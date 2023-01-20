@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>OpenLayers Demo</title>
+    <style type="text/css">
+      body {
+        margin: 0px;
+      }
+      #basicMap {
+        width: 80%;
+        height: 512px;
+      }
+      #bottone {
+        margin-top: 32px;
+        padding: 16px;
+        border-radius: 4px;
+        background-color: lightblue;
+      }
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+    <script type="text/javascript" src="javascript/mappa.js"></script>
+  </head>
+  <body onload="init();">
+    <form>
+      <label for="address">Enter an address:</label>
+      <input type="text" id="address" name="address">
+      <button type="button" onclick="searchAddress()">Search</button>
+    </form>
+
+    <div id="basicMap"></div>
+
+    <span onclick="getCenterCoordinates()" id="bottone">set coordinate</span>
+
+    Latitudine: <span id = "lat">0</span>
+    Longitudine: <span id = "lon">0</span>
+
+
+
+  </body>
+</html>
