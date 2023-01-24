@@ -1,4 +1,4 @@
-if (screen.width > screen.height){
+if (window.innerWidth > window.innerHeight){
   document.querySelector("body").classList.add("desktop");
 }
 
