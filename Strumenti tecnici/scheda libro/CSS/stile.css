@@ -2,7 +2,7 @@
     color: #eee;
 }
 .horizScroll{
-    overflow-x: auto;
+    overflow-x: scroll;
     white-space: nowrap;
     flex-wrap: nowrap;
 }
