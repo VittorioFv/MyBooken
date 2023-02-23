@@ -1,10 +1,13 @@
 .schedaLibro{
     color: #eee;
+    max-width: 18rem;
 }
 .horizScroll{
     overflow-x: scroll;
     white-space: nowrap;
     flex-wrap: nowrap;
+    max-height: 400px;
+    margin-top: 200px;
 }
 
 .prova{
@@ -13,18 +16,14 @@
 }
 .titoloCarta{
     
-    white-space: pre-line;
-    
-}
-.card-text{
-    max-width: 20rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: pre-wrap;
-
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
 }
+
+
 .immagine{
     border-radius: 7%;
 }
