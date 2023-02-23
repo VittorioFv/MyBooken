@@ -1,16 +1,12 @@
 .schedaLibro{
     color: #eee;
-    flex: 0 0 auto;
 }
 .horizScroll{
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: auto;
     white-space: nowrap;
+    flex-wrap: nowrap;
 }
-.contenitoreSchede{
- width: 100%;
 
-}
 .prova{
     padding: 40px;
     background-color: #313030;    
@@ -25,5 +21,8 @@
 
 }
 .immagine{
-    border-radius: 7% !important ;
+    border-radius: 7%;
+}
+.row{
+    flex-wrap: nowrap;
 }
