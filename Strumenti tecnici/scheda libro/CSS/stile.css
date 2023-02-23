@@ -1,0 +1,29 @@
+.schedaLibro{
+    color: #eee;
+    flex: 0 0 auto;
+}
+.horizScroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.contenitoreSchede{
+ width: 100%;
+
+}
+.prova{
+    padding: 40px;
+    background-color: #313030;    
+}
+.card-text{
+    max-width: 20rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-wrap;
+
+}
+.immagine{
+    border-radius: 7% !important ;
+}
