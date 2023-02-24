@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -91,6 +91,12 @@ body{
 
 }
 
+#divtokennav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between 2px;
+}
+
 .tokenNavbar{
     background-image: url(../../../LogoToken/token.svg);
     width: 24px;
@@ -98,6 +104,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    
   }
 
   .footerNavbar{
@@ -130,7 +138,7 @@ body{
     visibility: visible;
    }
   
-   #imglogo{
+   #imglogofooter{
     width: 100vw;
     height: 50px;
    }
