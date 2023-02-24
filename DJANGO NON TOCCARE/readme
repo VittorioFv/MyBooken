@@ -1,0 +1,15 @@
+
+NAVIGA NELLA CARTELLA sito
+Attiva ambiente:
+	source myworld/bin/activate
+
+
+dovrebbe comparire (myworld) all'inzio
+
+
+NAVIGA NELLA CARTELLA myBooken
+far partire il server:
+	python3 manage.py runserver
+	
+andare in http://127.0.0.1:8000/libri/
+
