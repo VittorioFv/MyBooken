@@ -7,34 +7,20 @@
 {% block content %}
 
   <div class="row horizScroll">
-  <div class="hstack gap-3">
     {% for x in mylibri %}
-    
-
-    
-      <div class="col-xs-4 col-md-4 col-lg-3">
-      <div class="card schedaLibro">
+      <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
         <a href="dettagli_libro/{{ x.id }}">
-        <div class="prova">
           <img class="card-img-top immagine" src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png" alt="Card image cap">
-
           <div class="card-body">
-            <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
-            <p class="card-text">{{ x.descrizione }}</p>
+              <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
           </div>
           <div class="card-footer">
-            <small class="text-muted testoFooter">{{ x.autore }}</small>
+              <small class="text-muted testoFooter">{{ x.autore }}</small>
           </div>
-        </div>
-      </a>
+        </a>
       </div>
-      </div>
-
     {% endfor %}
   </div>
-  </div>
+
 {% endblock %}
-
-
-
 
