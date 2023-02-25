@@ -26,9 +26,9 @@
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link active" href="#">Profilo</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="#">Impostazioni</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="#">Contattaci</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Profilo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Impostazioni</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Contattaci</a></li>
                 </ul>
             </div>
 
@@ -44,9 +44,12 @@
                     <a class="nav-link" href="#">Chat <i class="bi bi-chat-left" style="font-size: 17px;"></i></a>
                 </div>
             </div>
-            <div id="toggletoken divtokennav " class="">
-                <p>2</p> &nbsp <!-- &nbsp serve per dare spazio nella riga -->
-                <div class="tokenNavbar" style="font-size: 19px;"></div>
+            <div id="toggletoken">
+                <!-- <div id="divtokennav"> -->
+                    <p>2</p> &nbsp <!--&nbsp serve per dare spazio nella riga  -->
+                    <img src="../../LogoToken/token.svg" alt="Token" style="19px;">
+                    <!-- <div class="tokenNavbar" style="font-size: 19px;"></div> -->
+                <!-- </div> -->
             </div>
 
             <div id="sidebar">
@@ -85,30 +88,31 @@
         const sidebar = document.getElementById('sidebar');
         const toggletoken = document.getElementById('toggletoken');
         const sidebartoken = document.getElementById('sidebartoken');
-        /*
+
         document.onclick = function (e) {
-            if (e.target.id !== 'sidebar' && e.target.id !== 'toggle' && e.target.id !== 'sidebartoken' && e.target.id !== 'toggletoken') {
+            if (e.target.id !== 'toggle' && e.target.id !== 'sidebar') {
                 toggle.classList.remove('active');
                 sidebar.classList.remove('active');
+            }
+            if (e.target.id !== 'sidebartoken' && e.target.id !== 'toggletoken') {
                 toggletoken.classList.remove('active');
                 sidebartoken.classList.remove('active');
             }
-        }*/
-
+        }
 
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             sidebar.classList.toggle('active');
-            
         }
+
         toggletoken.onclick = function () {
-            toggle.classList.toggle('active');
-            sidebar.classList.toggle('active');
+            toggletoken.classList.toggle('active');
+            sidebartoken.classList.toggle('active');
         }
 
 
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>

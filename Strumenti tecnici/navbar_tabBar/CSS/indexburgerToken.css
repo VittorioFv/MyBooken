@@ -42,14 +42,6 @@ body{
     transition: 0.2s;
 }
 
-#toggle.active::before{
-    transform: translateY(0px) rotate(45deg);
-    box-shadow: 0px 0px 0px #fff;
-}
-
-#toggle.active::after{
-    transform: translateY(0px) rotate(-45deg);
-}
 
 #sidebar{
     position: fixed;
@@ -88,16 +80,17 @@ body{
     letter-spacing: 2px;
 }
 
-/*
+
 #divtokennav{
   display: flex;
   flex-direction: row;
   justify-content: space-between 2px;
+
 }
-*/
+
 
 #toggletoken{
-
+  
   float: right;
   right: 0px;
   width: 56px;
@@ -107,36 +100,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-}
 
-#toggletoken::before{
-  content: '';
-  position: absolute;
-  width: 28px;
-  height: 2px;
-  background: #fff;
-  transform: translateY(-10px);
-  transition: 0.2s;
-}
-
-#toggletoken::after{
-  content: '';
-  position: absolute;
-  width: 28px;
-  height: 2px;
-  background: #fff;
-  transform: translateY(10px);
-  transition: 0.2s;
-}
-
-#toggletoken.active::before{
-  transform: translateY(0px) rotate(45deg);
-  box-shadow: 0px 0px 0px #fff;
-}
-
-#toggletoken.active::after{
-  transform: translateY(0px) rotate(-45deg);
 }
 
 #sidebartoken{
@@ -186,6 +150,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    
   }
 
   .footerNavbar{
@@ -258,9 +223,6 @@ body{
     visibility: visible;
   }
 
-  #toggletoken{
-    visibility: visible;
-  }
 
 }
 
