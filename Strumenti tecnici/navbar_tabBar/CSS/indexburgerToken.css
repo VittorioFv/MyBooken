@@ -1,102 +1,21 @@
-*{
-    margin: 0px; 
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body{
-    background: lightblue;
+body {
+  background: lightblue;
 }
 
-.navcontainer{
-  padding: 0px !important; 
+.navcontainer {
+  padding: 0px !important;
+  height: 56px !important;
 }
 
-#toggle{
-    float: left;
-    left: 0px;
-    width: 56px;
-    height: 56px;
-    background: lightseagreen;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-}
-
-#toggle::before{
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: #fff;
-    box-shadow: 0px 10px 0px #fff; /*Se si vuole avere solo 2 barre su burgermenu basta togliere box-shadow*/
-    transform: translateY(-10px);
-    transition: 0.2s;
-}
-
-#toggle::after{
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: #fff;
-    transform: translateY(10px);
-    transition: 0.2s;
-}
-
-
-#sidebar{
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: lightseagreen;
-    transition: 0.2s;
-}
-
-#sidebar.active{
-    left: 0px;
-}
-
-#sidebar ul{
-    position: relative;
-    margin-top: 50px;
-}
-
-#sidebar ul li{
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-    padding: 10px 40px;
-}
-
-#sidebar ul li:hover{
-    background: #03a9f4;
-}
-
-#sidebar ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-}
-
-
-#divtokennav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between 2px;
-
-}
-
-
-#toggletoken{
-  
-  float: right;
-  right: 0px;
+#toggle {
+  float: left;
+  left: 0px;
   width: 56px;
   height: 56px;
   background: lightseagreen;
@@ -104,10 +23,93 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  visibility: hidden;
 }
 
-#sidebartoken{
+#toggle::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0px 10px 0px #fff;
+  /*Se si vuole avere solo 2 barre su burgermenu basta togliere box-shadow*/
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+
+#toggle::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(10px);
+  transition: 0.2s;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: lightseagreen;
+  transition: 0.2s;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul {
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+}
+
+#sidebar ul li:hover {
+  background: #03a9f4;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+#toggletoken {
+  background-image:  url(../../../LogoToken/token.svg);
+  background-size: 40px;
+  background-position-x: 13px;
+  background-position-y: center; 
+  background-repeat: no-repeat;
+  font-size: 50px;
+  float: right;
+  right: 0px;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggletoken p{
+  font-size: 14px;
+  margin: 0px;
+  transform: translate(-23px, 0px);
+}
+
+#sidebartoken {
   position: fixed;
   top: 0;
   right: -250px;
@@ -117,115 +119,102 @@ body{
   transition: 0.2s;
 }
 
-#sidebartoken.active{
+#sidebartoken.active {
   right: 0px;
 }
 
-#sidebartoken ul{
+#sidebartoken ul {
   position: relative;
-  margin-top: 50px;
-
+  margin-top: 30px;
+  padding: 10px;
 }
 
-#sidebartoken ul li{
+#sidebartoken ul li {
   list-style: none;
   display: inline-block;
   width: 100%;
-  padding: 10px 40px;
-  
+  padding: 8px 0px;
+  margin: 0px;
+  font-size: 12px;
 }
 
-#sidebartoken ul li:hover{
+#sidebartoken ul li:hover {
   background: #03a9f4;
 }
 
-#sidebartoken ul li a{
+#sidebartoken ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.5em;
   letter-spacing: 2px;
 }
 
+.footerNavbar {
+  width: auto;
+  display: flex;
+  visibility: hidden;
+}
 
-.tokenNavbar{
-    background-image: url(../../../LogoToken/token.svg);
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    
-  }
+#tabBar {
+  display: inline-block;
+  width: 40%;
+  height: 56px;
+  margin: 6px;
+}
 
-  .footerNavbar{
-    width: auto;
-    display: flex;
-    visibility: hidden;
-  }
+#tabBar div {
+  width: 33%;
+  text-align: center;
+  margin: auto;
+}
 
-  #tabBar{
-    display: inline-block;
-    width: 40%;
-    height: 56px;
-    margin: 6px;
-  }
-  
-  #tabBar div{
-    width: 33%;
-    text-align: center;
-    margin: auto;
-   }
-  
-   footer{
-    height: 100px;
-    position: fixed;
-    bottom: 0;
-    text-align: center;  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: visible;
-   }
-  
-   #imglogofooter{
-    width: 100vw;
-    height: 50px;
-   }
-  
+footer {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: visible;
+}
 
-@media only screen and (max-width: 992px)
-{
-  #tabBar{
+#imglogofooter {
+  width: 100vw;
+  height: 50px;
+}
+
+
+@media only screen and (max-width: 992px) {
+  #tabBar {
     position: fixed;
     bottom: 0;
     display: flex;
     flex-direction: row;
     width: 100vw;
     text-align: center;
-  
   }
 
-  #tabBar div{
+  #tabBar div {
     width: 33%;
     text-align: center;
     margin: auto;
-   }
+  }
 
-   #tabBar div a{
+  #tabBar div a {
     justify-content: center;
-   } 
+  }
 
-   .footerNavbar{
+  .footerNavbar {
     visibility: visible;
   }
 
-  footer{
+  footer {
     visibility: hidden;
   }
 
-  #toggle{
+  #toggle {
     visibility: visible;
   }
-
 
 }
