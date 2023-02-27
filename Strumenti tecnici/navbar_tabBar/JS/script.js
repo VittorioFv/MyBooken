@@ -1,15 +1,26 @@
-if (window.innerWidth > window.innerHeight){
-  document.querySelector("body").classList.add("desktop");
+const toggle = document.getElementById('toggle');
+const sidebar = document.getElementById('sidebar');
+const toggletoken = document.getElementById('toggletoken');
+const sidebartoken = document.getElementById('sidebartoken');
+
+document.onclick = function (e) {
+    if (e.target.id !== 'toggle' && e.target.id !== 'sidebar') {
+        toggle.classList.remove('active');
+        sidebar.classList.remove('active');
+    }
+    if (e.target.id !== 'sidebartoken' && e.target.id !== 'toggletoken') {
+        toggletoken.classList.remove('active');
+        sidebartoken.classList.remove('active');
+    }
 }
 
-function openNav() {
-  document.getElementById("sidebar").style.width = "80vw";
-  document.getElementById("close").style.display = "block";
-  document.getElementById("close").style.opacity = "20%";
+toggle.onclick = function () {
+    toggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
 }
 
-function closeNav() {
-  document.getElementById("sidebar").style.width = "0";
-  document.getElementById("close").style.display = "none";
-  document.getElementById("close").style.opacity = "0%";
+toggletoken.onclick = function () {
+    toggletoken.classList.toggle('active');
+    sidebartoken.classList.toggle('active');
 }
+
