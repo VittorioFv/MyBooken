@@ -1,27 +1,70 @@
 <html>
 <head>
 <title>PASSWORD DIMENTICATA</title>
-<link rel="stylesheet" href="accesso_registrazione.html" type="text/css" />
-<link rel="stylesheet" href="registrazione.html" type="text/css" />
-<link rel="stylesheet" href="acessi.css">
-<link rel="stylesheet" href="registrazionecs.css">
 <link rel="stylesheet" href="passdimenticatacs.css">
 </head>
 <body>
+    <div id="riq">
     <img src="../../LogoToken/logo.svg" height="230" width="230" id="log">
     <img src="icona-lucchetto.png" height="80" width="80" id="luc">
+    <div id="frase1"><strong>Problemi di accesso?</strong></div> 
     <br>
     <br>
-   <div id="frase"><strong>Inserisci nome utente o e-mail e ti invieremo un link per accedere di nuovo al tuo account</strong></div> 
     <br>
     <br>
-    <form action="#" class="formlogin" method="post">
-    <label>Usename:</label>
-    <input type="text" name="username" class="testo" placeholder="Username..." /><br>
-    
-    <a href="#"><input type="button" class="button" id="register" name="Register" value="Register" /></a>
-    <input type="submit" class="button" name="submit" value="Login" />
-    </form>
+   <div id="frase">Inserisci nome utente o e-mail e ti invieremo un link per accedere di nuovo al tuo account</div> 
+    <div id="linea"></div>
+    <div id="form">
+        <label><strong>Credenziali:    </strong></label>
+        <input type="text" name="username" class="testo" placeholder="Username..." />
     </div>
+
+    <button id="bott"><strong>avanti</strong></button>
+    <br>
+    <br>
+    <br>
+    <a href="accesso_registrazione.html" id="back">Torna all'accesso</a>
 </body>
 </html>
+
+
+
+<!--#log{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 38%;
+    bottom: 12%;
+}
+
+#luc{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 25%;
+}
+
+#frase1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 520px;
+    bottom: 10%;
+}
+
+#frase{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 325px;
+    bottom: 15%;
+}
+
+#linea{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(9, 179, 142);
+    position: relative;
+    bottom: 12%;
+}
+-->
