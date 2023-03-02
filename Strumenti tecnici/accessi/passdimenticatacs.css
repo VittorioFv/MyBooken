@@ -1,0 +1,26 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#log{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 40%;
+    bottom: 10%;
+}
+
+#luc{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 25%;
+}
+
+#frase{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 300px;
+}
