@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
+<link rel="stylesheet" href="acessi.css">
+<script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESSI</title>
+  
+</head>
+<body>
+  <div id="barralogo">
+    <img src="../../LogoToken/logo.svg" id="log">
+  </div>
+
+    <div id="formio"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+          Formio.createForm(document.getElementById('formio'), 'https://ghvjqncfntjvfsb.form.io/user/login');
+        };
+      </script>
+</html>

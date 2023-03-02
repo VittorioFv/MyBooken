@@ -1,0 +1,17 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#barralogo{
+    background-color: greenyellow;
+    height: 77px;
+}
+
+#log{
+    height: 170px;
+    width: 170px;
+    position: relative;
+    left: 43%;
+    bottom: 66%;
+}
