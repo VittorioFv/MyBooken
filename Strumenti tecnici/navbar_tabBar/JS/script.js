@@ -1,26 +1,31 @@
+document.getElementById('bodybkg').style.display = 'none';
 const toggle = document.getElementById('toggle');
 const sidebar = document.getElementById('sidebar');
 const toggletoken = document.getElementById('toggletoken');
 const sidebartoken = document.getElementById('sidebartoken');
 
-document.onclick = function (e) {
-    if (e.target.id !== 'toggle' && e.target.id !== 'sidebar') {
-        toggle.classList.remove('active');
-        sidebar.classList.remove('active');
-    }
-    if (e.target.id !== 'sidebartoken' && e.target.id !== 'toggletoken') {
-        toggletoken.classList.remove('active');
-        sidebartoken.classList.remove('active');
-    }
+document.getElementById('bodybkg').onclick = function (e) {
+    toggletoken.classList.remove('active');
+    sidebartoken.classList.remove('active');
+    toggle.classList.remove('active');
+    sidebar.classList.remove('active');
+    document.getElementById('bodybkg').style.display = 'none';
 }
 
 toggle.onclick = function () {
-    toggle.classList.toggle('active');
-    sidebar.classList.toggle('active');
+    toggle.classList.add('active');
+    sidebar.classList.add('active');
+    document.getElementById('bodybkg').style.display = 'block';
+    toggletoken.classList.remove('active');
+    sidebartoken.classList.remove('active');
+
 }
 
 toggletoken.onclick = function () {
-    toggletoken.classList.toggle('active');
-    sidebartoken.classList.toggle('active');
+    toggletoken.classList.add('active');
+    sidebartoken.classList.add('active');
+    document.getElementById('bodybkg').style.display = 'block';
+    toggle.classList.remove('active');
+    sidebar.classList.remove('active');
 }
 
