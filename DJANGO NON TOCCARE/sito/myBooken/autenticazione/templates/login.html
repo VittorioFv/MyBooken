@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Login MyBooken
+{% endblock %}
+
+{% block content %}
+
+    {% if messages %}
+        {% for ms in messages %}
+            {{ ms }}
+        {% endfor %}
+    {% endif %}
+
+    <form action = "" method = POST>
+        {% csrf_token %}
+        Username: <input type = "text" name = "username"><br>
+        Password: <input type = "password" name = "password"><br>
+        <input type = "submit" value = "Submit">
+    </form>
+
+{% endblock %}
