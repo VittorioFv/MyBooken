@@ -1,4 +1,6 @@
 
+********** IN WINDOWS NON SERVE *********
+
 NAVIGA NELLA CARTELLA sito
 Attiva ambiente:
 	source myworld/bin/activate
@@ -7,9 +9,14 @@ Attiva ambiente:
 dovrebbe comparire (myworld) all'inzio
 
 
+********** IN WINDOWS USARE py AL POSTO DI python3 *********
+
 NAVIGA NELLA CARTELLA myBooken
 far partire il server:
 	python3 manage.py runserver
 	
 andare in http://127.0.0.1:8000/libri/
 
+
+Requisito per creare token per l'accesso con l'email:
+	pip install six
