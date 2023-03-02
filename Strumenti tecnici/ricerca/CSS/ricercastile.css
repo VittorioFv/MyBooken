@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.containersearch {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#textsearch{
+    width: 40%;
+    border: transparent;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+
+#btnSubmit, #btnFunnel {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: transparent;
+}
+
+#btnFunnel svg, #btnSubmit svg{
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+ }
+
+.categoryscrollmenu {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+
+.singlecategory {
+    background-color: #333;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.singlecategory:hover {
+    background-color: #777;
+}
+
+.singlecategory a {
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
