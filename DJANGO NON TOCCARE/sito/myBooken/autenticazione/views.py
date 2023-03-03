@@ -57,7 +57,7 @@ def loginUtente(request):
             login(request, user)
             return redirect('libri')
         else:
-            messages.success(request, ("Errore: forse la password o l'username non sono corretti"))
+            messages.success(request, ("Errore: forse la password o l'username non sono corretti, ricordati di congfermare l'email se non lo hai fatto"))
             return redirect('login')
     else:
         return render(request, 'login.html')
@@ -80,12 +80,11 @@ def registrazioneUtente(request):
             utente.is_active = False # utente "in pause" finche non conferma la mail
             utente.save()
 
-            activateEmail(request, utente, form.cleaned_data.get('email'))
+            # activateEmail(request, utente, form.cleaned_data.get('email'))
 
             login(request, utente)
 
-            messages.success(request, (" Sei stato registrato correttamente"))
-            return redirect('libri')
+            return render(request, 'confermaMail.html', {'nome': utente.username})
     else:
         form = formDiRegistrazione()
     return render(request, 'registrazione.html', {
