@@ -1,15 +1,31 @@
-if (window.innerWidth > window.innerHeight){
-  document.querySelector("body").classList.add("desktop");
+document.getElementById('bodybkg').style.display = 'none';
+const toggle = document.getElementById('toggle');
+const sidebar = document.getElementById('sidebar');
+const toggletoken = document.getElementById('toggletoken');
+const sidebartoken = document.getElementById('sidebartoken');
+
+document.getElementById('bodybkg').onclick = function (e) {
+    toggletoken.classList.remove('active');
+    sidebartoken.classList.remove('active');
+    toggle.classList.remove('active');
+    sidebar.classList.remove('active');
+    document.getElementById('bodybkg').style.display = 'none';
 }
 
-function openNav() {
-  document.getElementById("sidebar").style.width = "80vw";
-  document.getElementById("close").style.display = "block";
-  document.getElementById("close").style.opacity = "20%";
+toggle.onclick = function () {
+    toggle.classList.add('active');
+    sidebar.classList.add('active');
+    document.getElementById('bodybkg').style.display = 'block';
+    toggletoken.classList.remove('active');
+    sidebartoken.classList.remove('active');
+
 }
 
-function closeNav() {
-  document.getElementById("sidebar").style.width = "0";
-  document.getElementById("close").style.display = "none";
-  document.getElementById("close").style.opacity = "0%";
+toggletoken.onclick = function () {
+    toggletoken.classList.add('active');
+    sidebartoken.classList.add('active');
+    document.getElementById('bodybkg').style.display = 'block';
+    toggle.classList.remove('active');
+    sidebar.classList.remove('active');
 }
+

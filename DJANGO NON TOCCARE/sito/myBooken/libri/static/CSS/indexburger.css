@@ -1,178 +1,230 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#bodybkg{
+  display: none;
+  background-color: black;
+  opacity: 50%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-body{
-    background: lightblue;
+.navcontainer {
+  padding: 0px !important;
+  height: 56px !important;
 }
 
-#toggle{
-    float: left;
-    left: 0px;
-    width: 56px;
-    height: 56px;
-    background: lightseagreen;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-}
+#toggle {
+  float: left;
+  left: 0px;
+  width: 56px;
+  height: 56px;
+  background: lightseagreen;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
 
-#toggle::before{
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: #fff;
-    box-shadow: 0px 10px 0px #fff; /*Se si vuole avere solo 2 barre su burgermenu basta togliere box-shadow così non fa più l'effetto strano del X*/
-    transform: translateY(-10px);
-    transition: 0.2s;
-}
-
-#toggle::after{
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: #fff;
-    transform: translateY(10px);
-    transition: 0.2s;
-}
-
-#toggle.active::before{
-    transform: translateY(0px) rotate(45deg);
-    box-shadow: 0px 0px 0px #fff;
-}
-
-#toggle.active::after{
-    transform: translateY(0px) rotate(-45deg);
-}
-
-#sidebar{
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: lightseagreen;
-    transition: 0.2s;
-}
-
-#sidebar.active{
-    left: 0px;
-}
-
-#sidebar ul{
-    position: relative;
-    margin-top: 50px;
-
-}
-
-#sidebar ul li{
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-    padding: 10px 40px;
-    
-}
-
-#sidebar ul li:hover{
-    background: #03a9f4;
-}
-
-#sidebar ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-
-}
-
-.tokenNavbar{
-    background-image: url(../../../LogoToken/token.svg);
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .footerNavbar{
-    width: auto;
-    display: flex;
-    visibility: hidden;
-  }
-
-  #tabBar{
-    display: inline-block;
-    width: 40%;
-    height: 56px;
-    margin: 6px;
-  }
   
-  #tabBar div{
-    width: 33%;
-    text-align: center;
-    margin: auto;
-   }
-  
-   footer{
-    height: 100px;
-    position: fixed;
-    bottom: 0;
-    text-align: center;  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: visible;
-   }
-  
-   #imglogo{
-    width: 100vw;
-    height: 50px;
-   }
-  
+}
 
-@media only screen and (max-width: 992px)
-{
-  #tabBar{
+#toggle::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0px 10px 0px #fff;
+  /*Se si vuole avere solo 2 barre su burgermenu basta togliere box-shadow*/
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+
+#toggle::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transform: translateY(10px);
+  transition: 0.2s;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: lightseagreen;
+  transition: 0.2s;
+}
+
+#sidebar.active {
+  left: 0px;
+  z-index: 2;
+}
+
+#sidebar ul {
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+}
+
+#sidebar ul li:hover {
+  background: #03a9f4;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+#toggletoken {
+  /*background-image:  url(../../../LogoToken/token.svg);*/
+  background-size: 40px;
+  background-position-x: 13px;
+  background-position-y: center; 
+  background-repeat: no-repeat;
+  font-size: 50px;
+  float: right;
+  right: 0px;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  z-index: 2;
+  
+}
+
+#toggletoken p{
+  font-size: 14px;
+  margin: 0px;
+  transform: translate(-23px, 0px);
+}
+
+#sidebartoken {
+  position: fixed; 
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background: lightseagreen;
+  transition: 0.2s;
+}
+
+#sidebartoken.active {
+  right: 0px;
+  z-index: 2;
+}
+
+#sidebartoken ul {
+  position: relative;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+#sidebartoken ul li {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 8px 0px;
+  margin: 0px;
+  font-size: 12px;
+}
+
+#sidebartoken ul li:hover {
+  background: #03a9f4;
+}
+
+.vertical-menu{
+  overflow-y: scroll;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 65vh;
+}
+
+.footerNavbar {
+  width: auto;
+  display: flex;
+  visibility: hidden;
+}
+
+#tabBar {
+  display: inline-block;
+  width: 40%;
+  height: 56px;
+  margin: 6px;
+}
+
+#tabBar div {
+  width: 33%;
+  text-align: center;
+  margin: auto;
+}
+
+footer {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: visible;
+}
+
+#imglogofooter {
+  width: 100vw;
+  height: 50px;
+}
+
+
+@media only screen and (max-width: 992px) {
+  #tabBar {
     position: fixed;
     bottom: 0;
     display: flex;
     flex-direction: row;
     width: 100vw;
     text-align: center;
-  
   }
 
-  #tabBar div{
+  #tabBar div {
     width: 33%;
     text-align: center;
     margin: auto;
-   }
+  }
 
-   #tabBar div a{
+  #tabBar div a {
     justify-content: center;
-   } 
+  }
 
-   .footerNavbar{
+  .footerNavbar {
     visibility: visible;
   }
 
-  footer{
+  footer {
     visibility: hidden;
   }
 
-  #toggle{
+  #toggle {
     visibility: visible;
   }
-
-}
-
-@media only screen and (min-width: 992px)
-{
-
 }

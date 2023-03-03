@@ -1,71 +1,109 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary navbar1">
-    <div class="container-fluid">
-        <div id="toggle"></div>
+<div id="bodybkg"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar1 navcontainer">
+        <div class="container-fluid navcontainer">
+            <div id="toggle"></div>
 
-        <a class="navbar-brand" href="#">MyBooken</a>
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link active" href="#">Profilo</a></li>
-              <li class="nav-item"><a class="nav-link active" href="{% url 'logout' %}">Logout</a></li>
-            </ul>
-          </div>
-
-        <!-- tabBar -->
-        <div class=" navbar-collapse" id="tabBar">
-            <div>
-                <a class="nav-link" href="#">Esplora <i class="bi bi-search" style="font-size: 17px;"></i></a>
-            </div>
-            <div>
-                <a class="nav-link" href="#">I miei libri <i class="bi bi-book" style="font-size: 17px;"></i></a>
-            </div>
-            <div>
-                <a class="nav-link" href="#">Chat <i class="bi bi-chat-left" style="font-size: 17px;"></i></a>
-            </div>
-        </div>
-        
-        <div class="tokenNavbar" style="font-size: 19px;"></div>
-        
-        <div id="sidebar">
-            <ul>
-                <li><a class="nav-link" href="#">Profilo</a></li>
-                <li><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
-                
-                
-                <div class="footerNavbar" style="width: 100px;">
-                    <img src="../../LogoToken/logo.svg" alt="LogoFooter"> &copy2023
+            <a class="navbar-brand" href="#">
+                <div class="logonavbar" style="width: 100px;">
+                    <img src="../../LogoToken/logo.svg" alt="Logo">
                 </div>
-            </ul>
+            </a>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Profilo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Impostazioni</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Contattaci</a></li>
+                </ul>
+            </div>
+
+            <!-- tabBar -->
+            <div class=" navbar-collapse" id="tabBar">
+                <div>
+                    <a class="nav-link" href="#">Esplora <i class="bi bi-search" style="font-size: 17px;"></i></a>
+                </div>
+                <div>
+                    <a class="nav-link" href="#">I miei libri <i class="bi bi-book" style="font-size: 17px;"></i></a>
+                </div>
+                <div>
+                    <a class="nav-link" href="#">Chat <i class="bi bi-chat-left" style="font-size: 17px;"></i></a>
+                </div>
+            </div>
+            <div id="toggletoken">
+                <p>2</p>
+            </div>
+
+            <div id="sidebar">
+                <ul>
+                    <li><a class="nav-link" href="#">Profilo</a></li>
+                    <li><a class="nav-link" href="#">Impostazioni</a></li>
+                    <li><a class="nav-link" href="#">Contattaci</a></li>
+                    <div class="footerNavbar">
+                        <img src="../../LogoToken/logo.svg" alt="LogoFooter" style="width: 100px;"> &copy2023
+                    </div>
+                </ul>
+            </div>
+            <div id="sidebartoken">
+                <ul>
+                    <li>
+                        <center><img src="../../LogoToken/token.svg" alt="token"
+                                style="width:50%; height:50%; align-items: center; margin-bottom: 7px;">
+                            <h3>Hai 2 Raton su 10</h3>
+                        </center>
+                    </li>
+                    <div class="vertical-menu">
+                        <li>
+                            <h6>0/5 Scambia 5 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/50 Scambia 50 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/100 Scambia 100 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/200 Scambia 5 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/500 Scambia 50 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/1000 Scambia 100 libri</h6>
+                        </li>
+                        <hr>
+                        <h5>Complete:</h5>
+                        <li>
+                            <h6>5/5 Scambia 5 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/5 Scambia 5 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/50 Scambia 50 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/100 Scambia 100 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/200 Scambia 5 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/500 Scambia 50 libri</h6>
+                        </li>
+                        <li>
+                            <h6>0/1000 Scambia 100 libri</h6>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
         </div>
-
-    </div>
-</nav>
+    </nav>
 
 
-<!-- Footer -->
-<footer class="col-xs-12 col-md-12 col-lg-12">
-    <a href="#"><img src="../../LogoToken/logo.svg" alt="Logo MyBooken" id="imglogo"></a>
-    | &copy 2023
-</footer>
 
-<script>
-    const toggle = document.getElementById('toggle');
-    const sidebar = document.getElementById('sidebar');
-
-    document.onclick = function (e) {
-        if (e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
-            toggle.classList.remove('active');
-            sidebar.classList.remove('active');
-        }
-    }
-
-
-    toggle.onclick = function () {
-        toggle.classList.toggle('active');
-        sidebar.classList.toggle('active');
-    }
-</script>
-<script type="text/javascript" src="JS/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="col-xs-12 col-md-12 col-lg-12">
+        <a href="#"><img src="../../LogoToken/logo.svg" alt="Logo MyBooken" id="imglogofooter"></a>
+        | &copy 2023
+    </footer>
