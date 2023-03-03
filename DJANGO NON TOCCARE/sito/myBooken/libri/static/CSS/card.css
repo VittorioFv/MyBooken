@@ -3,7 +3,9 @@
     margin: 0px;
 }
 .row{
+    --bs-gutter-x: 0;
     flex-wrap: nowrap;
+    width: 100%;
 }
 .horizScroll{
     overflow-x: scroll;

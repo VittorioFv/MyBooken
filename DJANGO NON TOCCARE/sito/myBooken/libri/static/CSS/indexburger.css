@@ -58,11 +58,12 @@
   height: 100vh;
   background: lightseagreen;
   transition: 0.2s;
+
+  z-index: 2;
 }
 
 #sidebar.active {
   left: 0px;
-  z-index: 2;
 }
 
 #sidebar ul {
@@ -123,11 +124,12 @@
   height: 100vh;
   background: lightseagreen;
   transition: 0.2s;
+
+  z-index: 2;
 }
 
 #sidebartoken.active {
   right: 0px;
-  z-index: 2;
 }
 
 #sidebartoken ul {
