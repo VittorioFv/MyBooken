@@ -23,6 +23,10 @@
     padding: 40px;
     background-color: #313030;  
 }
+.schedaLibro a {
+    color: white;
+    text-decoration: none;
+}
 .immagine{
     border-radius: 7%;
 }
@@ -35,8 +39,6 @@
 }
 .testoFooter{
     color: #eee !important;
-    
     position: absolute;
-    bottom: 5%;
-    
+    bottom: 5%; 
 }
