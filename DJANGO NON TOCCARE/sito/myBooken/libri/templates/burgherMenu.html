@@ -5,7 +5,8 @@
 
             <a class="navbar-brand" href="#">
                 <div class="logonavbar" style="width: 100px;">
-                    <img src="../../LogoToken/logo.svg" alt="Logo">
+                    {% load static %}
+                    <img src="{% static 'immagini/logo.svg' %}" alt="Logo">
                 </div>
             </a>
 
@@ -39,14 +40,17 @@
                     <li><a class="nav-link" href="#">Impostazioni</a></li>
                     <li><a class="nav-link" href="#">Contattaci</a></li>
                     <div class="footerNavbar">
-                        <img src="../../LogoToken/logo.svg" alt="LogoFooter" style="width: 100px;"> &copy2023
+                        {% load static %}
+                        <img src="{% static 'immagini/logo.svg' %}" alt="LogoFooter" style="width: 100px;"> &copy2023
                     </div>
                 </ul>
             </div>
             <div id="sidebartoken">
                 <ul>
                     <li>
-                        <center><img src="../../LogoToken/token.svg" alt="token"
+                        <center>
+                            {% load static %}
+                            <img src="{% static 'immagini/token.svg' %}" alt="token"
                                 style="width:50%; height:50%; align-items: center; margin-bottom: 7px;">
                             <h3>Hai 2 Raton su 10</h3>
                         </center>
@@ -104,6 +108,7 @@
 
     <!-- Footer -->
     <footer class="col-xs-12 col-md-12 col-lg-12">
-        <a href="#"><img src="../../LogoToken/logo.svg" alt="Logo MyBooken" id="imglogofooter"></a>
+        {% load static %}
+        <a href="#"><img src="{% static 'immagini/logo.svg' %}" alt="Logo MyBooken" id="imglogofooter"></a>
         | &copy 2023
     </footer>
