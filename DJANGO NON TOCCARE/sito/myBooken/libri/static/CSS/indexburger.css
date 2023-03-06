@@ -161,7 +161,14 @@
   margin-top: 20px;
   margin-bottom: 30px;
   height: 65vh;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.vertical-menu::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 
 .footerNavbar {
   width: auto;
