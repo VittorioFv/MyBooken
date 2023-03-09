@@ -82,7 +82,7 @@ def registrazioneUtente(request):
 
             # activateEmail(request, utente, form.cleaned_data.get('email'))
 
-            login(request, utente)
+            # login(request, utente)
 
             return render(request, 'confermaMail.html', {'nome': utente.username})
     else:
