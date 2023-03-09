@@ -6,7 +6,7 @@ class formAggiuntaLibri(ModelForm):
     class Meta:
         
         model = Libri
-        fields = ('isbn','titolo','autore','descrizione','immagine',)
+        fields = ('isbn','titolo','autore','descrizione','citta','immagine',)
         
 
     def __init__(self, *args, **kwargs):
@@ -16,6 +16,8 @@ class formAggiuntaLibri(ModelForm):
         self.fields['titolo'].widget.attrs['class'] = 'form-control'
         self.fields['autore'].widget.attrs['class'] = 'form-control'
         self.fields['descrizione'].widget.attrs['class'] = 'form-control'
+        self.fields['citta'].widget.attrs['class'] = 'form-control'
+        self.fields['citta'].widget.attrs['id'] = 'citta'
         self.fields['immagine'].required = False
 
 

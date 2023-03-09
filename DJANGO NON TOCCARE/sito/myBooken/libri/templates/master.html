@@ -18,7 +18,8 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/card.css' %}">
-
+    
+    {% block headCss %}{% endblock %}
 </head>
 <body>
     {% include 'burgherMenu.html' %}
@@ -27,8 +28,6 @@
     {% block content %}
     {% endblock %}
 
-
-    {% include 'footer.html' %}
 
     {# JAVASCRIPT PER IL MENU #}
     {% load static %}

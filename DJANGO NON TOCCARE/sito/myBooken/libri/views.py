@@ -53,7 +53,7 @@ def modificaLibro(request, id):
 @login_required
 def aggiungiLibro(request):
   if request.method == 'POST':
-    form = formModificaLibri(request.POST)
+    form = formAggiuntaLibri(request.POST)
     if form.is_valid():
       libro = form.save(commit=False)
       libro.idUser = request.user
@@ -61,7 +61,7 @@ def aggiungiLibro(request):
 
       return redirect('i_miei_libri')
   else:
-    form = formModificaLibri()
+    form = formAggiuntaLibri()
   return render(request, 'aggiuntaLibri.html', {
     'form': form,
   })

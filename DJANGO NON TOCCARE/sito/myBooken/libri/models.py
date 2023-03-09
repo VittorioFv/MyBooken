@@ -12,4 +12,6 @@ class Libri(models.Model):
 
   idUser = models.ForeignKey(User, on_delete=models.CASCADE)
 
+  citta = models.CharField(max_length=50)
+
   immagine = models.ImageField(upload_to='images/')
