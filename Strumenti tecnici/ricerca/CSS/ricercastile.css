@@ -48,14 +48,17 @@ body::-webkit-scrollbar{
     scroll-behavior: smooth;
     white-space: nowrap;
     overflow-y: hidden;
-    margin-top: 10px;
+    margin-top: 15px;
+    line-height: 22px;
+    
 }
 
 .singlecategory {
     background-color: #333;
     border-radius: 10px;
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    height: 25px;
 }
 
 .singlecategory:hover {
@@ -86,6 +89,7 @@ body::-webkit-scrollbar{
     left: 0px;
     background-color: #333;
     padding: 20px;
+    height: 100vh;
 }
 
 .containermap {
@@ -93,6 +97,7 @@ body::-webkit-scrollbar{
     right: 0px;
     background-color: #777;
     padding: 20px;
+    height: 100vh;
 }
 
 
