@@ -1,7 +1,13 @@
 body{
-    padding: 0;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(162, 255, 253); 
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
+
+
 
 #riq{
     background-color: rgb(141, 255, 143);
@@ -78,9 +84,62 @@ body{
     color: blue;
     border-radius: 20px;
 }
+
 #back{
     position: relative;
     left:  42%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: blue;
+}
+
+@media screen and (max-width: 600px) {
+    #log{
+        position: relative;
+        left: 50px;
+        width: 130px;
+        top: -150px;
+    }
+
+    #riq{
+        position: relative;
+        left: 19px;
+        width: 60%;
+        top: 60px;
+        height: 350px;
+    }
+
+    #luc{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        left: -45px;
+        top: -80px;
+    }
+
+    #frase1{
+        position: relative;
+        left: 50px;
+        font-size: 15px;
+        top: -170px;
+    }
+
+    #frase{
+        position: relative;
+        left: 0px;
+        font-size: 12px;
+        top: -270px;
+        text-align: center;
+    }
+
+    #linea{
+        position: relative;
+        top: -250px;
+    }
+
+    #form{
+        position: relative;
+        left: -8px;
+        font-size: 12px;
+        top: -210px;
+    }
 }

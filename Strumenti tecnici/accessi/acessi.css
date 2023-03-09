@@ -7,17 +7,17 @@ body{
 #loghetto{
     position: relative;
     top: 44px;
-    left: 43%;
+    left: 41%;
 }
 
 #dabox{
     background-color: rgb(141, 255, 143);
     border-radius: 20px;
-    width: 60%; 
+    width: 800px; 
     height: 300px;
     position: relative;
-    left: 20%;
-    bottom: 60%;
+    right: 70px;
+    margin-top: 230px;
 }
 
 #scritta{
@@ -34,9 +34,10 @@ body{
 #registraz{
     width: 200px;
     position: relative;
-    left: 43%;
+    left: 36%;
     font-size: 30px;
     color: rgb(39, 104, 39);
+    top: 120px;
 }
 
 #reg:hover{
@@ -45,3 +46,40 @@ body{
     transition: all 1s;
     
 }
+
+
+@media only screen and (min-width: 240px){
+    #loghetto {
+        position: fixed;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    #dabox {
+        width: 400px;
+        height: 350px;
+        margin: auto;
+        position: fixed;
+        top: 240px;
+        left: 15%;
+    }
+
+    #registraz{
+        width: 200px;
+        position: fixed;
+        left: 36%;
+        font-size: 30px;
+        color: rgb(39, 104, 39);
+        bottom: 300px;
+    }
+}
+    
+@media only screen and (min-width: 1024px)
+{ regole.. }
+

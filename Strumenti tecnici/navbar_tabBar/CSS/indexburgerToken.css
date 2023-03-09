@@ -205,36 +205,3 @@ footer {
   height: 50px;
 }
 
-
-@media only screen and (max-width: 992px) {
-  #tabBar {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    text-align: center;
-  }
-
-  #tabBar div {
-    width: 33%;
-    text-align: center;
-    margin: auto;
-  }
-
-  #tabBar div a {
-    justify-content: center;
-  }
-
-  .footerNavbar {
-    visibility: visible;
-  }
-
-  footer {
-    visibility: hidden;
-  }
-
-  #toggle {
-    visibility: visible;
-  }
-}
