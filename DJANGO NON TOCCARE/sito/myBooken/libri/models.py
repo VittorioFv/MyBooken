@@ -11,3 +11,5 @@ class Libri(models.Model):
   descrizione = models.CharField(max_length=255) # VARCHAR
 
   idUser = models.ForeignKey(User, on_delete=models.CASCADE)
+
+  immagine = models.ImageField(upload_to='images/')

@@ -5,6 +5,9 @@ from django.template import loader
 from libri.forms import formAggiuntaLibri
 from .models import Libri
 
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def libri(request):
   mylibri = mylibri = Libri.objects.exclude( idUser = request.user.id)
   # values_list('titolo') solo per titolo
@@ -18,6 +21,7 @@ def libri(request):
   }
   return HttpResponse(template.render(context, request))
 
+@login_required
 def dettagliLibro(request, id):
   mylibri = Libri.objects.get(id=id)
   template = loader.get_template('dettagliLibro.html')
@@ -26,9 +30,10 @@ def dettagliLibro(request, id):
   }
   return HttpResponse(template.render(context, request))
 
+@login_required
 def aggiungiLibro(request):
   if request.method == 'POST' and request.user.is_authenticated:
-    form = formAggiuntaLibri(request.POST)
+    form = formAggiuntaLibri(request.POST, files=request.FILES)
     if form.is_valid():
       libro = form.save(commit=False)
       libro.idUser = request.user
@@ -41,6 +46,7 @@ def aggiungiLibro(request):
     'form': form,
   })
 
+@login_required
 def mieiLibri(request):
   mylibri = Libri.objects.filter( idUser = request.user.id)
   # values_list('titolo') solo per titolo
