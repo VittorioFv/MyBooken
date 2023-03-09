@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,474 +9,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="registrazionecs.css">
+  <link rel="stylesheet" href="registrazionecs.css">
 </head>
-<body>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    input[type=text], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 10px;
-      border: 0px;
-      resize: vertical;
-      background-color: #7ce0bb;
-    }
-    
-    label {
-      padding: 12px 12px 12px 0;
-      display: inline-block;
-    }
-    
-    #fine{
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center; 
-        color: #04AA6D;
-        top: 180px;   
-    }
-    
-    #scritta {
-        position: relative;
-        top: 15px;
-    }
-    
-    #registraz{
-        position: relative;
-        top: -10px;
-        left: 250px;
-    }
-    
-    #loghetto{
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;   
-        top: 10px; 
-    }
-    
-    #register{
-      border: 0px;
-      background-color: blue;
-      color: white;
-      border-radius: 5px;
-    }
 
-    .container {
-      border-radius: 20px;
-      background-color: #ffffff;
-      padding: 200px;
-      width: 50%;
-      position: relative;
-      top: 50px;
-    }
-    
-    #blue{
-        position: relative;
-        top: -180px;
-        width: 170px;
-        left: -170px;
-        font-size: 15px;
-      }
+<body style="background-color: #A7DCEA;">
 
-      #blu{
-        position: relative;
-        left: -50px;
-        top: -235px;
-        font-size: 10px;
-        width: 500px;
-      }
+  <div class="col-xs-12">
+    <img class="img-responsive" src="../../LogoToken/logo quad.svg" width="80" height="80" id="loghetto">
+  </div>
 
+  <div class="container" style="background-color: #E1F1E5;">
+<form class="forms">
+  <!-- Email input -->
+  <div class="form-outline mb-4">  
+    <label class="form-label" for="form2Example1">E-MAIL:</label>
+    <input type="email" id="form2Example1" class="form-control" placeholder="Add an E-mail..." style="background-color: #36867d85;" style="font color=;"/>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4"> 
+    <label class="form-label" for="form2Example2">NEW USERNAME:</label>
+    <input type="password" id="form2Example2" class="form-control" placeholder="Add a New Username..." style="background-color: #36867d85;"/>
+  </div>
+
+  <div class="form-outline mb-4"> 
+    <label class="form-label" for="form2Example4">PASSWORD:</label>
+    <input type="password" id="form2Example3" class="form-control" placeholder="Write a Password..." style="background-color: #36867d85;"/>
+  </div>
+
+  <div class="form-outline mb-4"> 
+    <label class="form-label" for="form2Example4"> CONFIRM PASSWORD:</label>
+    <input type="password" id="form2Example4" class="form-control" placeholder="Write a confirm of the Password..." style="background-color: #36867d85;"/>
+  </div>
+
+  <div class="final">
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+          <label class="form-check-label" for="form2Example31">Remember me </label>
+        </div>
       
-    #rossi{
-        position: relative;
-        top: -280px;
-        width: 170px;
-        left: 370px;
-        font-size: 15px;
-      }
-
-      #rosso{
-        position: relative;
-        left: 448px;
-        top: -250px;
-        font-size: 10px;
-        width: 502px;
-      }
-     
-      #gialli{
-        position: relative;
-        bottom: 240px;
-        font-size: 15px;
-        width: 170px;
-        left: 328px;
-      }
-      #giallo{
-        position: relative;
-        left: 405px;
-        bottom: 235px;
-        font-size: 10px;
-        width: 502px;
-      }
-  
-      #verdi{
-        position: relative;
-        bottom: 240px;
-        font-size: 15px;
-        width: 170px;
-        left: 285px;
-      }
-      #verde{
-        position: relative;
-        left: 363px;
-        bottom: 220px;
-        font-size: 10px;
-        width: 502px;
-      }
-
-      #violi{
-        position: relative;
-        bottom: 220px;
-        font-size: 15px;
-        width: 170px;
-        left: 244px;
-      }
-
-      #viola{
-        position: relative;
-        left: 321px;
-        bottom: 190px;
-        font-size: 10px;
-        width: 502px;
-      }
-
-      #scritta{
-        position: relative;
-        left: -80px;
-        top: 8px;
-      }
-
-    .col-25 {
-      float: left;
-      width: 25%;
-      margin-top: 6px;
-    }
-    
-    .col-75 {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .col-25, .col-75, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-      }
-
-      .container{
-        position: relative;
-    width: 20%;
-    height: 350px;
-    left: 3px;
-    top: 190px;
-    right: 79px;
-      }
-    }
-    
-    #invio{
-        background-color: rgb(59, 101, 253);
-        width: 120px;
-        position: relative;
-        left: 270px;
-        top: 20px;
-        border: 0px;
-        border-radius: 10px;
-        color: white;
-    }
-    
-    @media screen and (max-width: 600px) {
-      #loghetto{
-        float: right;
-        width: 75%;
-        position: relative;
-        top: 5px;
-        right: 130px;
-      }
-    
-      #scritta{
-        position: relative;
-        top: -20px;
-        font-size: 20px;
-        left: -130px;
-      }
-    
-      #blue{
-        position: relative;
-        font-size: 10px;
-        left: -178px;
-        top: -210px;
-      }
-
-      #blu{
-        position: relative;
-        left: -180px;
-        top: -220px;
-        font-size: 10px;
-        width: 195px;
-      }
-
-      #rossi{
-        position: relative;
-        top: -245px;
-        font-size: 10px;
-        left: 20px;
-      }
-      
-      #rosso{
-        position: relative;
-        left: -150px;
-        top: -218px;
-        font-size: 10px;
-        width: 195px;
-      }
-
-      #gialli{
-        position: relative;
-        bottom: 230px;
-        font-size: 10px;
-        left: 20px;
-      }
-
-      #giallo{
-        position: relative;
-        left: -150px;
-        bottom: 203px;
-        font-size: 10px;
-        width: 195px;
-      }
-  
-      #verdi{
-        position: relative;
-        bottom: 215px;
-        font-size: 10px;
-        left: 20px;
-      }
-
-      #verde{
-        position: relative;
-        left: -150px;
-        bottom: 187px;
-        font-size: 10px;
-        width: 195px;
-      }
-
-      #violi{
-        position: relative;
-        bottom: 198px;
-        font-size: 10px;
-        left: 20px;
-      }
-
-      #viola{
-        position: relative;
-        left: -150px;
-        bottom: 170px;
-        font-size: 10px;
-        width: 195px;
-      }
-      
-      #fine{
-        position: relative;
-        left: -18px;
-        top: 270px;
-      }
-    
-      #invio{
-        background-color: rgb(59, 101, 253);
-        width: 220px;
-        position: relative;
-        left: 20px;
-        top: 140px;
-        height: 40px;
-        border: 0px;
-        border-radius: 10px;
-        color: white;
-    }
-     
-    #register{
-        position: relative;
-        font-size: 30px;
-        left: -480px; 
-        top: -80px;
-        font-size: 25px;
-        border-radius: 20px;
-        background-color: #04AA6D;
-    }
-    
-    
-    }
-    
-    </style>
-    
-    <div id="loghetto">
-        <img class="img-responsive" src="../../LogoToken/logo quad.svg" width="100" height="100">
-      </div>
-    
-    <div class="container">
-      <form action="/action_page.php">
-        <div id="blue">
-          <div class="col-25">
-            <label for="fname">E-mail:</label>
-          </div>
-        </div>
-          <div class="col-75" id="blu">
-            <input type="text" id="fname" name="firstname" placeholder="Inserisci E-mail...">
-          </div>
-        </div>
-
-        <div id="rossi">
-          <div class="col-25">
-            <label for="lname">Nuovo nome Utente:</label>
-          </div>
-        </div>
-          <div class="col-75" id="rosso">
-            <input type="text" id="lname" name="lastname" placeholder="Inserisci Nuovo nome...">
-          </div>
-    
-        <div id="gialli">
-          <div class="col-25">
-            <label for="lname">Password:</label>
-          </div>
-        </div>
-          <div class="col-75" id="giallo">
-            <input type="text" id="lname" name="lastname" placeholder="Inserisci Password...">
-          </div>
-        
-          <div id="verdi">
-            <div class="col-25">
-              <label for="fname">Conferma Password:</label>
-            </div>
-          </div>
-            <div class="col-75" id="verde">
-              <input type="text" id="fname" name="firstname" placeholder="Conferma Password...">
-            </div>
-          </div>
-        
-          <div id="violi">
-            <div class="col-25">
-              <label for="fname">Numero di telefono:</label>
-            </div>
-          </div>
-            <div class="col-75" id="viola">
-              <input type="text" id="fname" name="firstname" placeholder="Inserisci Numero di telefono...">
-            </div>
-          </div>
-       
-          </div>
-      </form>
-    
-      <div id="scritta">
-        <a href="passdimenticata.html" id="scritta">Hai già un account?</a>
-      </div>
-    
-      <div id="registraz">
-        <a href="registrazione.html"><button id="register"><strong>Registrati</strong></button></a>
+      <div class="cacca">
+        <!-- Simple link -->
+        <a href="#!">Forgot password?</a>
       </div>
     </div>
-    
-    
-    <div id="fine">
-    <a href="mailto:bendelewisdom@gmail.com"><strong style="color:rgb(11, 138, 128)">My Booken | &copy 2023</strong></a> 
-    </div>
-    
-      <script src="JS/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
-    </body>
-    </html>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTRAZIONE</title>
-    <link rel="stylesheet" href="registrazionecs.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
-<script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
-</head>
-<body>
-    <div id="icone"><img src="../../LogoToken/logo quad.svg" width="120" height="120" id="loghetto">
-      
-        </div>
-    
-
-    <br>
-    <br>
-    <br>
-    <div id="boxed">
-    <div id="formio"><script type="text/javascript">
-        window.onload = function() {
-          Formio.createForm(document.getElementById('formio'), 'https://ghvjqncfntjvfsb.form.io/user/register');
-        };
-      </script></div>
-      <br>
-      </div>
-      <div id="registraz">
-        <a href="registrazione.html"><strong><br>Registrati</strong></a>
-        
-        <a href="accesso_registrazione.html" id="scritt">Ho già un account</a>  
-      </div>
-      
-      
-</body>
-</html>
-
+  </div>
+  
+    <!-- Submit button -->
+    <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a href="#!">Register</a></p>
+      <p>or sign up with:</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
