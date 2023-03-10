@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'libri',
     'autenticazione',
+    'qr_code',
 ]
 
 MIDDLEWARE = [

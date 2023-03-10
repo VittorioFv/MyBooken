@@ -1,3 +1,4 @@
+{% load qr_code %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +27,8 @@
 
     {% block content %}
     {% endblock %}
+
+    {% qr_from_text "https://www.wikipedia.org"%}
 
 
     {% include 'footer.html' %}
