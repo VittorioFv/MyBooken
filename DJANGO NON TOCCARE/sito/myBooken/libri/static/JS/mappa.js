@@ -14,6 +14,10 @@ map.addLayer(mapnik);
 map.addLayer(markers);
 map.setCenter(position, zoom);
 
+setCenterCoordinatesLonLat(10.9924122, 45.4384958);
+
+cercaCittaFromLonLat(10.9924122, 45.4384958);
+
 function setCenterCoordinatesLonLat(lon, lat) // Sposta la mappa sulle cordinate longitudine latitudine
 {
   var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
@@ -21,6 +25,9 @@ function setCenterCoordinatesLonLat(lon, lat) // Sposta la mappa sulle cordinate
   var position       = new OpenLayers.LonLat(lon,lat).transform( fromProjection, toProjection);
 
   map.setCenter(position, zoom);
+
+  document.getElementById("latitudine").value = lat;
+  document.getElementById("longitudine").value = lon;
 }
 
 function createMarker(lon, lat) /**posiziona un marker e elimina i marker precedenti ***/
@@ -62,3 +69,51 @@ function cercaCitta() {
         alert(error);
     });
 }
+
+function getCenterCoordinates() /****** ricava le coordinate centrali della posizione della mappa */
+{
+  var center = map.getCenter();
+  var fromProjection = new OpenLayers.Projection("EPSG:900913"); // Spherical Mercator Projection
+  var toProjection = new OpenLayers.Projection("EPSG:4326"); // Transform to WGS 1984
+  var centerLonLat = center.transform(fromProjection, toProjection);
+  var lat = centerLonLat.lat;
+  var lon = centerLonLat.lon;
+
+  cercaCittaFromLonLat(lon, lat)
+}
+
+function cercaCittaFromLonLat(lon, lat) {
+  createMarker(lon, lat);
+  
+  var url = "https://nominatim.openstreetmap.org/reverse?format=json&lat="+ lat +"&lon="+ lon;
+
+  var callNominatiumApi = fetch(url);
+
+  callNominatiumApi.then(function (response) {
+      return response.json();
+  }).then(function (data) {  
+      if (data) {
+        document.querySelector("#citta").value =  data.address.suburb + ", " + data.address.city;
+      } else {
+        alert("Non ho trovato niente")
+      }
+  }).catch(function (error) {
+      alert(error);
+  });
+}
+
+// nascondo i form non utilizzati
+let h = document.querySelectorAll(".inputHidden")
+for(let i of h){
+  i.parentNode.style.display = "none";
+}
+
+
+document.getElementById("bottoneRicerca").addEventListener("click", () => {cercaCitta()});
+
+document.getElementById("bottoneRicercaMappa").addEventListener("click", () => {getCenterCoordinates()});
+
+/*document.getElementById("form_aggiungi_libro").addEventListener("submit", () => {
+
+});*/
+
