@@ -57,6 +57,9 @@ def aggiungiLibro(request):
     if form.is_valid():
       libro = form.save(commit=False)
       libro.idUser = request.user
+
+      
+
       libro.save()
 
       return redirect('i_miei_libri')

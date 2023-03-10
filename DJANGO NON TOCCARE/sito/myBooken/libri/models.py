@@ -14,4 +14,8 @@ class Libri(models.Model):
 
   citta = models.CharField(max_length=50)
 
+  longitudine = models.FloatField(max_length=50)
+  latitudine = models.FloatField(max_length=50)
+
+
   immagine = models.ImageField(upload_to='images/')
