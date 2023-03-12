@@ -1,16 +1,19 @@
 from django.forms import ModelForm
 from libri.models import Libri
 
+from django import forms 
+
 class formAggiuntaLibri(ModelForm):
     
     class Meta:
         
         model = Libri
         fields = ('isbn','titolo','autore','descrizione','citta','immagine','longitudine','latitudine')
-        
 
     def __init__(self, *args, **kwargs):
         super(formAggiuntaLibri, self).__init__(*args, **kwargs)
+
+        self.fields['isbn'].label = "ISBN"
 
         self.fields['isbn'].widget.attrs['class'] = 'form-control'
         self.fields['titolo'].widget.attrs['class'] = 'form-control'

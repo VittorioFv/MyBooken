@@ -53,7 +53,7 @@ def modificaLibro(request, id):
 @login_required
 def aggiungiLibro(request):
   if request.method == 'POST':
-    form = formAggiuntaLibri(request.POST)
+    form = formAggiuntaLibri(request.POST, request.FILES)
     if form.is_valid():
       libro = form.save(commit=False)
       libro.idUser = request.user

@@ -18,4 +18,4 @@ class Libri(models.Model):
   latitudine = models.FloatField(max_length=50)
 
 
-  immagine = models.ImageField(upload_to='images/')
+  immagine = models.ImageField(null = True, blank = True, upload_to="images/libri/")
