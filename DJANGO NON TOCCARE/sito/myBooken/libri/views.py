@@ -6,21 +6,20 @@ from libri.forms import formAggiuntaLibri
 from libri.forms import formModificaLibri
 from .models import Libri, Categorie
 
+from django.db.models import Q
+
 from django.contrib.auth.decorators import login_required
 
 @login_required
 def libri(request):
-  mylibri = mylibri = Libri.objects.exclude( idUser = request.user.id)
-  # values_list('titolo') solo per titolo
-  # filter(titolo='prova').values()
-  # filter(firstname__startswith='L').values()
-  # order_by('-firstname').values()
-
-  template = loader.get_template('esplora.html')
-  context = {
+  mylibri = Libri.objects.exclude(idUser = request.user.id)
+  if request.method == 'POST':
+    testoDaCercare = request.POST.get('cercaLibri')
+    mylibri = mylibri.filter(Q(titolo__icontains = testoDaCercare) | Q(descrizione__icontains = testoDaCercare) | Q(autore__icontains = testoDaCercare) | Q(isbn__icontains = testoDaCercare))
+  
+  return render(request, 'esplora.html', {
     'mylibri': mylibri,
-  }
-  return HttpResponse(template.render(context, request))
+  })
 
 @login_required
 def dettagliLibro(request, id):
