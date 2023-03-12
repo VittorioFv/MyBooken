@@ -1,7 +1,7 @@
 {% extends "master.html" %}
 
 {% block title %}
-  MyBooken esplora
+  MyBooken I miei libri
 {% endblock %}
 
 {% block content %}
@@ -9,18 +9,27 @@
   <div class="row horizScroll">
     {% for x in mylibri %}
       <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
-        <a href="dettagli_libro/{{ x.id }}">
-          <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
+        <a href="modifica_libro/{{ x.id }}">
+          {% if x.immagine %}
+            <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
+          {% endif %}
           <div class="card-body">
               <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
           </div>
           <div class="card-footer">
-              <small class="text-muted testoFooter">{{ x.autore }}</small>
+            <small class="text-muted testoFooter">
+              {{ x.autore }}
+            </small>
+            <a href="elimina_libro/{{ x.id }}">
+              ELIMINA
+            </a>
           </div>
         </a>
       </div>
     {% endfor %}
   </div>
+
+  <a href="{% url 'aggiungi_libro' %}"> Aggiungi libro </a>
 
 {% endblock %}
 

@@ -4,15 +4,27 @@
   Aggiungi libro MyBooken
 {% endblock %}
 
+{% block headCss %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+{% endblock %}
+
 {% block content %}
 
-<form action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
+<form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
     {% csrf_token %}
     
     {{ form.as_div }}
 
+    <button type="button" id="bottoneRicerca">Cerca nella mappa</button>
+    <button type="button" id="bottoneRicercaMappa">Ricava dalla mappa</button>
     <input type = "submit" value = "Submit">
-
 </form>
+
+<div id="basicMap"></div>
+
+<script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
 
 {% endblock %}

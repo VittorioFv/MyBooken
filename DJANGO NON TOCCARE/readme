@@ -18,6 +18,12 @@ far partire il server:
 andare in http://127.0.0.1:8000/libri/
 
 
+migration:
+	py manage.py makemigrations libri
+
+	python manage.py migrate
+	
+
 Requisito per creare token per l'accesso con l'email:
 	
 	Token conferma email:
