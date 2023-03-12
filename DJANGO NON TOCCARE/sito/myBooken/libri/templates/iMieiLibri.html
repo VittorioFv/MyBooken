@@ -17,7 +17,12 @@
               <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
           </div>
           <div class="card-footer">
-              <small class="text-muted testoFooter">{{ x.autore }}</small>
+            <small class="text-muted testoFooter">
+              {{ x.autore }}
+            </small>
+            <a href="elimina_libro/{{ x.id }}">
+              ELIMINA
+            </a>
           </div>
         </a>
       </div>

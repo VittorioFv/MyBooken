@@ -4,7 +4,7 @@ from django.template import loader
 
 from libri.forms import formAggiuntaLibri
 from libri.forms import formModificaLibri
-from .models import Libri
+from .models import Libri, Categorie
 
 from django.contrib.auth.decorators import login_required
 
@@ -26,6 +26,23 @@ def libri(request):
 def dettagliLibro(request, id):
   mylibri = Libri.objects.get(id=id)
   template = loader.get_template('dettagliLibro.html')
+  context = {
+    'mylibri': mylibri,
+  }
+  return HttpResponse(template.render(context, request))
+
+
+
+
+@login_required
+def mieiLibri(request):
+  mylibri = Libri.objects.filter( idUser = request.user.id)
+  # values_list('titolo') solo per titolo
+  # filter(titolo='prova').values()
+  # filter(firstname__startswith='L').values()
+  # order_by('-firstname').values()
+
+  template = loader.get_template('iMieiLibri.html')
   context = {
     'mylibri': mylibri,
   }
@@ -56,9 +73,12 @@ def aggiungiLibro(request):
     form = formAggiuntaLibri(request.POST, request.FILES)
     if form.is_valid():
       libro = form.save(commit=False)
+      
       libro.idUser = request.user
 
       libro.save()
+
+      form.save_m2m()
 
       return redirect('i_miei_libri')
   else:
@@ -68,15 +88,8 @@ def aggiungiLibro(request):
   })
 
 @login_required
-def mieiLibri(request):
-  mylibri = Libri.objects.filter( idUser = request.user.id)
-  # values_list('titolo') solo per titolo
-  # filter(titolo='prova').values()
-  # filter(firstname__startswith='L').values()
-  # order_by('-firstname').values()
+def eliminaLibro(request, id):
+  libro = Libri.objects.get(pk=id)
+  libro.delete()
 
-  template = loader.get_template('iMieiLibri.html')
-  context = {
-    'mylibri': mylibri,
-  }
-  return HttpResponse(template.render(context, request))
+  return redirect('i_miei_libri')

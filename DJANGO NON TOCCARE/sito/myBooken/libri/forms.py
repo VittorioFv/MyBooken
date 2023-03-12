@@ -1,15 +1,24 @@
 from django.forms import ModelForm
-from libri.models import Libri
+from libri.models import Libri, Categorie 
 
-from django import forms 
+from django import forms
+
+class CategorieField(forms.ModelMultipleChoiceField):
+    def label_from_instance(self, categoria):
+        return str(categoria.nomeCategoria)
 
 class formAggiuntaLibri(ModelForm):
     
     class Meta:
         
         model = Libri
-        fields = ('isbn','titolo','autore','descrizione','citta','immagine','longitudine','latitudine')
+        fields = ('isbn','titolo','autore','descrizione','citta','immagine','longitudine','latitudine','categoria')
 
+    categoria = CategorieField(
+        queryset = Categorie.objects.all(),
+        widget = forms.CheckboxSelectMultiple
+    )
+    
     def __init__(self, *args, **kwargs):
         super(formAggiuntaLibri, self).__init__(*args, **kwargs)
 
