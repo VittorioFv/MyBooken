@@ -4,14 +4,32 @@ from django.template import loader
 
 from libri.forms import formAggiuntaLibri
 from libri.forms import formModificaLibri
+from autenticazione.models import Profilo
 from .models import Libri, Categorie
 
 from django.db.models import Q
 
 from django.contrib.auth.decorators import login_required
 
+import geopy
+import geopy.distance
+
 @login_required
 def libri(request):
+  profilo = Profilo.objects.get(user = request.user.id)
+  lon = 180 # a 180 c'è il salto
+  lat = 90
+  
+  start = geopy.Point(lat, lon)
+  d = geopy.distance.distance(kilometers = 10)
+
+  print(start)
+  print(d.destination(point=start, bearing=0).latitude) # 1km nord
+  print(d.destination(point=start, bearing=180).latitude) # 1km sud
+
+  print(d.destination(point=start, bearing=90).longitude) # 1km est
+  print(d.destination(point=start, bearing=270).longitude) # 1km ovest
+
   mylibri = Libri.objects.exclude(idUser = request.user.id)
   if request.method == 'POST':
     testoDaCercare = request.POST.get('cercaLibri')

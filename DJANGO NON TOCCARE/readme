@@ -31,3 +31,6 @@ Requisito per creare token per l'accesso con l'email:
 	
 	model con immagini:
 		python -m pip install Pillow 
+
+	Mappe e distanze tra punti:
+		pip install geopy
