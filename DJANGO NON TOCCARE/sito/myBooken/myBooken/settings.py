@@ -121,8 +121,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 LOGIN_REDIRECT_URL = "/libri"
-LOGIN_URL = "/login"
-LOGOUT_REDIRECT_URL = "/login"
+LOGIN_URL = "/login/"
+LOGOUT_REDIRECT_URL = "/login/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -133,8 +133,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Verifica email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_FORM = ''
-EMAIL_HOST_USER = ''
+EMAIL_FORM = 'mybooken.noreply@gmail.com'
+EMAIL_HOST_USER = 'mybooken.noreply@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
