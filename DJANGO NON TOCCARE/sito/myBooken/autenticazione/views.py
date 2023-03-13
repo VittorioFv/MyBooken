@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib import messages
-from .forms import formDiRegistrazione
+from .forms import formDiRegistrazione, formProfilo
 # EMAIL VERIFICA
 from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
@@ -10,6 +10,8 @@ from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
 
 from .tokensAutenticazione import account_activation_token
+
+from django.contrib.auth.models import User
 
 def activateEmail(request, user, to_email):
     oggettoMail = " Attiva il tuo account di MyBooken"
@@ -69,24 +71,30 @@ def logoutUtente(request):
 def registrazioneUtente(request):
     if request.method == 'POST':
         form = formDiRegistrazione(request.POST)
-        if form.is_valid():
+        formP = formProfilo(request.POST)
+        if form.is_valid() and formP.is_valid():
             utente = form.save(commit = False)
-            
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
-            
-            # utente = authenticate(username = username, password = password) Proviene da un altro tutorial ma sembra inutile
+            profilo = formP.save(commit = False)
 
             utente.is_active = False # utente "in pause" finche non conferma la mail
             utente.save()
 
-            # activateEmail(request, utente, form.cleaned_data.get('email'))
+            profilo.user = utente
+            profilo.save()
 
-            # login(request, utente)
+            activateEmail(request, utente, form.cleaned_data.get('email'))
 
             return render(request, 'confermaMail.html', {'nome': utente.username})
     else:
         form = formDiRegistrazione()
+        formP = formProfilo()
     return render(request, 'registrazione.html', {
         'form': form,
+        'formP': formP,
     })
+
+def confermaPosizione(modello, request):
+    if request.method == 'POST':
+        print(request)
+    
+    return render(request, 'confermaMail.html', {'nome': modello.citta})

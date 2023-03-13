@@ -31,8 +31,6 @@ def dettagliLibro(request, id):
   return HttpResponse(template.render(context, request))
 
 
-
-
 @login_required
 def mieiLibri(request):
   mylibri = Libri.objects.filter( idUser = request.user.id)

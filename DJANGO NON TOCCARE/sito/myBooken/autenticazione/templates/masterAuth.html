@@ -14,6 +14,11 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/generale.css' %}">
 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/form.css' %}">
+
+    {% block headCss %}{% endblock %}
+
 </head>
 <body>
     {% block content %}

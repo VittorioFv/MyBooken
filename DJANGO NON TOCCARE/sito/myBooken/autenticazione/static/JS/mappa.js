@@ -16,8 +16,6 @@ map.setCenter(position, zoom);
 
 setCenterCoordinatesLonLat(10.9924122, 45.4384958);
 
-cercaCittaFromLonLat(10.9924122, 45.4384958);
-
 function setCenterCoordinatesLonLat(lon, lat) // Sposta la mappa sulle cordinate longitudine latitudine
 {
   var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
@@ -67,6 +65,10 @@ function cercaCitta() {
         }
     }).catch(function (error) {
         alert(error);
+    }).finally(() => {
+      document.getElementById('nascondiSotto').style.display = "block";
+      document.getElementById('schedaMappa').style.display = "block";
+      document.getElementById('schedaMappa').style.opacity = "100%";
     });
 }
 
@@ -78,28 +80,6 @@ function getCenterCoordinates() /****** ricava le coordinate centrali della posi
   var centerLonLat = center.transform(fromProjection, toProjection);
   var lat = centerLonLat.lat;
   var lon = centerLonLat.lon;
-
-  cercaCittaFromLonLat(lon, lat)
-}
-
-function cercaCittaFromLonLat(lon, lat) {
-  createMarker(lon, lat);
-  
-  var url = "https://nominatim.openstreetmap.org/reverse?format=json&lat="+ lat +"&lon="+ lon;
-
-  var callNominatiumApi = fetch(url);
-
-  callNominatiumApi.then(function (response) {
-      return response.json();
-  }).then(function (data) {  
-      if (data) {
-        document.querySelector("#citta").value =  data.address.suburb + ", " + data.address.city;
-      } else {
-        alert("Non ho trovato niente")
-      }
-  }).catch(function (error) {
-      alert(error);
-  });
 }
 
 // nascondo i form non utilizzati
@@ -108,12 +88,22 @@ for(let i of h){
   i.parentNode.style.display = "none";
 }
 
+document.getElementById("schedaMappa").style.display = "none";
 
-document.getElementById("bottoneRicerca").addEventListener("click", () => {cercaCitta()});
+var conferma = false;
+document.querySelector("form").addEventListener("submit", (e) => {
+  if (!conferma) {
+    e.preventDefault();
 
-document.getElementById("bottoneRicercaMappa").addEventListener("click", () => {getCenterCoordinates()});
+    cercaCitta();
 
-/*document.getElementById("form_aggiungi_libro").addEventListener("submit", () => {
+  } else {
+    console.log("ciao");
+  }
+});
 
-});*/
+document.querySelector("#bottoneRicerca").addEventListener("click", () => {
+  conferma = true;
+  document.querySelector("form").submit();
+});
 

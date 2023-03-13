@@ -1,0 +1,23 @@
+{% extends "masterAuth.html" %}
+
+{% block title %}
+  Login MyBooken
+{% endblock %}
+
+{% block content %}
+
+    {% if messages %}
+        {% for ms in messages %}
+            {{ ms }}
+        {% endfor %}
+    {% endif %}
+
+    <form action = "" method = POST>
+        {% csrf_token %}
+        Username: <input type = "number" name = "longitudine"><br>
+        Password: <input type = "number" name = "latitudine"><br>
+    </form>
+
+    <a href="{% url 'registrazione' %}"> Registrati </a>
+
+{% endblock %}
