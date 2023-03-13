@@ -16,12 +16,15 @@
     
     {{ form.as_div }}
 
-    <button type="button" id="bottoneRicerca">Cerca nella mappa</button>
-    <button type="button" id="bottoneRicercaMappa">Ricava dalla mappa</button>
     <input type = "submit" value = "Submit">
 </form>
 
-<div id="basicMap"></div>
+<div id="nascondiSotto"></div>
+<div id="schedaMappa">
+  <div id="basicMap"></div>
+  <h3> La posizione è corretta? </h3>
+  <button type="button" id="bottoneRicerca">Sì</button>
+</div>
 
 <script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
 {% load static %}

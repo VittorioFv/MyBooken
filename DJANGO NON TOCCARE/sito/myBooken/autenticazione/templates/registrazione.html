@@ -6,6 +6,11 @@
 
 {% block content %}
 
+{% block headCss %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+{% endblock %}
+
 <form action = "{% url 'registrazione' %}" method = POST>
     {% csrf_token %}
     
@@ -15,5 +20,17 @@
     <input type = "submit" value = "Submit">
 
 </form>
+
+
+<div id="nascondiSotto"></div>
+<div id="schedaMappa">
+  <div id="basicMap"></div>
+  <h3> La posizione è corretta? </h3>
+  <button type="button" id="bottoneRicerca">Sì</button>
+</div>
+
+<script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
 
 {% endblock %}
