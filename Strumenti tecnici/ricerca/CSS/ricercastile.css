@@ -3,13 +3,13 @@
     padding: 0px;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-input{
+input {
     padding-left: 10px;
 }
 
@@ -75,35 +75,34 @@ input{
     text-decoration: none;
 }
 
-
 .categoryscrollmenufiltrata {
     margin-top: 10px;
-    line-height: 22px;
+    line-height: 15px;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row; 
-    
+   
+
 }
 
 .singlecategoryfiltrata {
-    display: flex;
-    justify-content: flex-start;
+    display: inline-block;
     color: gray;
     background-color: lightblue;
-    padding: 4px;
+    padding: 3px;
     border-radius: 10px;
     font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .singlecategoryfiltrata a {
     margin-left: 5px;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .nascosto {
-    visibility: hidden;
+    display: none;
 }
-
 
 /* Contenitore Bowser */
 .container-fluid {
@@ -134,10 +133,8 @@ input{
     z-index: -1;
 }
 
-
-
 /* Contenitore Mobile */
-.containermapmobile{
+.containermapmobile {
     visibility: hidden;
     z-index: -1;
 }
@@ -171,22 +168,22 @@ button {
     border: transparent;
 }
 
-#show-modal-btn{
+#show-modal-btn {
     bottom: 0;
-    right: 0; 
+    right: 0;
     position: absolute;
     margin: 10px;
     margin-bottom: 56px;
 }
 
-#close-modal-btn{
+#close-modal-btn {
     float: right;
     right: 10px;
     top: 10px;
     margin: 10px;
 }
 
-.containersearchpopup{
+.containersearchpopup {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -197,11 +194,11 @@ button {
 
 
 @media only screen and (max-width: 992px) {
-    .containermapmobile{
+    .containermapmobile {
         visibility: visible;
     }
 
-    .container-fluid{
+    .container-fluid {
         visibility: hidden;
     }
-  }
+}
