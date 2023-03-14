@@ -77,11 +77,12 @@ input{
 
 
 .categoryscrollmenufiltrata {
-    margin-top: 20px;
+    margin-top: 10px;
     line-height: 22px;
     display: flex;
     justify-content: flex-start;
     flex-direction: row; 
+    
 }
 
 .singlecategoryfiltrata {
@@ -96,6 +97,7 @@ input{
 
 .singlecategoryfiltrata a {
     margin-left: 5px;
+    text-decoration: none;
 }
 
 .nascosto {
@@ -110,7 +112,7 @@ input{
     justify-content: space-between;
     width: 100vw;
     height: 600px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     z-index: -1;
 }
