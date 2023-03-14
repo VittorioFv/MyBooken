@@ -54,7 +54,6 @@ input{
     overflow-y: hidden;
     margin-top: 15px;
     line-height: 22px;
-    
 }
 
 .singlecategory {
@@ -74,6 +73,33 @@ input{
     text-align: center;
     padding: 14px;
     text-decoration: none;
+}
+
+
+.categoryscrollmenufiltrata {
+    margin-top: 20px;
+    line-height: 22px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row; 
+}
+
+.singlecategoryfiltrata {
+    display: flex;
+    justify-content: flex-start;
+    color: gray;
+    background-color: lightblue;
+    padding: 4px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.singlecategoryfiltrata a {
+    margin-left: 5px;
+}
+
+.nascosto {
+    visibility: hidden;
 }
 
 

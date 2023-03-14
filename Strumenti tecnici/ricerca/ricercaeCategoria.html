@@ -27,19 +27,44 @@
 
     <!--  Category Scrolling ------>
     <div class="categoryscrollmenu">
-        <div class="singlecategory"><a href="#home">Istruzione</a></div>
-        <div class="singlecategory"><a href="#home">Letteratura e narrativa</a></div>
-        <div class="singlecategory"><a href="#home">Storia</a></div>
-        <div class="singlecategory"><a href="#home">Gialli e thriller</a></div>
-        <div class="singlecategory"><a href="#home">Arte, cinema e fotografia</a></div>
-        <div class="singlecategory"><a href="#home">Romanzi</a></div>
-        <div class="singlecategory"><a href="#home">Biografia</a></div>
-        <div class="singlecategory"><a href="#home">Avventura e azione</a></div>
-        <div class="singlecategory"><a href="#home">Fumetti e manga</a></div>
-        <div class="singlecategory"><a href="#home">Fantascienza</a></div>
-        <div class="singlecategory"><a href="#home">Distopia</a></div>
-        <div class="singlecategory"><a href="#home">Fantasy</a></div>
-        <div class="singlecategory"><a href="#home">Umorismo</a></div>
+
+        <div class="singlecategory"><a href="#" data-id="istruzione">Istruzione</a></div>
+        <div class="singlecategory"><a href="#" data-id="letteraturaenarrativa">Letteratura e narrativa</a></div>
+        <div class="singlecategory"><a href="#" data-id="storia">Storia</a></div>
+        <div class="singlecategory"><a href="#" data-id="gialliethriller">Gialli e thriller</a></div>
+        <div class="singlecategory"><a href="#" data-id="artecinemaefotografia">Arte, cinema e fotografia</a></div>
+        <div class="singlecategory"><a href="#" data-id="romanzi">Romanzi</a></div>
+        <div class="singlecategory"><a href="#" data-id="biografia">Biografia</a></div>
+        <div class="singlecategory"><a href="#" data-id="avventuraeazione">Avventura e azione</a></div>
+        <div class="singlecategory"><a href="#" data-id="fumettiemanga">Fumetti e manga</a></div>
+        <div class="singlecategory"><a href="#" data-id="fantascienza">Fantascienza</a></div>
+        <div class="singlecategory"><a href="#" data-id="distopia">Distopia</a></div>
+        <div class="singlecategory"><a href="#" data-id="fantasy">Fantasy</a></div>
+        <div class="singlecategory"><a href="#" data-id="umorismo">Umorismo</a></div>
+    </div>
+
+    <div class="categoryscrollmenufiltrata">
+        <div class="singlecategoryfiltrata nascosto" id="istruzione">Istruzione<a href="#" data-id="istruzione"> x</a>
+        </div>
+        <div class="singlecategoryfiltrata nascosto" id="letteraturaenarrativa">Letteratura e narrativa<a href="#"
+                data-id="letteraturaenarrativa"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="storia">Storia<a href="#" data-id="storia">x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="gialliethriller">Gialli e thriller<a href="#"
+                data-id="gialliethriller"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="artecinemaefotografia">Arte, cinema e fotografia<a href="#"
+                data-id="artecinemaefotografia"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="romanzi">Romanzi<a href="#" data-id="romanzi"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="biografia">Biografia<a href="#" data-id="biografia"> x</a>
+        </div>
+        <div class="singlecategoryfiltrata nascosto" id="avventuraeazione">Avventura e azione<a href="#"
+                data-id="avventuraeazione"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="fumettiemanga">Fumetti e manga<a href="#"
+                data-id="fumettiemanga"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="fantascienza">Fantascienza<a href="#" data-id="fantascienza">
+                x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="distopia">Distopia<a href="#" data-id="distopia"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="fantasy">Fantasy<a href="#" data-id="fantasy"> x</a></div>
+        <div class="singlecategoryfiltrata nascosto" id="umorismo">Umorismo<a href="#" data-id="umorismo"> x</a></div>
     </div>
 
     <!-- Contenitore Browser --->
@@ -79,8 +104,8 @@
     <!-- Contenitore Mobile --->
     <div class="containermapmobile">
 
-        <button type="submit" id="show-modal-btn" onclick="myalert()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+        <button type="submit" id="show-modal-btn" onclick="myalert()"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
             </svg></button>
 
@@ -112,6 +137,7 @@
         </div>
     </div>
 
+    <script src="javascript/filtercategory.js"></script>
     <script src="javascript/popupmap.js"></script>
 </body>
 
