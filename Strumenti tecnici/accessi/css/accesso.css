@@ -45,7 +45,7 @@ label{
 
 #fine{
     position: relative;
-    bottom: -80px;
+    bottom: -94px;
 }
 
 
@@ -103,6 +103,11 @@ label{
     .row{
         position: relative;
         left: 20px;
+    }
+
+    #fine{
+        position: relative;
+        bottom: 20px;
     }
   }
   

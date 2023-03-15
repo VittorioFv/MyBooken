@@ -62,22 +62,7 @@ label{
 
 #fine{
     position: relative;
-    bottom: -80px;
-}
-
-
-.container {
-    border-radius: 20px;
-    background-color: #b6ecd9;
-    width: 45%;
-    height: 700px;
-    position: relative;
-  }
-
-  
-#fine{
-    position: relative;
-    bottom: -140px;
+    bottom: -70px;
 }
 
 .btn-primary{
@@ -94,9 +79,9 @@ label{
     border-radius: 20px;
     background-color: #b6ecd9;
     width: 45%;
-    height: 470px;
+    height: 540px;
     position: relative;
-    top: 15px;
+    top: 40px;
   }
 
   .row{
@@ -108,13 +93,13 @@ label{
 
   .form-check-label{
     position: relative;
-    left: -120px;
+    left: -40px;
     top: -40px;
   }
 
   .form-check-input{
     position: relative;
-    left: -150px;
+    left: -50px;
     top: -40px;
 }
 
@@ -133,7 +118,7 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 600px;
+        height: 640px;
         margin: auto;
     }
 
@@ -174,8 +159,27 @@ label{
     .form-check-input{
         position: relative;
         left: -20px;
-        top: -30px;
+        top: -80px;
     }
+
+    .form-check-label{
+        position: relative;
+        left: -20px;
+        top: -80px;
+    }
+
+    .btn-primary{
+        position: relative;
+        left: -10px;
+        top: -80px;
+    }
+
+    .text-center{
+        position: relative;
+        left: -6px;
+        top: -70px;
+    }
+    
 
   }
   
