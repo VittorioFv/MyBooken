@@ -17,20 +17,40 @@ input {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: right;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    height: 24px;
+    
+
 }
+.containersearch input{
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    
+}
+
+.containersearch button{
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    
+}
+
 
 #textsearch {
-    width: 40%;
     border: transparent;
     border-radius: 10px;
-    background-color: lightblue;
-}
+    background-color: #A7DCEA;
+} 
 
-#btnSubmit,
-#btnFunnel {
+#btnSubmit {
     width: 25px;
     height: 25px;
     background-color: transparent;
@@ -38,13 +58,13 @@ input {
     border: transparent;
 }
 
-#btnFunnel svg,
 #btnSubmit svg,
 #openmap svg,
 #closemap svg {
     display: flex;
     justify-content: center;
     margin-left: 5px;
+    color: #005E79; 
 }
 
 .categoryscrollmenu {
@@ -57,7 +77,7 @@ input {
 }
 
 .singlecategory {
-    background-color: #333;
+    background-color: #DFF0E4;
     border-radius: 10px;
     display: inline-block;
     margin-bottom: 15px;
@@ -69,7 +89,7 @@ input {
 }
 
 .singlecategory a {
-    color: white;
+    color: #36867D;
     text-align: center;
     padding: 14px;
     text-decoration: none;
@@ -77,27 +97,25 @@ input {
 
 .categoryscrollmenufiltrata {
     margin-top: 10px;
-    line-height: 15px;
-    display: flex;
-   
-
+    display: inline-table;
 }
 
 .singlecategoryfiltrata {
     display: inline-block;
     color: gray;
-    background-color: lightblue;
+    background-color: #DFF0E4;
     padding: 3px;
     border-radius: 10px;
     font-size: 12px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin: 2px;
+    line-height: 15px;
 }
 
 .singlecategoryfiltrata a {
-    margin-left: 5px;
+    margin-left: 3px;
     text-decoration: none;
     font-size: 15px;
+    color: #36867D;
 }
 
 .nascosto {
@@ -110,9 +128,8 @@ input {
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
-    height: 600px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    height: 100vh;
+    margin-top: 5px;
     z-index: -1;
 }
 
@@ -122,6 +139,7 @@ input {
     background-color: #333;
     padding: 20px;
     height: 100vh;
+    z-index: 0;
 }
 
 .containermap {
@@ -130,7 +148,7 @@ input {
     background-color: #777;
     padding: 20px;
     height: 100vh;
-    z-index: -1;
+    z-index: 0;
 }
 
 /* Contenitore Mobile */
@@ -163,9 +181,10 @@ input {
 button {
     width: 36px;
     height: 36px;
-    background-color: lightblue;
+    background-color: #A7DCEA;
     border-radius: 50px;
     border: transparent;
+    cursor: pointer;
 }
 
 #show-modal-btn {
@@ -174,6 +193,7 @@ button {
     position: absolute;
     margin: 10px;
     margin-bottom: 56px;
+    color: #005E79;
 }
 
 #close-modal-btn {
@@ -181,6 +201,7 @@ button {
     right: 10px;
     top: 10px;
     margin: 10px;
+    color: #005E79;
 }
 
 .containersearchpopup {
@@ -200,5 +221,11 @@ button {
 
     .container-fluid {
         visibility: hidden;
+    }
+
+    .containersearch input{
+        width: 50%;
+        padding-right: 20px;
+        box-sizing: border-box;        
     }
 }
