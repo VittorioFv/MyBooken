@@ -3,3 +3,49 @@
     margin: 0px;
 }
 
+.contenitorelibrovrt {
+   padding: 0px;
+   margin: 0px;
+}
+
+#toplibrovrt {
+    background-color: lightgreen;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    
+    display: inline-block;
+    float: left;
+}
+
+#toplibrovrt img {
+    background-color: lightgreen;
+    width: 80%;
+    height: 80%;
+    
+}
+
+#bodylibrovrt {
+    background-color: lightgray;
+    height: 300px;
+    display: inline-block;
+    width: 70%;
+    float: right;
+}
+
+#footerlibrovrt {
+    background-color: lightskyblue;
+    bottom: 0px;
+    
+    
+}
+
+#footerlibrovrt locationlibrovrt {
+    float: left;
+    
+}
+
+#footerlibrovrt isbnlibrovrt {
+    float: right;
+    
+}
