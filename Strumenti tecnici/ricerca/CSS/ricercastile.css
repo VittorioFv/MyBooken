@@ -16,31 +16,26 @@ input {
 .containersearch {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: right;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 5px;
     position: relative;
     height: 24px;
-    
-
 }
+
 .containersearch input{
     width: 50%;
     padding-right: 20px;
     box-sizing: border-box;
-    
 }
 
 .containersearch button{
     top: 0;
     bottom: 0;
     padding: 0;
-    margin: auto;
+    margin-left: -25px;
     width: 25px;
-    height: 25px;
-    position: absolute;
-    
+    height: 25px; 
 }
 
 
@@ -209,9 +204,31 @@ button {
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    margin-bottom: 10px;
     transform: translateY(-20px);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    height: 24px;
 }
+
+.containersearchpopup input{
+    width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+    
+}
+
+.containersearchpopup button{
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin-left: -25px;
+    width: 25px;
+    height: 25px; 
+}
+
+
+
 
 
 @media only screen and (max-width: 992px) {
