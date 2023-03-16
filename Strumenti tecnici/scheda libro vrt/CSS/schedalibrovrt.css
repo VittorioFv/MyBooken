@@ -6,46 +6,52 @@
 .contenitorelibrovrt {
    padding: 0px;
    margin: 0px;
+   background-color: #DFF0E4;
+   height: 300px;
 }
 
 #toplibrovrt {
-    background-color: lightgreen;
+    background-color: #DFF0E4;
     width: 30%;
-    height: 300px;
+    height: 90%;
     text-align: center;
-    
     display: inline-block;
     float: left;
+    
 }
 
 #toplibrovrt img {
-    background-color: lightgreen;
+    background-color: #36867D;
     width: 80%;
-    height: 80%;
+    height: 80%; 
+    border-radius: 10px;
+    margin: 20px; 
     
 }
 
 #bodylibrovrt {
-    background-color: lightgray;
-    height: 300px;
+    padding-top: 10px;
+    height: 80%;
     display: inline-block;
     width: 70%;
     float: right;
+    padding-top: 20px;
 }
 
 #footerlibrovrt {
-    background-color: lightskyblue;
+   
     bottom: 0px;
-    
-    
+    height: 10%;
+    margin-left: 9%;
+    margin-right: 9%;
 }
 
-#footerlibrovrt locationlibrovrt {
+#locationlibrovrt {
     float: left;
     
 }
 
-#footerlibrovrt isbnlibrovrt {
+#isbnlibrovrt {
     float: right;
     
 }
