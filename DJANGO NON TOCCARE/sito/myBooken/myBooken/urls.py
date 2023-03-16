@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('libri/', include('libri.urls')),
-   
+    path('chat/', include('interazioniUtenti.urls')),
     path('', include('autenticazione.urls')),
     path('', include('django.contrib.auth.urls')),
    
