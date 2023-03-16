@@ -2,15 +2,12 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgb(146, 220, 218);
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
     text-align: center;
 }
 
 #loghetto{
     position: relative;
-    top: 30px;
+    top: 10px;
 }
 
 .forms{
@@ -67,8 +64,9 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 600px;
+        height: 460px;
         margin: auto;
+        top: 10px;
     }
 
     #form2Example2{
@@ -107,7 +105,20 @@ label{
 
     #fine{
         position: relative;
-        bottom: 20px;
+        bottom: -40px;
     }
+    .form-check-input{
+        position: relative;
+        left: -20px;
+        top: 10px;
+    }
+
+    .form-check-label{
+        position: relative;
+        left: -10px;
+        top: 0px;
+        width: 100%;
+      }
+
   }
   

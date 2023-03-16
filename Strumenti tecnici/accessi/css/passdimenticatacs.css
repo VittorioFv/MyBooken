@@ -118,7 +118,7 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 640px;
+        height: 620px;
         margin: auto;
     }
 
@@ -150,12 +150,23 @@ label{
         top: 80px;
         margin: auto;
     }
+
+    #fine{
+        position: relative;
+        top: 50px;
+        
+    }
+    
     
     .row{
         position: relative;
         left: 20px;
     }
 
+    #loghetto{
+        position: relative;
+        left: 45px;
+    }
     .form-check-input{
         position: relative;
         left: -20px;
