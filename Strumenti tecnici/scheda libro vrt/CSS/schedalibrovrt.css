@@ -38,20 +38,37 @@
     padding-top: 20px;
 }
 
-#footerlibrovrt {
-   
+#footerbodylibrovrt {
     bottom: 0px;
     height: 10%;
     margin-left: 9%;
     margin-right: 9%;
+    display: block;
+}
+
+#footerlibrovrt {
+    bottom: 0px;
+    height: 10%;
+    margin-left: 9%;
+    margin-right: 9%;
+    
 }
 
 #locationlibrovrt {
     float: left;
-    
 }
 
 #isbnlibrovrt {
     float: right;
-    
+}
+
+
+@media only screen and (max-width: 992px) {
+    #footerbodylibrovrt {
+        display: none;
+    }
+
+    hr {
+        
+    }
 }

@@ -5,7 +5,7 @@
 }
 
 body {
-  background: lightblue;
+  background: lightblue;  
 }
 
 #bodybkg{
@@ -21,6 +21,8 @@ body {
 .navcontainer {
   padding: 0px !important;
   height: 56px !important;
+  position: fixed;
+  background-color: #DFF0E4;
 }
 
 #toggle {
@@ -33,9 +35,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-
-  
+  visibility: hidden; 
 }
 
 #toggle::before {
@@ -116,7 +116,6 @@ body {
   align-items: center;
   transition: all 0.2s;
   z-index: 2;
-  
 }
 
 #toggletoken p{
@@ -181,6 +180,7 @@ body {
   width: 40%;
   height: 56px;
   margin: 6px;
+  background-color: #DFF0E4;
 }
 
 #tabBar div {
@@ -191,13 +191,14 @@ body {
 
 footer {
   height: 100px;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   visibility: visible;
+  background-color: #DFF0E4;
 }
 
 #imglogofooter {
@@ -208,11 +209,13 @@ footer {
 @media only screen and (max-width: 992px) {
   #tabBar {
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     display: flex;
     flex-direction: row;
     width: 100vw;
     text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   #tabBar div {
