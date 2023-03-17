@@ -6,7 +6,7 @@ body{
 
 #loghetto{
     position: relative;
-    top: 20px;
+    bottom: -30px;
 }
 
 .forms{
@@ -15,61 +15,80 @@ body{
 }
 
 #form2Example1{
-    
     border: 0px;
-    width: 60%;
+    width: 540px;
     position: relative;
-    float: right;
-    margin: 10px;
+    top: -30px;
+    left: 22px;
+    background-color: rgba(67, 160, 137, 0.521);
 }
 
 #form2Example2{
-    
     border: 0px;
-    width: 60%;
+    width: 540px;
     position: relative;
-    float: right;
-    margin: 10px;
+    top: -77px;
+    left: 22px;
+    background-color: rgba(67, 160, 137, 0.521);
 }
 
 #form2Example3{
-    
     border: 0px;
-    width: 60%;
+    width: 540px;
     position: relative;
-    float: right;
-    margin: 10px;
+    top: -120px;
+    left: 22px;
+    background-color: rgba(67, 160, 137, 0.521);
 }
 
 #form2Example4{
-    
     border: 0px;
-    width: 60%;
+    width: 540px;
     position: relative;
-    float: right;
-    margin: 10px;
+    top: -170px;
+    left: 22px;
+    background-color: rgba(67, 160, 137, 0.521);
 }
 
+#label2{
+    position: relative;
+    top: -65px;
+    left: -1px;
+}
+
+#label3{
+    position: relative;
+    top: -110px;
+}
+
+#label4{
+    position: relative;
+    top: -155px;
+    left: 1px;
+}
 
 label{
     float: left;
+    position: relative;
+    top: -20px;
     color:rgb(64, 160, 136);
     margin: 20px;
 }
 
 #fine{
     position: relative;
-    bottom: -30px;
+    bottom: -70px;
 }
 
 .btn-primary{
     position: relative;
-    top: -40px;
+    top: -160px;
+    width: 50%;
 }
 
 .text-center{
     position: relative;
-    top: -40px;
+    top: -170px;
 }
 
 .container {
@@ -78,7 +97,9 @@ label{
     width: 45%;
     height: 460px;
     position: relative;
-    top: 40px;
+    top: 50px;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .row{
@@ -103,51 +124,77 @@ label{
 
     .container{
         position: relative;
-        top: 9px;
+        top: 50px;
         width: 300px;
-        height: 500px;
+        height: 450px;
         margin: auto;
     }
 
         
     #form2Example1{
-        top: -10px;
+        top: -65px;
         float: left;
         position: relative;
-        left: 18%;
+        left: 10%;
+        width: 77%;
     }
     
     #form2Example2{
-    float: left;
-       left: 18%;
+       float: left;
+       left: 10%;
        position: relative;
+       top: -95px;
+       width: 77%;
     }
     
     #form2Example3{
         float: left;
-        left: 18%;
+        left: 10%;
         position: relative;
+        width: 77%;
+        top: -125px;
     }
     
     #form2Example4{
        float: left;
-       left: 18%;
+       left: 10%;
        position: relative;
+       width: 77%;
+       top: -155px;
     }
     
-    label{
+    #label1{
         position: relative;
         color:rgb(64, 160, 136);
-        text-align: center;
-        left: 38px;
-        top: 10px;
-        margin-top: -10px;
+        float: left;
+        top: -50px;
+    }
+
+    #label2{
+        position: relative;
+        color:rgb(64, 160, 136);
+        float: left;
+        top: -80px;
+    }
+
+    #label3{
+        position: relative;
+        color:rgb(64, 160, 136);
+        float: left;
+        top: -110px;
+    }
+
+    #label4{
+        position: relative;
+        color:rgb(64, 160, 136);
+        float: left;
+        top: -140px;
     }
     
-    .fine{
+    #fine{
         position: relative;
-        bottom: -20px;
-        margin: auto;
+        bottom: -70px;
+        
     }
     
     .row{
@@ -178,12 +225,16 @@ label{
 
     .btn-primary{
         position: relative;
-        top: -20px;
+        top: 270px;
+        left: -50px;
     }
    
     .text-center{
         position: relative;
-        top: -20px;
+        top: 260px;
+        width: 400px;
+        font-size: 20px;
+        left: -180px;
     }
   }
   

@@ -5,9 +5,26 @@ body{
     text-align: center;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
+    
 #loghetto{
     position: relative;
-    top: 10px;
+    top: 40px;
 }
 
 .forms{
@@ -23,6 +40,12 @@ body{
 #form2Example1{
     background-color: rgb(127, 212, 191);
     border: 0px;
+}
+
+.col{
+    position: relative;
+    margin: auto;
+    left: -30px;
 }
 
 .form-outline{
@@ -42,17 +65,16 @@ label{
 
 #fine{
     position: relative;
-    bottom: -94px;
+    bottom: -124px;
 }
-
 
 .container {
     border-radius: 20px;
     background-color: #b6ecd9;
     width: 45%;
-    height: 400px;
+    height: 380px;
     position: relative;
-    top: 50px;
+    top: 90px;
   }
  
   @media screen and (max-width: 992px) {
@@ -64,9 +86,9 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 460px;
+        height: 400px;
         margin: auto;
-        top: 10px;
+        top: 40px;
     }
 
     #form2Example2{
@@ -105,20 +127,35 @@ label{
 
     #fine{
         position: relative;
-        bottom: -40px;
+        bottom: -50px;
     }
     .form-check-input{
         position: relative;
-        left: -20px;
-        top: 10px;
+        left: 117px;
+        top: -50px;
     }
 
     .form-check-label{
         position: relative;
-        left: -10px;
-        top: 0px;
+        left: 120px;
+        top: -50px;
         width: 100%;
       }
 
+      .col{
+        position: relative;
+        left: -70px;
+        top: -30px;
+      }
+
+      .btn-primary{
+        position: relative;
+        top: -30px;
+      }
+
+      .text-center{
+        position: relative;
+        top: -30px;
+      }
   }
   
