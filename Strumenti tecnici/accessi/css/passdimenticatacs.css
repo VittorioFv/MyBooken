@@ -2,9 +2,6 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgb(146, 220, 218);
-    overflow: hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
     text-align: center;
 }
 
@@ -40,7 +37,7 @@ body{
     background-color: rgb(127, 212, 191);
     border: 0px;
     position: relative;
-    top: -20px;
+    top: -10px;
 }
 
 .form-outline{
@@ -49,9 +46,8 @@ body{
 }
 
 label{
-    float: left;
     position: relative;
-    top: -25px;
+    top: -15px;
     color:rgb(64, 160, 136)
 }
 
@@ -62,7 +58,7 @@ label{
 
 #fine{
     position: relative;
-    bottom: -70px;
+    bottom: -120px;
 }
 
 .btn-primary{
@@ -79,9 +75,9 @@ label{
     border-radius: 20px;
     background-color: #b6ecd9;
     width: 45%;
-    height: 540px;
+    height: 490px;
     position: relative;
-    top: 40px;
+    top: 70px;
   }
 
   .row{
@@ -90,18 +86,6 @@ label{
     top: 5px;
     width: 100%;
   }
-
-  .form-check-label{
-    position: relative;
-    left: -40px;
-    top: -40px;
-  }
-
-  .form-check-input{
-    position: relative;
-    left: -50px;
-    top: -40px;
-}
 
 .cacca{
     position: relative;
@@ -118,7 +102,7 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 620px;
+        height: 540px;
         margin: auto;
     }
 
@@ -139,9 +123,8 @@ label{
     }
     
     label{
-        float: left;
         position: relative;
-        left: -20%;
+        top: -10px;
         color:rgb(64, 160, 136)
     }
     
@@ -153,10 +136,9 @@ label{
 
     #fine{
         position: relative;
-        top: 50px;
+        top: 85px;
         
     }
-    
     
     .row{
         position: relative;
@@ -167,18 +149,7 @@ label{
         position: relative;
         left: 45px;
     }
-    .form-check-input{
-        position: relative;
-        left: -20px;
-        top: -80px;
-    }
-
-    .form-check-label{
-        position: relative;
-        left: -20px;
-        top: -80px;
-    }
-
+  
     .btn-primary{
         position: relative;
         left: -10px;
@@ -190,8 +161,6 @@ label{
         left: -6px;
         top: -70px;
     }
-    
-
   }
   
 
