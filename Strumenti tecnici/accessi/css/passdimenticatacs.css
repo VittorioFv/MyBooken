@@ -18,6 +18,31 @@ body{
     left: -50px;
 }
 
+input[type="email"]{
+    font-size: 16px;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]:-moz-placeholder {
+    color: rgb(88, 182, 158);
+    opacity: 1;
+}
+
+input[type="email"]:-ms-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]::-ms-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]::placeholder {
+    color: rgb(88, 182, 158);
+}
+
 #frase1{
     position: relative;
     top: 60px;
@@ -99,19 +124,17 @@ label{
       margin-top: auto;
     }
 
+    #luc{
+        position: relative;
+        top: 60px;
+        left: -60px;
+    }
+    
     .container{
         position: relative;
         width: 300px;
         height: 540px;
         margin: auto;
-    }
-
-    #form2Example2{
-        width: 130%;
-        margin: auto;
-        float: left;
-        position: relative;
-        left: -20%;
     }
     
     #form2Example1{
@@ -119,7 +142,7 @@ label{
        margin: auto;
        float: left;
        position: relative;
-       left: -20%;
+       left: -18%;
     }
     
     label{
@@ -152,13 +175,13 @@ label{
   
     .btn-primary{
         position: relative;
-        left: -10px;
+        left: -3px;
         top: -80px;
     }
 
     .text-center{
         position: relative;
-        left: -6px;
+        left: -3px;
         top: -70px;
     }
   }
