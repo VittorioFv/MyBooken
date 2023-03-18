@@ -7,4 +7,14 @@
   body {
     background: lightblue;
   }
+footer{
+  color: #005E79; 
+  opacity: 50%; 
+  font-size: 15px;
+  position: sticky;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
   

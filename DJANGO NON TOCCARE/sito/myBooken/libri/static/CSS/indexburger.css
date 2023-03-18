@@ -188,7 +188,7 @@
   text-align: center;
   margin: auto;
 }
-
+/*
 footer {
   height: 100px;
   position: fixed;
@@ -199,10 +199,10 @@ footer {
   justify-content: center;
   visibility: visible;
 }
-
+*/
 #imglogofooter {
-  width: 100vw;
-  height: 50px;
+  width: 80px;
+  height: 60px;
 }
 
 
