@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Aggiungi libro MyBooken
+{% endblock %}
+
+{% block content %}
+
+<form action = "{{ id }}" method = POST>
+    {% csrf_token %}
+    
+    {{ form.as_div }}
+
+    <input type = "submit" value = "Submit">
+
+</form>
+
+{% endblock %}

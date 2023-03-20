@@ -1,0 +1,89 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.contenitorelibrovrt {
+    padding: 10px;
+    margin: 0px;
+    background-color: #DFF0E4;
+    height: 216px;
+    display: inline-block;
+    width: 80%;
+   
+}
+
+#toplibrovrt {
+    background-color: transparent;
+    width: 30%;
+    height: 77%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    padding-top: 10px;
+    text-align: left;
+}
+
+#toplibrovrt img {
+    background-color: #36867D;
+    margin: 20px;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+#bodylibrovrt {
+    height: 70%;
+    display: inline-block;
+    width: 70%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#bodylibrovrt h2, h3, h5{
+   
+}
+
+#descritionlibro {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#footerbodylibrovrt {
+    height: 10%;
+    margin-right: 3%;
+    display: block;
+}
+
+#footerlibrovrt {
+    bottom: 0px;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: none;
+    
+}
+
+#locationlibrovrt {
+    float: left;
+}
+
+#isbnlibrovrt {
+    float: right;
+}
+
+@media only screen and (max-width: 992px) {
+    #footerbodylibrovrt {
+        display: none;
+    }
+
+    #footerlibrovrt {
+        display: block;
+    }
+
+    .contenitorelibrovrt {
+        height: 230px;
+    }
+}
