@@ -15,8 +15,8 @@
     {% load static %}
     <img src="{% static 'immagini/logo quad.svg' %}" width="120 px" height="120 px" id="loghetto">
 
-    <div class="container">
-        <form class="forms">
+    <div class="container BoxRegistrazione">
+        <form class="forms"action = "" method = POST>
             {% csrf_token %}
           <!-- Email input -->
           <div class="form-outline mb-4">  
@@ -42,12 +42,12 @@
           </div>
         
           <!-- Submit button -->
-          <button type="button" class="btn btn-primary btn-block mb-4">Accedi</button>
+          <button type="Submit" class="btn btn-primary btn-block mb-4" value="Submit">Accedi</button>
         
           <!-- Register buttons -->
           <div class="text-center">
             <p>Not a member? <a href="{% url 'registrazione' %}">Registrati</a></p>
-            <p>or sign up with:</p>
+            
             
           </div>
         </div>
@@ -60,4 +60,4 @@
 
 {% endblock %}
 
-      
+ 
