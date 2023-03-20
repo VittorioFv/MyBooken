@@ -1,19 +1,19 @@
 * {
     padding: 0px;
     margin: 0px;
-    transition: all 0.2s;
-    /* text-align: center; */
-    color: #36867D;
 }
 
 .contenitorelibrovrt {
     background-color: #DFF0E4;
-    display: inline-block;
     margin: auto;
     padding: auto;
     overflow: auto;
     box-sizing: border-box;
-    
+    color: #36867D;
+    transition: all 0.2s;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
 }
 
 #toplibrovrt {
@@ -24,7 +24,6 @@
     display: inline-block;
     float: left;
     padding-top: 5px;
-    
 }
 
 #toplibrovrt img {
@@ -33,15 +32,13 @@
     border-radius: 10px;
     max-width: 150px;
     min-width: 150px;
-
 }
 
 #bodylibrovrt {
     height: 70%;
     display: inline-block;
     width: 70%;
-    margin-top: 15px;
-    
+    margin-top: 17px;
 }
 
 #descritionlibro {
@@ -50,18 +47,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     padding-bottom: 47px;
-}
-
-#footerbodylibrovrt {
-    height: 10%;
-    margin-right: 3%;
-    display: block;
+    font-size: 14px;
 }
 
 #footerlibrovrt {
     margin-left: 3%;
     margin-right: 3%;
-    display: none;
+    display: block;
     clear: both;
 }
 
@@ -71,50 +63,4 @@
 
 #isbnlibrovrt {
     float: right;
-}
-
-@media only screen and (max-width: 992px) {
-    #footerbodylibrovrt {
-        display: none;
-    }
-
-    #footerlibrovrt {
-        display: block;
-    }
-
-    .contenitorelibrovrt {
-        height: 70%;
-    }
-}
-
-@media only screen and (max-width: 678px) {
-
-    .contenitorelibrovrt {
-        padding: 0px;
-        width: 100%;
-        height: 190px;
-    }
-
-    #toplibrovrt {
-        width: 30%;
-
-    }
-
-    #toplibrovrt img {
-        max-width: 90px;
-        min-width: 90px;
-        margin-top: 13px;
-    }
-
-    #bodylibrovrt {
-        width: 70%;
-    }
-
-    #descritionlibro {
-        
-        -webkit-line-clamp: 2;
-       
-    }
-
-
 }
