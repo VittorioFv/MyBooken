@@ -2,15 +2,16 @@
     padding: 0px;
     margin: 0px;
 }
+
 .row{
     flex-wrap: nowrap;
 }
+
 .horizScroll{
     overflow-x: scroll;
     white-space: nowrap;
     flex-wrap: nowrap;
     margin-top: 200px;
-    
 }
 
 .schedaLibro{
@@ -21,9 +22,11 @@
     padding: 40px;
     background-color: #313030;  
 }
+
 .immagine{
     border-radius: 7%;
 }
+
 .titoloCarta{
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -31,10 +34,9 @@
     overflow: hidden;
     white-space: pre-wrap;
 }
+
 .testoFooter{
-    color: #eee !important;
-    
+    color: #eee !important; 
     position: absolute;
     bottom: 5%;
-    
 }

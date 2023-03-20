@@ -1,0 +1,38 @@
+{% extends "master.html" %}
+
+{% block title %}
+  MyBooken esplora
+{% endblock %}
+
+{% block content %}
+
+  <form action = "" method = POST>
+    {% csrf_token %}
+    
+    <input type = "text" name = "cercaLibri">
+
+    <input type = "submit" value = "cerca">
+
+  </form>
+    
+
+  <div class="row horizScroll">
+    {% for x in mylibri %}
+      <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+        <a href="dettagli_libro/{{ x.id }}">
+          {% if x.immagine %}
+            <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
+          {% endif %}
+          <div class="card-body">
+              <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted testoFooter">{{ x.autore }}</small>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}
+

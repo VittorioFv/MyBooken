@@ -1,0 +1,33 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Aggiungi libro MyBooken
+{% endblock %}
+
+{% block headCss %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    {{ form.as_div }}
+
+    <input type = "submit" value = "Submit">
+</form>
+
+<div id="nascondiSotto"></div>
+<div id="schedaMappa">
+  <div id="basicMap"></div>
+  <h3> La posizione è corretta? </h3>
+  <button type="button" id="bottoneRicerca">Sì</button>
+</div>
+
+<script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+{% load static %}
+<script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
+
+{% endblock %}

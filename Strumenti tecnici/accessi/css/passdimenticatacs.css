@@ -1,0 +1,342 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(146, 220, 218);
+    text-align: center;
+}
+
+
+#loghetto{
+    position: relative;
+    top: -10px;
+    left: 60px;
+}
+
+#luc{
+    position: relative;
+    top: 60px;
+    left: -50px;
+}
+
+input[type="email"]{
+    font-size: 16px;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]:-moz-placeholder {
+    color: rgb(88, 182, 158);
+    opacity: 1;
+}
+
+input[type="email"]:-ms-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]::-ms-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]::placeholder {
+    color: rgb(88, 182, 158);
+}
+
+#frase1{
+    position: relative;
+    top: 60px;
+}
+
+#frase{
+    position: relative;
+    top: 70px;
+}
+
+.forms{
+    position: relative;
+    top: 90px;
+}
+
+#form2Example1{
+    background-color: rgb(127, 212, 191);
+    border: 0px;
+    position: relative;
+    top: -10px;
+}
+
+.form-outline{
+    margin: auto;
+    width: 50%;
+}
+
+label{
+    position: relative;
+    top: -15px;
+    color:rgb(64, 160, 136)
+}
+
+.row{
+    position: relative;
+    text-align: center;
+}
+
+#fine{
+    position: relative;
+    bottom: -120px;
+}
+
+.btn-primary{
+    position: relative;
+    top: -40px;
+}
+
+.text-center{
+    position: relative;
+    top: -40px;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: #b6ecd9;
+    width: 45%;
+    height: 490px;
+    position: relative;
+    top: 70px;
+  }
+
+  .row{
+    position: relative;
+    left: 40px;
+    top: 5px;
+    width: 100%;
+  }
+
+.cacca{
+    position: relative;
+    top: -65px;
+    right: -80px;
+}
+
+  @media screen and (max-width: 992px) {
+    .col-xs-12, .col, .forms, .row {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    #luc{
+        position: relative;
+        top: 60px;
+        left: -60px;
+    }
+    
+    .container{
+        position: relative;
+        width: 300px;
+        height: 540px;
+        margin: auto;
+    }
+    
+    #form2Example1{
+       width: 130%;
+       margin: auto;
+       float: left;
+       position: relative;
+       left: -18%;
+    }
+    
+    label{
+        position: relative;
+        top: -10px;
+        color:rgb(64, 160, 136)
+    }
+    
+    .final{
+        position: relative;
+        top: 80px;
+        margin: auto;
+    }
+
+    #fine{
+        position: relative;
+        top: 85px;
+        
+    }
+    
+    .row{
+        position: relative;
+        left: 20px;
+    }
+
+    #loghetto{
+        position: relative;
+        left: 45px;
+    }
+  
+    .btn-primary{
+        position: relative;
+        left: -3px;
+        top: -80px;
+    }
+
+    .text-center{
+        position: relative;
+        left: -3px;
+        top: -70px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#riq{
+    background-color: rgb(141, 255, 143);
+    height: 80%;
+    width: 80%;
+    position: relative;
+    left: 125px;
+    top: 10%;
+    border-radius: 40px;
+}
+
+#log{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 38%;
+    bottom: 12%;
+}
+
+#luc{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 23%;
+    bottom: 20px;
+}
+
+#frase1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 455px;
+    bottom: 25%;
+}
+
+#frase{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 225px;
+    bottom: 15%;
+}
+
+#linea{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    bottom: 12%;
+}
+
+#form{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    left: 35%;
+    bottom: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+
+.testo{
+    border-radius: 12px;
+    height: 35px;
+    border: 0px;
+}
+
+#bott{
+    position: relative;
+    left: 45%;
+    height: 35px;
+    width: 70px;
+    border: 0px;
+    color: blue;
+    border-radius: 20px;
+}
+
+#back{
+    position: relative;
+    left:  42%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+
+@media screen and (max-width: 600px) {
+    #log{
+        position: relative;
+        left: 50px;
+        width: 130px;
+        top: -150px;
+    }
+
+    #riq{
+        position: relative;
+        left: 19px;
+        width: 60%;
+        top: 60px;
+        height: 350px;
+    }
+
+    #luc{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        left: -45px;
+        top: -80px;
+    }
+
+    #frase1{
+        position: relative;
+        left: 50px;
+        font-size: 15px;
+        top: -170px;
+    }
+
+    #frase{
+        position: relative;
+        left: 0px;
+        font-size: 12px;
+        top: -270px;
+        text-align: center;
+    }
+
+    #linea{
+        position: relative;
+        top: -250px;
+    }
+
+    #form{
+        position: relative;
+        left: -8px;
+        font-size: 12px;
+        top: -210px;
+    }
+}
