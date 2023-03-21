@@ -107,11 +107,11 @@ label{
   }
 .invia{
     background-color: #089FCA;
-    box-shadow: 0px 2px 0px 0px;
-    box-shadow: ;
+    box-shadow: 10px 10px 5px #089FCA;
 }
 .invia:hover{
     background-color: #089FCA;
+    box-shadow: 10px 10px 5px #089FCA;
 
 }
   
