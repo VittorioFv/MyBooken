@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgb(146, 220, 218);
+    overflow-x: hidden;
     text-align: center;
 }
 
