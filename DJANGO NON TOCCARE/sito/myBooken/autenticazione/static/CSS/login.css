@@ -1,38 +1,16 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(146, 220, 218);
+    background-color: #A7DCEA;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     text-align: center;
-}
-
-input[type="email"]{
-    font-size: 16px;
-}
-
-input[type="email"]::-webkit-input-placeholder {
-    color: rgb(88, 182, 158);
-}
-
-input[type="email"]:-moz-placeholder {
-    color: rgb(88, 182, 158);
-    opacity: 1;
-}
-
-input[type="email"]:-ms-input-placeholder {
-    color: rgb(88, 182, 158);
-}
-
-input[type="email"]::-ms-input-placeholder {
-    color: rgb(88, 182, 158);
-}
-
-input[type="email"]::placeholder {
-    color: rgb(88, 182, 158);
 }
 
 #loghetto{
     position: relative;
-    top: 40px;
+    top: 30px;
 }
 
 .forms{
@@ -48,12 +26,6 @@ input[type="email"]::placeholder {
 #form2Example1{
     background-color: rgb(127, 212, 191);
     border: 0px;
-}
-
-.col{
-    position: relative;
-    margin: auto;
-    left: -30px;
 }
 
 .form-outline{
@@ -73,16 +45,17 @@ label{
 
 #fine{
     position: relative;
-    bottom: -124px;
+    bottom: -80px;
 }
+
 
 .container {
     border-radius: 20px;
     background-color: #b6ecd9;
     width: 45%;
-    height: 380px;
+    height: 400px;
     position: relative;
-    top: 90px;
+    top: 50px;
   }
  
   @media screen and (max-width: 992px) {
@@ -94,9 +67,8 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 400px;
+        height: 600px;
         margin: auto;
-        top: 40px;
     }
 
     #form2Example2{
@@ -132,38 +104,5 @@ label{
         position: relative;
         left: 20px;
     }
-
-    #fine{
-        position: relative;
-        bottom: -50px;
-    }
-    .form-check-input{
-        position: relative;
-        left: 117px;
-        top: -50px;
-    }
-
-    .form-check-label{
-        position: relative;
-        left: 120px;
-        top: -50px;
-        width: 100%;
-      }
-
-      .col{
-        position: relative;
-        left: -70px;
-        top: -30px;
-      }
-
-      .btn-primary{
-        position: relative;
-        top: -30px;
-      }
-
-      .text-center{
-        position: relative;
-        top: -30px;
-      }
   }
   

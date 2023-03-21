@@ -9,6 +9,31 @@ body{
     bottom: -30px;
 }
 
+input[type="email"]{
+    font-size: 16px;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]:-moz-placeholder {
+    color: rgb(88, 182, 158);
+    opacity: 1;
+}
+
+input[type="email"]:-ms-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]::-ms-input-placeholder {
+    color: rgb(88, 182, 158);
+}
+
+input[type="email"]::placeholder {
+    color: rgb(88, 182, 158);
+}
+
 .forms{
     position: relative;
     top: 25px;

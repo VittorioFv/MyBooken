@@ -1,48 +1,44 @@
 * {
     padding: 0px;
     margin: 0px;
-    text-align: center;
 }
 
 .contenitorelibrovrt {
-    padding: 10px;
-    margin: 0px;
     background-color: #DFF0E4;
-    height: 216px;
-    display: inline-block;
-    width: 80%;
-   
+    margin: auto;
+    padding: auto;
+    overflow: auto;
+    box-sizing: border-box;
+    color: #36867D;
+    transition: all 0.2s;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
 }
 
 #toplibrovrt {
     background-color: transparent;
-    width: 30%;
-    height: 77%;
+    width: 25%;
+    height: 70%;
     text-align: center;
     display: inline-block;
     float: left;
-    padding-top: 10px;
-    text-align: left;
+    padding-top: 5px;
 }
 
 #toplibrovrt img {
     background-color: #36867D;
-    margin: 20px;
+    margin: 16px;
     border-radius: 10px;
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    min-width: 150px;
 }
 
 #bodylibrovrt {
     height: 70%;
     display: inline-block;
     width: 70%;
-    margin-top: 30px;
-    overflow: hidden;
-}
-
-#bodylibrovrt h2, h3, h5{
-   
+    margin-top: 17px;
 }
 
 #descritionlibro {
@@ -50,20 +46,15 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
-
-#footerbodylibrovrt {
-    height: 10%;
-    margin-right: 3%;
-    display: block;
+    padding-bottom: 47px;
+    font-size: 14px;
 }
 
 #footerlibrovrt {
-    bottom: 0px;
     margin-left: 3%;
     margin-right: 3%;
-    display: none;
-    
+    display: block;
+    clear: both;
 }
 
 #locationlibrovrt {
@@ -72,18 +63,4 @@
 
 #isbnlibrovrt {
     float: right;
-}
-
-@media only screen and (max-width: 992px) {
-    #footerbodylibrovrt {
-        display: none;
-    }
-
-    #footerlibrovrt {
-        display: block;
-    }
-
-    .contenitorelibrovrt {
-        height: 230px;
-    }
 }
