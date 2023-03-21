@@ -5,11 +5,19 @@ from django.core.validators import MinLengthValidator
 
 from libri.models import Libri
 
+class Chat(models.Model):
+  utente1 = models.ForeignKey(User, related_name='utente1', on_delete=models.CASCADE)
+  utente2 = models.ForeignKey(User, related_name='utente2', on_delete=models.CASCADE)
 
-# Create your models here.
+  class Meta:
+    unique_together = ('utente1', 'utente2')
+
+
 class Scambi(models.Model):
-  ricevente = models.ForeignKey(User, related_name='ricevente', on_delete=models.CASCADE)
-  mittente = models.ForeignKey(User, related_name='mittente',on_delete=models.CASCADE)
   libro = models.ForeignKey(Libri, on_delete=models.CASCADE)
+  chat = models.ForeignKey(Chat, on_delete=models.CASCADE)
+  codice = models.CharField(max_length=6, unique=True, validators=[MinLengthValidator(6)], null=True, blank=True)
 
-  codice = models.CharField(max_length=6, unique=True, validators=[MinLengthValidator(6)])
+
+  class Meta:
+    unique_together = ('libro', 'chat')
