@@ -1,0 +1,108 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(146, 220, 218);
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#loghetto{
+    position: relative;
+    top: 30px;
+}
+
+.forms{
+    position: relative;
+    top: 25px;
+}
+
+#form2Example2{
+    background-color: rgb(127, 212, 191);
+    border: 0px;
+}
+
+#form2Example1{
+    background-color: rgb(127, 212, 191);
+    border: 0px;
+}
+
+.form-outline{
+    margin: auto;
+    width: 50%;
+}
+
+label{
+    float: left;
+    color:rgb(64, 160, 136)
+}
+
+.row{
+    position: relative;
+    text-align: center;
+}
+
+#fine{
+    position: relative;
+    bottom: -80px;
+}
+
+
+.container {
+    border-radius: 20px;
+    background-color: #b6ecd9;
+    width: 45%;
+    height: 400px;
+    position: relative;
+    top: 50px;
+  }
+ 
+  @media screen and (max-width: 992px) {
+    .col-xs-12, .col, .forms, .row {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .container{
+        position: relative;
+        width: 300px;
+        height: 600px;
+        margin: auto;
+    }
+
+    #form2Example2{
+        width: 130%;
+        margin: auto;
+        float: left;
+        position: relative;
+        left: -20%;
+    }
+    
+    #form2Example1{
+       width: 130%;
+       margin: auto;
+       float: left;
+       position: relative;
+       left: -20%;
+    }
+    
+    label{
+        float: left;
+        position: relative;
+        left: -20%;
+        color:rgb(64, 160, 136)
+    }
+    
+    .final{
+        position: relative;
+        top: 80px;
+        margin: auto;
+    }
+    
+    .row{
+        position: relative;
+        left: 20px;
+    }
+  }
+  
