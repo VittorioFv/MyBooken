@@ -2,31 +2,40 @@ from django.db import models
 from django.core.validators import MinLengthValidator
 from django.contrib.auth.models import User
 
+from django.db.models.signals import pre_delete
+from .signals import ImmaginiLibriCleanup
+
+
 class Libri(models.Model):
-  titolo = models.CharField(max_length=50)  # VARCHAR
-  autore = models.CharField(max_length=50)  # VARCHAR
-  
-  isbn = models.CharField(max_length=13, validators=[MinLengthValidator(13)])    # CHAR
+    titolo = models.CharField(max_length=50)  # VARCHAR
+    autore = models.CharField(max_length=50)  # VARCHAR
 
-  descrizione = models.CharField(max_length=255) # VARCHAR
+    isbn = models.CharField(max_length=13, validators=[
+                            MinLengthValidator(13)])    # CHAR
 
-  citta = models.CharField(max_length=50)
+    descrizione = models.CharField(max_length=255)  # VARCHAR
 
-  longitudine = models.FloatField(max_length=50)
-  latitudine = models.FloatField(max_length=50)
+    citta = models.CharField(max_length=50)
 
-  immagine = models.ImageField(null = True, blank = True, upload_to="images/libri/")
+    longitudine = models.FloatField(max_length=50)
+    latitudine = models.FloatField(max_length=50)
 
-  idUser = models.ForeignKey(User, on_delete=models.CASCADE)
+    immagine = models.ImageField(
+        null=True, blank=True, upload_to="images/libri/")
 
-  # per qualche motivo la variabile categorie al plurale da errore
-  categoria = models.ManyToManyField('Categorie', through='LibriCategorie') 
+    idUser = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    # per qualche motivo la variabile categorie al plurale da errore
+    categoria = models.ManyToManyField('Categorie', through='LibriCategorie')
+
+
+pre_delete.connect(ImmaginiLibriCleanup, sender=Libri)
 
 
 class Categorie(models.Model):
-  nomeCategoria = models.CharField(max_length=50)
+    nomeCategoria = models.CharField(max_length=50)
 
 
 class LibriCategorie(models.Model):
-  libro = models.ForeignKey(Libri, on_delete=models.CASCADE)
-  categoria = models.ForeignKey(Categorie, on_delete=models.CASCADE)
+    libro = models.ForeignKey(Libri, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categorie, on_delete=models.CASCADE)
