@@ -13,6 +13,14 @@ class Profilo(models.Model):
     longitudine = models.FloatField(max_length=50)
     latitudine = models.FloatField(max_length=50)
 
+    numTopen = models.IntegerField(
+        default=1,
+        validators=[
+            MaxValueValidator(5),
+            MinValueValidator(1)
+        ]
+    )
+
 class Recensione(models.Model):
     idUser = models.ForeignKey(User, on_delete=models.CASCADE)
     voto = models.IntegerField(
