@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+
 body{
     padding: 0;
     margin: 0;
@@ -12,6 +14,9 @@ input[type="text"]{
 }
 
 input[type="text"]::-webkit-input-placeholder {
+    color: #36867D;
+}
+input[type="password"]::-webkit-input-placeholder {
     color: #36867D;
 }
 
