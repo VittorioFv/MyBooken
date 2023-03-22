@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 body{
     padding: 0;
     margin: 0;
     background-color: #A7DCEA;
     text-align: center;
+    font-family: 'Gamja Flower', cursive;
 }
 
 input[type="text"]{
@@ -78,108 +80,74 @@ label{
     bottom: -124px;
 }
 
-.container {
-    border-radius: 20px;
-    background-color: #E1F1E5;
-    width: 35%;
-    height: 380px;
-    position: relative;
-    top: 90px;
+
+
+  @media screen and (min-width: 992px){
+    .container {
+        border-radius: 20px;
+        background-color: #E1F1E5;
+        width: 605px;
+        height: 487px;
+        position: relative;
+        top: 90px;
+      }
+    .btn{
+        position: relative;
+        font-size: large;
+        border: 0px;
+        border-radius: 15px;
+        width: 253px;
+        height: 60px;
+        margin-top: 20px;
+    
+    }
+    #accedi{
+        background-color: #089FCA; 
+    
+    }
+    #registrati{
+        background-color: rgb(8, 159, 202, 0.4);
+        color: #005E79;
+        line-height: 45px;
+    }
+    .row{
+        margin-top: 40px;
+    }
+
+
+
   }
  
   @media screen and (max-width: 992px) {
-    .col-xs-12, .col, .forms, .row {
-      width: 100%;
-      margin-top: auto;
-    }
-
-    .container{
+    .container {
+        border-radius: 20px;
+        background-color: #E1F1E5;
+        width: 314px;
+        height: 362px;
         position: relative;
-        width: 300px;
-        height: 400px;
-        margin: auto;
-        top: 40px;
-    }
-
-    #form2Example2{
-        width: 130%;
-        margin: auto;
-        float: left;
+        top: 90px;
+      }
+    .btn{
         position: relative;
-        left: -20%;
-    }
+        font-size: large;
+        border: 0px;
+        border-radius: 15px;
+        width: 120px;
+        height: 50px;
+        margin-top: 10px;
     
-    #form2Example1{
-       width: 130%;
-       margin: auto;
-       float: left;
-       position: relative;
-       left: -20%;
     }
+    #accedi{
+        background-color: #089FCA; 
     
-    label{
-        float: left;
-        position: relative;
-        left: -20%;
-        color:rgb(64, 160, 136)
     }
-    
-    .final{
-        position: relative;
-        top: 80px;
-        margin: auto;
+    #registrati{
+        background-color: rgb(8, 159, 202, 0.4);
+        color: #005E79;
+        line-height: 40px;
     }
-    
     .row{
-        position: relative;
-        left: 20px;
+        margin-top: 20px;
     }
-
-    #fine{
-        position: relative;
-        bottom: -50px;
-    }
-    .form-check-input{
-        position: relative;
-        left: 117px;
-        top: -50px;
-    }
-
-    .form-check-label{
-        position: relative;
-        left: 120px;
-        top: -50px;
-        width: 100%;
-      }
-
-      .col{
-        position: relative;
-        left: -70px;
-        top: -30px;
-      }
-
-      .btn-primary{
-        position: relative;
-        top: -30px;
-      }
-
-      .text-center{
-        position: relative;
-        top: -30px;
-      }
   }
-  .btn{
-    position: relative;
-    width: 150px;
-    font-size: large;
-  }
-#accedi{
-    background-color: #089FCA; 
-    margin-left: 10px; 
-}
-#registrati{
-    background-color: rgb(8, 159, 202, 0.4);
-    color: #005E79;
-    margin-right: 10px;
-
-}
+  
