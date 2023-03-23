@@ -11,16 +11,17 @@
     overflow-x: scroll;
     white-space: nowrap;
     flex-wrap: nowrap;
-    margin-top: 200px;
+    margin-top: 20px;
 }
 
 .schedaLibro{
-    color: #eee;
-    max-width: 18rem;
+    color: #36867D;
+    max-width: 30%;
     position: relative;
-    min-height: 100%;
+    min-height: 70%;
     padding: 40px;
-    background-color: #313030;  
+    background-color: #DFF0E4;
+   
 }
 
 .immagine{
@@ -33,10 +34,12 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: pre-wrap;
+    font-size: 14px;
 }
 
 .testoFooter{
-    color: #eee !important; 
+    color: #36867D !important; 
     position: absolute;
     bottom: 5%;
+    font-size: 12px;
 }

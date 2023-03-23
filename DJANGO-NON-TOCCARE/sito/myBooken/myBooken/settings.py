@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-o*iu0@wj_5pctbi$qbg+w0)-jld$5wqu)j00lk4%39=)(r1eai
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+HTTP_URL = 'http://127.0.0.1:8000/'
+URL = '127.0.0.1'
+ALLOWED_HOSTS = [URL]
 
 
 # Application definition
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'qr_code',
     'libri',
     'autenticazione',
     'interazioniUtenti',
