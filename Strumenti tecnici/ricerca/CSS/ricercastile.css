@@ -130,13 +130,13 @@ input {
 .containerschedalibri {
     width: 50%;
     left: 0px;
-    background-color: #333;
     display: inline-block;
     z-index: 0;
     position: relative;
     overflow-y: scroll;
     flex-wrap: nowrap;
 }
+
 
 .containermap {
     width: 50%;
@@ -149,8 +149,17 @@ input {
 
 /* Contenitore Mobile */
 .containermapmobile {
-    visibility: hidden;
+    display: block;
     z-index: -1;
+    width: 100%;
+    height: 6900px;
+}
+
+.containerschedalibrimobile{
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: auto;
 }
 
 #overlay {
@@ -186,7 +195,7 @@ button {
 #show-modal-btn {
     bottom: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     margin: 10px;
     margin-bottom: 56px;
     color: #005E79;
@@ -229,11 +238,11 @@ button {
 
 @media only screen and (max-width: 992px) {
     .containermapmobile {
-        visibility: visible;
+        display: block;
     }
 
     .container-fluid {
-        visibility: hidden;
+        display: none;
     }
 
     .containersearch input {
@@ -243,6 +252,13 @@ button {
     }
 
     .containerschedalibri {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .containerschedalibrimobile{
         display: none;
     }
 
