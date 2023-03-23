@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgb(146, 220, 218);
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -40,20 +41,26 @@ input[type="email"]::placeholder {
     top: 25px;
 }
 
-#form2Example2{
-    background-color: rgb(127, 212, 191);
-    border: 0px;
-}
-
 #form2Example1{
     background-color: rgb(127, 212, 191);
     border: 0px;
+    width: 135%;
+    position: relative;
+    left: -50px;
 }
 
-.col{
+#form2Example2{
+    background-color: rgb(127, 212, 191);
+    border: 0px;
+    width: 135%;
+    position: relative;
+    left: -50px;
+}
+
+#dimenticata{
     position: relative;
     margin: auto;
-    left: -30px;
+    top: 90px;
 }
 
 .form-outline{
@@ -63,12 +70,9 @@ input[type="email"]::placeholder {
 
 label{
     float: left;
-    color:rgb(64, 160, 136)
-}
-
-.row{
+    color:rgb(64, 160, 136);
     position: relative;
-    text-align: center;
+    left: -50px;
 }
 
 #fine{
@@ -78,13 +82,43 @@ label{
 
 .container {
     border-radius: 20px;
-    background-color: #b6ecd9;
+    background-color: #dbfff3;
     width: 45%;
     height: 380px;
     position: relative;
     top: 90px;
   }
  
+  .form-check-label{
+    position: relative;
+    left: -160px;
+  }
+
+  .form-check-input{
+    position: relative;
+    left: -155px;
+  }
+
+
+  .btn-primary{
+    background-color: #08a0ca86;
+    border: 0px;
+    width: 200px;
+    border-radius: 12px;
+    position: relative;
+    top: -20px;
+  }
+
+  .btn-secondary{
+    background-color: #078fb4;
+    border: 0px;
+    width: 200px;
+    border-radius: 12px;
+    position: relative;
+    top: -20px;
+  }
+
+
   @media screen and (max-width: 992px) {
     .col-xs-12, .col, .forms, .row {
       width: 100%;
@@ -94,40 +128,34 @@ label{
     .container{
         position: relative;
         width: 300px;
-        height: 400px;
+        height: 350px;
         margin: auto;
         top: 40px;
     }
 
-    #form2Example2{
-        width: 130%;
+    #form2Example1{
         margin: auto;
         float: left;
         position: relative;
         left: -20%;
     }
     
-    #form2Example1{
-       width: 130%;
+    #form2Example2{
        margin: auto;
        float: left;
        position: relative;
        left: -20%;
+       margin-top: 20px;
     }
     
     label{
         float: left;
         position: relative;
         left: -20%;
-        color:rgb(64, 160, 136)
+        color:rgb(64, 160, 136);
     }
     
-    .final{
-        position: relative;
-        top: 80px;
-        margin: auto;
-    }
-    
+
     .row{
         position: relative;
         left: 20px;
@@ -139,14 +167,14 @@ label{
     }
     .form-check-input{
         position: relative;
-        left: 117px;
-        top: -50px;
+        left: 40px;
+        top: 40px;
     }
 
     .form-check-label{
         position: relative;
-        left: 120px;
-        top: -50px;
+        left: 45px;
+        top: 40px;
         width: 100%;
       }
 
@@ -158,12 +186,25 @@ label{
 
       .btn-primary{
         position: relative;
-        top: -30px;
+        top: -10px;
+        width: 100px;
+      }
+
+      .btn-secondary{
+        position: relative;
+        top: -10px;
+        width: 100px;
       }
 
       .text-center{
         position: relative;
         top: -30px;
       }
+
+      #label1{
+        position: relative;
+        top: 10px;
+      }
   }
+
   

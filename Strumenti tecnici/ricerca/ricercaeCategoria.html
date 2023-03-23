@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/ricercastile.css">
     <link rel="stylesheet" href="../scheda libro vrt/CSS/schedalibrovrt.css">
+    <link rel="stylesheet" href="../scheda libro/CSS/cards.css">
     <title>Ricerca</title>
-
-
 </head>
 
 <body>
@@ -25,7 +25,6 @@
 
     <!--  Category Scrolling ------>
     <div class="categoryscrollmenu">
-
         <div class="singlecategory"><a href="#" data-id="istruzione">Istruzione</a></div>
         <div class="singlecategory"><a href="#" data-id="letteraturaenarrativa">Letteratura e narrativa</a></div>
         <div class="singlecategory"><a href="#" data-id="storia">Storia</a></div>
@@ -41,6 +40,7 @@
         <div class="singlecategory"><a href="#" data-id="umorismo">Umorismo</a></div>
     </div>
 
+    <!--  Filtered categories------>
     <div class="categoryscrollmenufiltrata">
         <div class="singlecategoryfiltrata nascosto" id="istruzione">Istruzione<a href="#" data-id="istruzione"> x</a>
         </div>
@@ -202,7 +202,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Contenitore Mappa --->
         <div class="containermap">
             <form action="" method="POST" class="containersearch">
                 <input type="text" id="textsearch" placeholder="  Inserire un indirizzo...">
@@ -228,11 +228,145 @@
         </div>
     </div>
 
-
-
-
     <!-- Contenitore Mobile --->
     <div class="containermapmobile">
+        <div class="containerschedalibrimobile">
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+            <!------------------------------BookCardVERTICALE--------------------------------->
+            <div class="contenitorelibrovrt">
+                <div id="toplibrovrt">
+                    <img src="../../LogoToken/logo quad.svg" alt="Libro">
+                </div>
+                <div id="bodylibrovrt">
+                    <h3>Titolo libro lumaca</h3>
+                    <h5><i>Lumaca Mother</i></h5><br>
+                    <p id="descritionlibro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus vero
+                        corrupti amet? Iustodivdescrition dignissimos vitae soluta rem nihil vel tempore, non
+                        consequuntur
+                        velit
+                        fugiat quas labore est ipsum rerum?</p>
+                </div>
+                <div id="footerlibrovrt">
+                    <h6 id="locationlibrovrt" style="color: #000;">Verona(VR) - Italia</h6>
+                    <h6 id="isbnlibrovrt" style="color: #000;">ISBN 000-00-00000-00-0</h6>
+                </div>
+            </div>
+        </div>
+
+
 
         <button type="submit" id="show-modal-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -241,6 +375,130 @@
         </button>
 
         <div id="overlay">
+            <div class="row horizScroll">
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Il nome della rosa</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">titolo</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!------------------------------BookCard--------------------------------->
+                <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+                    <img class="card-img-top immagine"
+                        src="https://media-assets.vanityfair.it/photos/63d93cdd654c8294f917aaac/master/w_1200,h_900,c_limit/libri-d-amore-chiamami-con-il-tuo-nome.png"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title titoloCarta">Chiamami col tuo nome hdsbvjhbdsfjbvjhsdfbvjfbd jhv</h5>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted testoFooter">Luca Guadagnino</small>
+                    </div>
+                </div>
+                <!-----------------------------FineContenitoreCards------------------------------------>
+            </div>
+            <!-- Contenitore Mappa Mobile --->
             <div id="modal">
                 <button type="submit" id="close-modal-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x"
