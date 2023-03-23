@@ -46,7 +46,7 @@ input[type="email"]::placeholder {
     width: 165%;
     position: relative;
     float: left;
-    left: -100px;
+    left: -32%;
 }
 
 #form2Example2{
@@ -55,7 +55,7 @@ input[type="email"]::placeholder {
     width: 165%;
     position: relative;
     float: left;
-    left: -100px;
+    left: -32%;
 }
 #form2Example3{
     background-color: rgb(127, 212, 191);
@@ -63,7 +63,7 @@ input[type="email"]::placeholder {
     width: 165%;
     position: relative;
     float: left;
-    left: -100px;
+    left: -32%;
 }
 
 #form2Example4{
@@ -72,7 +72,7 @@ input[type="email"]::placeholder {
     width: 165%;
     position: relative;
     float: left;
-    left: -100px;
+    left: -32%;
 }
 
 .col{
@@ -90,27 +90,27 @@ input[type="email"]::placeholder {
     float: left;
     color:rgb(64, 160, 136);
     position: relative;
-    left: -100px;
+    left: -35%;
 }
 #label2{
     float: left;
     color:rgb(64, 160, 136);
     position: relative;
-    left: -100px;
+    left: -35%;
 }
 
 #label3{
     float: left;
     color:rgb(64, 160, 136);
     position: relative;
-    left: -100px;
+    left: -35%;
 }
 
 #label4{
     float: left;
     color:rgb(64, 160, 136);
     position: relative;
-    left: -100px;
+    left: -35%;
 }
 
 .btn-primary{
