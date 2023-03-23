@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.db.models import Q
 
 from libri.models import Libri
+from myBooken.settings import HTTP_URL
 
 from .models import Chat, Scambi
 
@@ -42,14 +43,23 @@ def generaCodice(request, id):
         scambio = None
 
     if not scambio:
-        codice = random.randint(0, 999999)
+        a = True
+        while(a):
+            codice = random.randint(0, 999999)
+            try:
+                scambio = Scambi.objects.get(codice = codice)
+            except:
+                a = False
         scambio = Scambi(
             libro=libro, idRichiedente=request.user, codice=codice)
         scambio.save()
     else:
         codice = scambio.codice
-
+    
+    linkCodice = HTTP_URL + "codice/" + str(codice) + "/" 
+    
     return render(request, 'codiceScambio.html',  {
+        'link': linkCodice,
         'codice': codice,
     })
 

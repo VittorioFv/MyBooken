@@ -6,6 +6,8 @@ from django.core.validators import MinLengthValidator
 from libri.models import Libri
 
 
+
+
 class Chat(models.Model):
   utente1 = models.ForeignKey(User, related_name='utente1', on_delete=models.CASCADE)
   utente2 = models.ForeignKey(User, related_name='utente2', on_delete=models.CASCADE)
