@@ -6,27 +6,36 @@
 
 {% block content %}
 
-    {% if messages %}
-        {% for ms in messages %}
-            {{ ms }}
-        {% endfor %}
-    {% endif %}
+    
 
     {% load static %}
+    
+      
     <img src="{% static 'immagini/logo quad.svg' %}" width="120 px" height="120 px" id="loghetto">
 
+    {% if messages %}
+      {% for ms in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{ ms }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+      {% endfor %}
+    {% endif %}
     <div class="container BoxRegistrazione">
+
+
         <form class="forms"action = "" method = POST>
             {% csrf_token %}
           <!-- Email input -->
           <div class="form-outline mb-4 input">  
-            <label class="form-label" for="form2Example1">EMAIL:</label>
+            <label class="form-label" for="form2Example1">EMAIL</label>
             <input type="text" name = "username" id="form2Example1" class="form-control" placeholder="email" />
           </div>
         
           <!-- Password input -->
           <div class="form-outline mb-4 input"> 
-            <label class="form-label" for="form2Example2"">PASSWORD:</label>
+            <label class="form-label" for="form2Example2"">PASSWORD</label>
             <input type="password" name = "password" id="form2Example2" class="form-control" placeholder="password" />
           </div>
         
@@ -35,7 +44,8 @@
           <div class="final">
 
           <!-- Register buttons -->
-            <buttun type="button" class="btn btn-primary btn-block mb-4" id="registrati" href="{% url 'registrazione' %}">REGISTRATI</buttun>
+
+            <a type="button" class="btn btn-secondary btn-block mb-4" id="registrati" href="{% url 'registrazione' %}">REGISTRATI</a>
        
           <!-- Submit button -->
           <button type="Submit" class="btn btn-primary btn-block mb-4" id="accedi" value="Submit">ACCEDI</button> 
@@ -43,7 +53,7 @@
           <div class="row mb-4">
             <div>
               <!-- Simple link -->
-              <a href="#!" style="color: #005E79;">Password dimenticata?</a>
+              <a href="#!" style="color: #005E79; font-family: 'Golos Text', sans-serif;">Password dimenticata?</a>
             </div>
           </div>
         </div>

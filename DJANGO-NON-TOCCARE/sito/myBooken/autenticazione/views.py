@@ -59,7 +59,7 @@ def loginUtente(request):
             login(request, user)
             return redirect('libri')
         else:
-            messages.success(request, ("Errore: forse la password o l'username non sono corretti, ricordati di congfermare l'email se non lo hai fatto"))
+            messages.success(request, ("Errore: forse la password o l'username non sono corretti, ricordati di confermare l'email se non lo hai fatto"))
             return redirect('login')
     else:
         return render(request, 'login.html')
