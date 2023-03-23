@@ -29,8 +29,8 @@
             {% csrf_token %}
           <!-- Email input -->
           <div class="form-outline mb-4 input">  
-            <label class="form-label" for="form2Example1">EMAIL</label>
-            <input type="text" name = "username" id="form2Example1" class="form-control" placeholder="email" />
+            <label class="form-label" for="form2Example1">USERNAME</label>
+            <input type="text" name = "username" id="form2Example1" class="form-control" placeholder="username" />
           </div>
         
           <!-- Password input -->
@@ -51,9 +51,9 @@
           <button type="Submit" class="btn btn-primary btn-block mb-4" id="accedi" value="Submit">ACCEDI</button> 
           </div>
           <div class="row mb-4">
-            <div>
+            <div id="PassDim">
               <!-- Simple link -->
-              <a href="#!" style="color: #005E79; font-family: 'Golos Text', sans-serif;">Password dimenticata?</a>
+              <a href="#!" id="PasswordDimenticata">Password dimenticata?</a>
             </div>
           </div>
         </div>

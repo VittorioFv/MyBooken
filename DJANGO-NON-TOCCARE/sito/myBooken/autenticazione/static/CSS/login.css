@@ -102,9 +102,15 @@ label{
 
 #fine{
     position: absolute;
-    bottom: 20px;
-    width: 160px;
-    left: calc(50% - 80px);
+    margin-top: 100px;
+    width: 250px;
+    left: calc(50% - 125px);
+}
+#fine a{
+    text-decoration: none;
+    opacity: 50%;
+    font-size: 22px;
+
 }
 
 
@@ -183,8 +189,14 @@ label{
         line-height: 40px;
         font-family: 'Golos Text', sans-serif;
     }
+    #PassDim{
+        margin-top: -10px;
+    }
     .row{
         margin-top: 20px;
+    }
+    #fine{
+        font-size: 14px;
     }
   }
   .btn{
@@ -199,5 +211,9 @@ label{
     width: 605px;
     position: relative;
     left: calc(50% - 302px);
+  }
+  #PasswordDimenticata{
+    color: #005E79; 
+    font-family: 'Golos Text', sans-serif;
   }
 
