@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+  MyBooken esplora
+{% endblock %}
+
+{% block content %}
+
+  <div>
+    {% load qr_code %}
+    {% qr_from_text link %}
+    {{ codice }}
+  </div>
+{% endblock %}
+

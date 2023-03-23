@@ -2,11 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     text-align: center;
-}
-
-#loghetto{
-    position: relative;
-    bottom: -30px;
+    overflow-x: hidden;
 }
 
 input[type="email"]{
@@ -34,113 +30,120 @@ input[type="email"]::placeholder {
     color: rgb(88, 182, 158);
 }
 
+#loghetto{
+    position: relative;
+    top: 40px;
+}
+
 .forms{
     position: relative;
     top: 25px;
 }
 
 #form2Example1{
+    background-color: rgb(127, 212, 191);
     border: 0px;
-    width: 540px;
+    width: 165%;
     position: relative;
-    top: -30px;
-    left: 22px;
-    background-color: rgba(67, 160, 137, 0.521);
+    float: left;
+    left: -32%;
 }
 
 #form2Example2{
+    background-color: rgb(127, 212, 191);
     border: 0px;
-    width: 540px;
+    width: 165%;
     position: relative;
-    top: -77px;
-    left: 22px;
-    background-color: rgba(67, 160, 137, 0.521);
+    float: left;
+    left: -32%;
 }
-
 #form2Example3{
+    background-color: rgb(127, 212, 191);
     border: 0px;
-    width: 540px;
+    width: 165%;
     position: relative;
-    top: -120px;
-    left: 22px;
-    background-color: rgba(67, 160, 137, 0.521);
+    float: left;
+    left: -32%;
 }
 
 #form2Example4{
+    background-color: rgb(127, 212, 191);
     border: 0px;
-    width: 540px;
+    width: 165%;
     position: relative;
-    top: -170px;
-    left: 22px;
-    background-color: rgba(67, 160, 137, 0.521);
+    float: left;
+    left: -32%;
 }
 
-#label2{
+.col{
     position: relative;
-    top: -65px;
-    left: -1px;
+    margin: auto;
+    left: -30px;
+}
+
+.form-outline{
+    margin: auto;
+    width: 50%;
+}
+
+#label1{
+    float: left;
+    color:rgb(64, 160, 136);
+    position: relative;
+    left: -35%;
+}
+#label2{
+    float: left;
+    color:rgb(64, 160, 136);
+    position: relative;
+    left: -35%;
 }
 
 #label3{
+    float: left;
+    color:rgb(64, 160, 136);
     position: relative;
-    top: -110px;
+    left: -35%;
 }
 
 #label4{
-    position: relative;
-    top: -155px;
-    left: 1px;
-}
-
-label{
     float: left;
-    position: relative;
-    top: -20px;
     color:rgb(64, 160, 136);
-    margin: 20px;
-}
-
-#fine{
     position: relative;
-    bottom: -70px;
+    left: -35%;
 }
 
 .btn-primary{
     position: relative;
-    top: -160px;
-    width: 50%;
+    top: 23px;
+    border: 0px;
+    border-radius: 13px;
 }
 
 .text-center{
     position: relative;
-    top: -170px;
+    top: 15px;
+}
+
+.row{
+    position: relative;
+    text-align: center;
+}
+
+#fine{
+    position: relative;
+    bottom: -124px;
 }
 
 .container {
     border-radius: 20px;
     background-color: #b6ecd9;
     width: 45%;
-    height: 460px;
+    height: 380px;
     position: relative;
-    top: 50px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    top: 90px;
   }
-
-  .row{
-    position: relative;
-    left: 40px;
-    top: 5px;
-    width: 100%;
-  }
-
-  .form-check-label{
-    position: relative;
-    left: -20px;
-    top: -20px;
-  }
-
-
+ 
   @media screen and (max-width: 992px) {
     .col-xs-12, .col, .forms, .row {
       width: 100%;
@@ -149,118 +152,115 @@ label{
 
     .container{
         position: relative;
-        top: 50px;
         width: 300px;
-        height: 450px;
+        height: 400px;
         margin: auto;
+        top: 40px;
     }
 
-        
     #form2Example1{
-        top: -65px;
-        float: left;
+        margin: auto;
         position: relative;
-        left: 10%;
-        width: 77%;
+        left: -45px;
     }
     
     #form2Example2{
-       float: left;
-       left: 10%;
-       position: relative;
-       top: -95px;
-       width: 77%;
+        margin: auto;
+        position: relative;
+        left: -45px;
     }
+   
     
     #form2Example3{
-        float: left;
-        left: 10%;
+        margin: auto;
         position: relative;
-        width: 77%;
-        top: -125px;
+        left: -45px;
     }
     
     #form2Example4{
-       float: left;
-       left: 10%;
-       position: relative;
-       width: 77%;
-       top: -155px;
+        margin: auto;
+        position: relative;
+        left: -45px;
     }
     
     #label1{
-        position: relative;
-        color:rgb(64, 160, 136);
         float: left;
-        top: -50px;
+        position: relative;
+        left: -30%;
+        color:rgb(64, 160, 136)
     }
 
     #label2{
-        position: relative;
-        color:rgb(64, 160, 136);
         float: left;
-        top: -80px;
+        position: relative;
+        left: -42%;
+        width: 150%;
+        margin-top: 5px;
+        color:rgb(64, 160, 136)
     }
 
     #label3{
-        position: relative;
-        color:rgb(64, 160, 136);
         float: left;
-        top: -110px;
+        position: relative;
+        left: -30%;
+        margin-top: 5px;
+        color:rgb(64, 160, 136)
     }
 
     #label4{
-        position: relative;
-        color:rgb(64, 160, 136);
         float: left;
-        top: -140px;
+        width: 150%;
+        position: relative;
+        left: -42%;
+        margin-top: 5px;
+        color:rgb(64, 160, 136)
     }
     
-    #fine{
+    .final{
         position: relative;
-        bottom: -70px;
-        
+        top: 80px;
+        margin: auto;
     }
     
     .row{
         position: relative;
-        width: 100%;
-        font-size: 13px;
+        left: 20px;
     }
 
+    #fine{
+        position: relative;
+        bottom: -50px;
+    }
     .form-check-input{
         position: relative;
-        left: -20px;
-        top: -3px;
+        left: 117px;
+        top: -50px;
     }
 
     .form-check-label{
         position: relative;
-        left: -50px;
-        top: 5px;
+        left: 120px;
+        top: -50px;
         width: 100%;
       }
 
-    .cacca{
+      .col{
         position: relative;
+        left: -70px;
         top: -30px;
-        width: 100%;
-        right: 30px;
-    }
+      }
 
-    .btn-primary{
+      .btn-primary{
         position: relative;
-        top: 270px;
-        left: -50px;
-    }
-   
-    .text-center{
+        top: 20px;
+      }
+
+      .text-center{
         position: relative;
-        top: 260px;
-        width: 400px;
-        font-size: 20px;
-        left: -180px;
-    }
+        top: 10px;
+      }
+      
+      }
+
   }
   
-
