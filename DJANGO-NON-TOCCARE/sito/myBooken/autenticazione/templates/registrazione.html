@@ -1,36 +1,106 @@
 {% extends "masterAuth.html" %}
 
 {% block title %}
-  Login MyBooken
+  Registrazione MyBooken
 {% endblock %}
 
 {% block content %}
+{% load static %}
 
-{% block headCss %}
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
-{% endblock %}
+<link rel="stylesheet" href="{% static 'CSS/registrazione.css' %}">
 
-<form action = "{% url 'registrazione' %}" method = POST>
-    {% csrf_token %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
     
-    {{ form.as_div }}
-    {{ formP.as_div }}
 
-    <input type = "submit" value = "Submit">
+    {% load static %}
+    
+      
+    <img src="{% static 'immagini/logo quad.svg' %}" width="120 px" height="120 px" id="loghetto">
 
-</form>
+    {% if messages %}
+      {% for ms in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          Errore di inserimento, controlla meglio
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+      {% endfor %}
+    {% endif %}
+    <div class="container BoxRegistrazione">
 
 
-<div id="nascondiSotto"></div>
+        <form class="forms" action = "{% url 'registrazione' %}" method = POST>
+            {% csrf_token %}
+          <!-- Username input -->
+          <div class="form-outline mb-4 input">  
+            <label class="form-label" for="form2Example1">USERNAME</label>
+            <input type="text" name = "username" id="form2Example1" class="form-control" placeholder="username" />
+          </div>
+
+          <div class="form-outline mb-4 input">  
+            <label class="form-label" for="form2Example1">EMAIL</label>
+            <input type="email" name = "email" id="form2Example1" class="form-control" placeholder="email" />
+          </div>
+        
+          <!-- Password input -->
+          <div class="form-outline mb-4 input"> 
+            <label class="form-label" for="form2Example2"">PASSWORD</label>
+            <input type="password" name = "password1" id="form2Example2" class="form-control" placeholder="password" />
+          </div>
+
+          <div class="form-outline mb-4 input"> 
+            <label class="form-label" for="form2Example2"">CONFERMA PASSWORD</label>
+            <input type="password" name = "password2" id="form2Example2" class="form-control" placeholder="conferma password" />
+          </div>
+        
+          <div class="form-outline mb-4 input">  
+            <label class="form-label" for="form2Example1">CITTA'</label>
+            <input type="text" name = "citta"  id="citta" class="form-control" value="" placeholder="città" />
+          </div>
+
+            <div class="inputHidden"> 
+              <input type="text" name = "longitudine" id="longitudine" value="" placeholder="" />
+            </div>
+            <div class="inputHidden">
+              <input type="text" name = "latitudine"  id="latitudine" value="" placeholder="" />
+            </div>
+  
+
+
+          
+
+          <!-- 2 column grid layout for inline styling -->
+          <div class="final">
+
+          <!-- Submit button -->
+          <button type="Submit" class="btn btn-primary btn-block mb-4" id="accedi" value="Submit">REGISTRATI</button> 
+          </div>
+        </form>
+    </div>
+
+        <div id="nascondiSotto"></div>
 <div id="schedaMappa">
-  <div id="basicMap"></div>
-  <h3> La posizione è corretta? </h3>
-  <button type="button" id="bottoneRicerca">Sì</button>
+<div id="basicMap"></div>
+<h3> La posizione è corretta? </h3>
+<button type="button" id="bottoneRicerca">Sì</button>
 </div>
 
 <script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
 {% load static %}
 <script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
 
+        
+        
+        <div id="fine">
+          <a href="mailto:mybooken.noreply@gmail.com"><strong style="color:rgb(11, 138, 128)">My Booken | &copy 2023</strong></a> 
+          </div>
+
 {% endblock %}
+
+
+
+
+
+ 

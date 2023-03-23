@@ -17,6 +17,16 @@ input[type="text"]{
     font-family: 'Golos Text', sans-serif;
 
 }
+input[type="password"]{
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+
+}
+input[type="email"]{
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+
+}
 
 input[type="text"]::-webkit-input-placeholder {
     font-size: 20px;
@@ -25,6 +35,13 @@ input[type="text"]::-webkit-input-placeholder {
 
 }
 input[type="password"]::-webkit-input-placeholder {
+    color: #36867D;
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+
+
+}
+input[type="email"]::-webkit-input-placeholder {
     color: #36867D;
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
@@ -47,7 +64,7 @@ input[type="text"]:-ms-input-placeholder {
 
 input[type="text"]::-ms-input-placeholder {
     font-size: 20px;
-    font-family: 'Golos Text', sans-serif; 
+    font-family: 'Golos Text', sans-serif;   
     color: #36867D;
 }
 
@@ -75,11 +92,12 @@ input[type="text"]::placeholder {
     
 }
 
-#form2Example1{
+#citta{
     background-color: rgb(54, 134, 125, 0.3);
     color: #36867D;
     border: 0px;
 }
+
 
 .col{
     position: relative;
@@ -124,7 +142,7 @@ label{
         border-radius: 20px;
         background-color: #E1F1E5;
         width: 605px;
-        height: 487px;
+        height: 800px;
         position: relative;
         top: 90px;
         padding: 20px;
@@ -193,9 +211,7 @@ label{
         line-height: 40px;
         font-family: 'Golos Text', sans-serif;
     }
-    #PassDim{
-        margin-top: -10px;
-    }
+
     .row{
         margin-top: 20px;
     }
@@ -220,4 +236,3 @@ label{
     color: #005E79; 
     font-family: 'Golos Text', sans-serif;
   }
-

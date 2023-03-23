@@ -60,6 +60,9 @@ function cercaCitta() {
             setCenterCoordinatesLonLat(lon, lat)
             createMarker(lon, lat);
             console.log(lon, lat);
+            document.getElementById('nascondiSotto').style.display = "block";
+          document.getElementById('schedaMappa').style.display = "block";
+        document.getElementById('schedaMappa').style.opacity = "100%";
         } else {
             alert("Non ho trovato niente")
         }
@@ -83,10 +86,10 @@ function getCenterCoordinates() /****** ricava le coordinate centrali della posi
 }
 
 // nascondo i form non utilizzati
-let h = document.querySelectorAll(".inputHidden")
-for(let i of h){
-  i.parentNode.style.display = "none";
-}
+// let h = document.querySelectorAll(".inputHidden")
+// for(let i of h){
+//   i.parentNode.style.display = "none";
+// }
 
 document.getElementById("schedaMappa").style.display = "none";
 
@@ -94,7 +97,8 @@ var conferma = false;
 document.querySelector("form").addEventListener("submit", (e) => {
   if (!conferma) {
     e.preventDefault();
-
+    console.log("hei");
+    
     cercaCitta();
 
   } else {
