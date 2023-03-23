@@ -6,5 +6,12 @@
 
 {% block content %}
 
+  {% for user in utenti %}
+    <div>
+      {{ user.username }}
+      <a href="scambia_libro/{{ user.username }}"> Genera codice per lo scambio </a>
+    </div>
+  {% endfor %}
+
 {% endblock %}
 
