@@ -1,0 +1,386 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#primabar{
+    background-color: #A7DCEA;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#loghetto{
+    position: relative;
+    top: -25px;
+    left: 23px;
+}
+
+#token{
+    position: relative;
+    left: 40%;
+    top: -24px;
+}
+
+#libroside{
+    width: 100%;
+}
+
+.bi-chevron-left{
+    position: relative;
+    top: -70px;
+    left: -42%;
+}
+
+#titolo{
+    position: relative;
+    top: 30px;
+}
+
+#libro{
+    border-radius: 30px;
+    position: relative;
+    border: 5px solid #A7DCEA;
+    width: 25%;
+    height: 300px;
+    top: 50px;
+    left: 37%;
+}
+
+#p1{
+    border: 0px;
+    background-color: #A7DCEA;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    position: relative;
+    left: 45%;
+    top: 20px;
+}
+
+#p2{
+    border: 0px;
+    background-color: #A7DCEA;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    position: relative;
+    left: 50%;
+    top: -30px;
+}
+
+#chat{
+    width: 50px;
+    position: relative;
+    left: 45%;
+    top: -20px;
+}
+
+#richiedi{
+    width: 50px;
+    position: relative;
+    left: 50%;
+    top: -68px;
+}
+
+.riquadri{
+    background-color: #E1F1E5;
+    height: 50px;
+    border-radius: 20px;
+    width: 20%;
+}
+
+#r1{
+    position: relative;
+    left: 2%;
+    top: -40px;
+    padding: 10px;
+}
+
+#r2{
+    position: relative;
+    left: 40%;
+    top: -91px;
+    padding: 10px;
+}
+
+#r3{
+    position: relative;
+    left: 78%;
+    top: -141px;
+    padding: 10px;
+}
+
+#r4{
+    position: relative;
+    top: -100px;
+    left: 40%;
+    padding: 10px;
+}
+
+#autore{
+    font-size: 30px;
+    color: #23687a;
+    position: relative;
+    top: -110px;
+}
+
+#descrizione{
+    background-color: #298a7eaf;
+    height: 40px;
+    border-radius: 10px;
+    width: 10%;
+    position: relative;
+    left: 25%;
+    top: -60px;
+}
+
+#containertesto{
+    width: 50%;
+    height: 400px;
+    background-color: #E1F1E5;
+    position: relative;
+    left: 25%;
+    top: -73px;
+    z-index: 1;
+    border-radius: 0px 10px 10px 10px;
+}
+
+#prova{
+    font-size: 30px;
+    color: #23687a;
+    position: relative;
+    top: -40px;
+    left: -16%;
+}
+
+#riquadroprova{
+    width: 50%;
+    height: 70px;
+    background-color: #36867d63;
+    position: relative;
+    left: 25%;
+    top: -30px;
+    border-radius: 10px;
+}
+
+#correlati{
+    position: relative;
+    left: -16%;
+}
+
+#riquadrocorrelati{
+    width: 50%;
+    height: 170px;
+    background-color: #36867d63;
+    position: relative;
+    left: 25%;
+    top: 10px;
+    border-radius: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding: 10px;
+}
+
+.image{
+    width: 12%;
+    height: 80px;
+    background-color: #E1F1E5;
+    position: relative;
+    margin: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 30px;
+}
+
+#fine{
+    position: relative;
+    top: 60px;
+    height: 80px;
+    background-color: #A7DCEA;
+    padding: 12px;
+}
+
+#img-responsive{
+    position: relative;
+    left: -10%;
+}
+
+#contact{
+    position: relative;
+    top: 1px;
+}
+
+@media screen and (max-width: 992px) {
+    .col-xs-12 {
+      width: 100%;
+      margin-top: auto;
+    }
+
+#token{
+    position: relative;
+    left: 16%;
+    width: 10%;
+    height: 10%;
+}
+
+#titolo{
+    position: relative;
+    top: 10px;
+}
+
+    #libro{
+        border-radius: 30px;
+        position: relative;
+        border: 9px solid #A7DCEA;
+        width: 75%;
+        height: 270px;
+        top: 20px;
+        left: 13%;
+    }
+
+    .riquadri{
+        background-color: #E1F1E5;
+        height: 67px;
+        border-radius: 15px;
+        width: 23%;
+        padding: 10px;
+
+    }
+    
+#r1{
+    position: relative;
+    left: 2%;
+    top: -80px;
+}
+
+#r2{
+    position: relative;
+    left: 38%;
+    top: -145px;
+}
+
+#r3{
+    position: relative;
+    left: 75%;
+    top: -213px;
+}
+
+
+#p1{
+    position: relative;
+    left: 35%;
+    top: -10px;
+}
+
+#p2{
+    position: relative;
+    left: 55%;
+    top: -60px;
+}
+
+
+#chat{
+    position: relative;
+    left: 35%;
+    top: -50px;
+}
+
+#richiedi{
+    width: 50px;
+    position: relative;
+    left: 55%;
+    top: -97px;
+}
+
+#autore{
+    font-size: 30px;
+    color: #23687a;
+    position: relative;
+    top: -200px;
+    left: -34%;
+}
+
+
+#r4{
+    position: relative;
+    top: -200px;
+    left: 2%;
+    padding: 10px;
+    width: 50%;
+    height: 45px;
+}
+
+#descrizione{
+    background-color: #298a7eaf;
+    height: 40px;
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+    left: 2%;
+    top: -180px;
+}
+
+#containertesto{
+    width: 96%;
+    height: 400px;
+    background-color: #E1F1E5;
+    position: relative;
+    left: 2%;
+    top: -190px;
+    z-index: 1;
+    border-radius: 0px 15px 15px 15px;
+}
+
+
+#prova{
+    position: relative;
+    top: -160px;
+    left: -15%;
+}
+
+#riquadroprova{
+    width: 96%;
+    height: 70px;
+    position: relative;
+    left: 2%;
+    top: -150px;
+}
+
+#correlati{
+    position: relative;
+    left: -16%;
+    top: -120px;
+}
+
+#riquadrocorrelati{
+    width: 96%;
+    height: 170px;
+    position: relative;
+    left: 2%;
+    top: -100px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#fine{
+    position: relative;
+    top: -50px;
+}
+
+#img-responsive{
+    position: relative;
+    left: -25%;
+}
+
+#contact{
+    position: relative;
+    top: -105px;
+    margin-left: 10%;
+}
+}
+
