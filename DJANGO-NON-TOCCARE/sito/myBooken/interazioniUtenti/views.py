@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 from django.db.models import Q
 
+from autenticazione.models import Profilo
 from libri.models import Libri
 from myBooken.settings import HTTP_URL
 
@@ -14,11 +15,14 @@ import random
 
 @login_required
 def chatMain(request):
-    utentiId = Chat.objects.values('utente2').filter(utente1=request.user)
-    utentiId2 = Chat.objects.values('utente1').filter(utente2=request.user)
-    utenti = User.objects.filter(Q(pk__in=utentiId) | Q(pk__in=utentiId2))
+    utentiId = Chat.objects.values('utente1', 'utente2').filter(Q(utente1 = request.user) | Q(utente2 = request.user)).order_by('tempo')
 
-    return render(request, 'chat.html', {'utenti': utenti})
+    # DA RIVEDERE
+    #uId = []
+    #print(utentiId.utente1)
+    #utenti = User.objects.filter(pk__in = uId)
+
+    return render(request, 'chat.html')#, {'utenti': utenti})
 
 
 @login_required
@@ -44,10 +48,10 @@ def generaCodice(request, id):
 
     if not scambio:
         a = True
-        while(a):
+        while (a):
             codice = random.randint(0, 999999)
             try:
-                scambio = Scambi.objects.get(codice = codice)
+                scambio = Scambi.objects.get(codice=codice)
             except:
                 a = False
         scambio = Scambi(
@@ -55,24 +59,52 @@ def generaCodice(request, id):
         scambio.save()
     else:
         codice = scambio.codice
-    
-    linkCodice = HTTP_URL + "codice/" + str(codice) + "/" 
-    
+
+    linkCodice = HTTP_URL + "codice/" + str(codice) + "/"
+
     return render(request, 'codiceScambio.html',  {
         'link': linkCodice,
         'codice': codice,
     })
 
 
+def scambiaTokenTra(richiedente, ricevente):
+    profilo2 = Profilo.objects.get(user = richiedente)
+    if profilo2.numTopen <= 0:
+        return False
+    profilo2.numTopen -= 1
+    profilo2.save()
+    
+    profilo1 = Profilo.objects.get(user = ricevente)
+    profilo1.numTopen += 1
+    profilo1.save()
+    
+    return True
+
 @login_required
 def controllaCodiceScambio(request, codiceScambio):
     try:
-      scambio = Scambi.objects.get(codice=codiceScambio)
-      libro = Libri.objects.get(pk = scambio.libro.id)
-      user =  User.objects.get(pk = libro.idUser.id)
-      if user == request.user:
-          return render(request, 'confermaCodice.html')
+        scambio = Scambi.objects.get(codice=codiceScambio)
+        libro = Libri.objects.get(pk=scambio.libro.id)
+        riceveneTetoken = User.objects.get(pk=libro.idUser.id)
+        richiedenteTetoken = User.objects.get(username=scambio.idRichiedente)
+
+        if riceveneTetoken == request.user:
+            if (scambiaTokenTra(richiedenteTetoken, riceveneTetoken)):
+                scambio.delete()
+                libro.delete()
+                try:
+                    chat = Chat.objects.get(utente1=richiedenteTetoken, utente2=riceveneTetoken)
+                except:
+                    chat = Chat.objects.get(utente1=riceveneTetoken, utente2=richiedenteTetoken)
+                
+                chat.numeroScambi += 1
+                chat.save()
+
+                return render(request, 'confermaCodice.html')
+            else:
+                return render(request, 'nonHaiToken.html')
     except:
         return render(request, 'codiceErrato.html')
-    
+
     return render(request, 'codiceErrato.html')

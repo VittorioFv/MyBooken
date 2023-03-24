@@ -21,7 +21,7 @@ class Profilo(models.Model):
         ]
     )
 
-class Recensione(models.Model):
+class Recensioni(models.Model):
     idUser = models.ForeignKey(User, on_delete=models.CASCADE)
     voto = models.IntegerField(
         default=5,

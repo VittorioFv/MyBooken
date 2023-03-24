@@ -14,6 +14,8 @@ class Chat(models.Model):
 
   numeroScambi = models.IntegerField(default=0)
 
+  tempo = models.TimeField(auto_now=False, auto_now_add=False)
+
   class Meta:
     unique_together = ('utente1', 'utente2')
 
