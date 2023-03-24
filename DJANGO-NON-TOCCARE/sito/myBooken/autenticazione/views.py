@@ -43,7 +43,7 @@ def attivaUtente(request, uidb64, token):
         utente.is_active = True
         utente.save()
 
-        messages.success(request, " Grazie per aver confermato la mail. or puoi accedere col tuo account")
+        messages.success(request, ("Grazie per aver confermato la mail. or puoi accedere col tuo account"))
         return redirect('login')
     else:    
         messages.error(request, " Il link di attivazione è invalido")
@@ -66,7 +66,8 @@ def loginUtente(request):
 
 def logoutUtente(request):
     logout(request)
-    return render(request, 'login.html')
+    messages.success(request, ("Sei uscito dal tuo account correttamente"))
+    return redirect('login')
 
 def registrazioneUtente(request):
     if request.method == 'POST':
