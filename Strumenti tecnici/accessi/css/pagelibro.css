@@ -230,7 +230,7 @@ body{
 
 #titolo{
     position: relative;
-    top: 10px;
+    top: -12px;
 }
 
     #libro{
@@ -302,14 +302,14 @@ body{
     color: #23687a;
     position: relative;
     top: -200px;
-    left: -34%;
+    left: -28%;
 }
 
 
 #r4{
     position: relative;
     top: -200px;
-    left: 2%;
+    left: 9%;
     padding: 10px;
     width: 50%;
     height: 45px;
@@ -321,16 +321,16 @@ body{
     border-radius: 10px;
     width: 50%;
     position: relative;
-    left: 2%;
+    left: 9%;
     top: -180px;
 }
 
 #containertesto{
-    width: 96%;
+    width: 82%;
     height: 400px;
     background-color: #E1F1E5;
     position: relative;
-    left: 2%;
+    left: 9%;
     top: -190px;
     z-index: 1;
     border-radius: 0px 15px 15px 15px;
@@ -340,28 +340,28 @@ body{
 #prova{
     position: relative;
     top: -160px;
-    left: -15%;
+    left: -9%;
 }
 
 #riquadroprova{
-    width: 96%;
+    width: 82%;
     height: 70px;
     position: relative;
-    left: 2%;
+    left: 9%;
     top: -150px;
 }
 
 #correlati{
     position: relative;
-    left: -16%;
+    left: -9%;
     top: -120px;
 }
 
 #riquadrocorrelati{
-    width: 96%;
+    width: 82%;
     height: 170px;
     position: relative;
-    left: 2%;
+    left: 9%;
     top: -100px;
     border-radius: 10px;
     padding: 10px;
@@ -370,6 +370,7 @@ body{
 #fine{
     position: relative;
     top: -50px;
+    vertical-align: bottom;
 }
 
 #img-responsive{
