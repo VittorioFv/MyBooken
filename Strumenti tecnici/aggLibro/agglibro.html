@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/agglibro.css">
+    <title>AggLibro</title>
+</head>
+
+<body>
+    <button type="submit" id="show-modalbook-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="34"
+            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+        </svg>
+    </button>
+
+    <div id="overlaybook">
+        <div id="modalbook">
+            <button type="submit" id="close-modalbook-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="34" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+
+            <div class="containeragglibro">
+                <form action="" method="POST">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">ISBN:</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">Inserisci il titolo:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Titolo...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Inserisci l'autore:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Autore...">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Inserisci una descrizione:</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Descrizione..."
+                                style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="lname">Aggiungi immagine</label>
+                        <button type="submit" id="btnSubmit"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="34" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <script src="JS/agglibro.js"></script>
+</body>
+
+</html>

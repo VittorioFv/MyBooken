@@ -1,0 +1,49 @@
+#overlaybook {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modalbook {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #A7DCEA;
+    margin: auto;
+}
+
+button {
+    width: 36px;
+    height: 36px;
+    background-color: #089FCA;
+    border-radius: 50px;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px rgba(0, 94, 121, 0.4);
+    color: #FFFFFF;
+}
+
+#show-modalbook-btn {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 10px;
+    margin-bottom: 56px;
+}
+
+#close-modalbook-btn {
+    float: right;
+    right: 10px;
+    top: 10px;
+    margin: 10px;
+}
+
+.containeragglibro{
+    text-align: center;
+    
+}

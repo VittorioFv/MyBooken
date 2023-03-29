@@ -89,7 +89,6 @@ input {
     text-decoration: none;
 }
 
-
 .containerschedalibri {
     width: 50%;
     left: 0px;
@@ -99,7 +98,6 @@ input {
     overflow-y: scroll;
     flex-wrap: nowrap;
 }
-
 
 .containermap {
     width: 50%;
