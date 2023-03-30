@@ -31,29 +31,29 @@
                 <form action="" method="POST">
                     <div class="row">
                         <div class="col-25">
-                            <label for="fname">ISBN:</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <label>ISBN*:</label>
+                            <input type="text" id="isbn" name="isbn" placeholder="000-00-00000-00-0" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-25">
-                            <label for="fname">Inserisci il titolo:</label>
+                            <label>Inserisci il titolo*:</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="fname" name="firstname" placeholder="Titolo...">
+                            <input type="text" id="fname" name="firstname" placeholder="Titolo..." required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-25">
-                            <label for="lname">Inserisci l'autore:</label>
+                            <label>Inserisci l'autore*:</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="lname" name="lastname" placeholder="Autore...">
+                            <input type="text" id="lname" name="lastname" placeholder="Autore..." required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-25">
-                            <label for="subject">Inserisci una descrizione:</label>
+                            <label>Inserisci una descrizione:</label>
                         </div>
                         <div class="col-75">
                             <textarea id="subject" name="subject" placeholder="Descrizione..."
@@ -61,13 +61,25 @@
                         </div>
                     </div>
                     <div class="row">
-                        <label for="lname">Aggiungi immagine</label>
-                        <button type="submit" id="btnSubmit"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                height="34" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-                            </svg>
-                        </button>
+                        <div class="col-25">
+                            <label>Aggiungi immagine</label>
+                            <button type="submit" id="btnSubmit"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="34" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label>
+                                <input type="checkbox" name="remember"> Usa la posizione del tuo profilo
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit">Submit</button>
                     </div>
                 </form>
 
