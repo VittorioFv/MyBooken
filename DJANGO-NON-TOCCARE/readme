@@ -37,3 +37,4 @@ Requisito per creare token per l'accesso con l'email:
 		
 	QR code:
 		pip install django-qr-code
+

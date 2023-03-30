@@ -15,14 +15,17 @@ import random
 
 @login_required
 def chatMain(request):
-    utentiId = Chat.objects.values('utente1', 'utente2').filter(Q(utente1 = request.user) | Q(utente2 = request.user)).order_by('tempo')
+    chatId = Chat.objects.filter(Q(utente1 = request.user) | Q(utente2 = request.user)).order_by('data', 'tempo')[:10]
 
-    # DA RIVEDERE
-    #uId = []
-    #print(utentiId.utente1)
-    #utenti = User.objects.filter(pk__in = uId)
+    uId = []
+    for chat in chatId:
+        if chat.utente1 == request.user:
+            uId.append(chat.utente2)
+        else:
+            uId.append(chat.utente1)
+    utenti = User.objects.filter(username__in = uId)
 
-    return render(request, 'chat.html')#, {'utenti': utenti})
+    return render(request, 'chat.html', {'utenti': utenti})
 
 
 @login_required

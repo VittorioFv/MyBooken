@@ -14,6 +14,7 @@ class Chat(models.Model):
 
   numeroScambi = models.IntegerField(default=0)
 
+  data = models.DateField(auto_now=False, auto_now_add=False)
   tempo = models.TimeField(auto_now=False, auto_now_add=False)
 
   class Meta:
