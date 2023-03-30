@@ -9,7 +9,7 @@ from interazioniUtenti.models import Chat
 from .models import Libri
 from django.contrib.auth.models import User
 
-from datetime import datetime
+from datetime import datetime, date
 
 from django.db.models import Q
 
@@ -45,17 +45,19 @@ def contattaAutore(request, username):
     utente1 = User.objects.get(username=request.user.username)
     utente2 = User.objects.get(username=username)
 
+    if utente1.username > utente2.username:
+        t = utente1
+        utente1 = utente2
+        utente2 = t
+    
     try:
         chat = Chat.objects.get(
             utente1=utente1, utente2=utente2)
     except:
-        try:
-          chat = Chat.objects.get(utente1=utente2,
-                                utente2=utente1)
-        except:
-          chat = Chat(utente1=utente1, utente2=utente2, numeroScambi = 0)
-          chat.tempo = datetime.now()
-          chat.save()
+        chat = Chat(utente1=utente1, utente2=utente2, numeroScambi = 0)
+        chat.data = date.today()
+        chat.tempo = datetime.now()
+        chat.save()
     
     return redirect('chat_main')
 
@@ -64,10 +66,8 @@ def libri(request):
     profilo = Profilo.objects.get(user=request.user.id)
     lon = profilo.longitudine
     lat = profilo.latitudine
+    
     ((lonm, lonM), (latm, latM)) = getArea(lon=lon, lat=lat, kilometri=10)
-
-    print(lonm, lonM, latm, latM)
-
     mylibri = Libri.objects.filter(
         longitudine__gt=lonm, longitudine__lt=lonM, latitudine__gt=latm, latitudine__lt=latM)
     mylibri = mylibri.exclude(idUser=request.user.id)
@@ -86,7 +86,6 @@ def libri(request):
 @login_required
 def dettagliLibro(request, id):
     libro = Libri.objects.get(id=id)
-    # utente = User.objects.get(username = libro.idUser)
     profilo = Profilo.objects.get(user=libro.idUser)
     recensioni = Recensioni.objects.filter(idUser=libro.idUser)
 
