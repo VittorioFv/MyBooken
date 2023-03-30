@@ -5,18 +5,20 @@
 {% endblock %}
 
 {% block content %}
-{% load static %}
 
+{% load static %}
 <link rel="stylesheet" href="{% static 'CSS/registrazione.css' %}">
 
 {% load static %}
-
 <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/map.css' %}">
+
     
 
     {% load static %}
-    
-      
+          
     <img src="{% static 'immagini/logo quad.svg' %}" width="120 px" height="120 px" id="loghetto">
 
     {% if messages %}
@@ -87,15 +89,23 @@
     </div>
 
         <div id="nascondiSotto"></div>
-<div id="schedaMappa">
-<div id="basicMap"></div>
+
+
+
 <h3> La posizione è corretta? </h3>
 <button type="button" id="bottoneRicerca">Sì</button>
 </div>
 
-<script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+
+  <div id="map"></div>
+
+
+
 {% load static %}
 <script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
+
+{% load static %}
+<script type="text/javascript" src="{% static 'JS/map.js' %}"></script>
 
         
         
