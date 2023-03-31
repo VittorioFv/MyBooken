@@ -12,8 +12,8 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
 
-{% load static %}
-<link rel="stylesheet" href="{% static 'CSS/map.css' %}">
+{% comment %} {% load static %}
+<link rel="stylesheet" href="{% static 'CSS/map.css' %}"> {% endcomment %}
 
     
 
@@ -87,22 +87,20 @@
           </div>
         </form>
     </div>
-
-        <div id="nascondiSotto"></div>
-
-
-
-<h3> La posizione è corretta? </h3>
-<button type="button" id="bottoneRicerca">Sì</button>
-</div>
-
-
-  <div id="map"></div>
+<div id="overlay"></div>
+        
+          <div id="basicMap"></div>
+          <h3 id="domanda"> La posizione è corretta? </h3>
+          <button type="button" id="bottoneRicerca">Sì</button>
+        
 
 
 
-{% load static %}
-<script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
+
+
+
+
+
 
 {% load static %}
 <script type="text/javascript" src="{% static 'JS/map.js' %}"></script>

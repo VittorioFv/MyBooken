@@ -1,13 +1,103 @@
-
-var map = L.map('map').setView([45.4384958, 10.9924122], 13);
+var map = L.map('basicMap').setView([45.4384958, 10.9924122], 13);
+var markersArray = []
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-L.marker([45.4384958, 10.9924122]).addTo(map);
+
+//L.marker([45.4384958, 10.9924122]).addTo(map);
+
 map.on('click', (event) => {
     console.log(event.latlng)
     L.marker([event.latlng.lat, event.latlng.lng]).addTo(map);
 });
+//INIZIO
+function cercaCitta(cittaDaCercare) {
+  var cittaDaCercare = document.getElementById("citta").value;
 
+  var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + cittaDaCercare;
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      var lat = data[0].lat;
+      var lon = data[0].lon;
+      map.setView(new L.LatLng(lat, lon), 13);
+      var marker = L.marker([lat, lon]).addTo(map);
+      map.fitBounds(marker.getBounds());
+      document.getElementById('basicMap').style.left = "20%";
+      document.getElementById('overlay').style.display = "block";
+      document.getElementById('bottoneRicerca').style.display = "block";
+      document.getElementById('domanda').style.display = "block";
+
+    })
+    .catch(function(error) {
+      console.log(error);
+    })
+    .finally(() => {
+      document.getElementById('basicMap').style.left = "20%";
+      document.getElementById('overlay').style.display = "block";
+      document.getElementById('bottoneRicerca').style.display = "block";
+      document.getElementById('domanda').style.display = "block";
+    });
+}
+
+
+
+//FINE
+/*
+ function cercaCitta() {
+   var cittaDaCercare = document.getElementById("citta").value;
+
+   var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + cittaDaCercare;
+
+   var callNominatiumApi = fetch(url);
+
+   callNominatiumApi.then(function (response) {
+       return response.json();
+   }).then(function (data) {
+       if (data.length > 0) {
+           var lat = data[0].lat;
+           var lon = data[0].lon;
+           map.setView([lat, lon], 13);
+           //setCenterCoordinatesLonLat(lon, lat)
+           //createMarker(lon, lat);
+           console.log(lon, lat);
+           document.getElementById('nascondiSotto').style.display = "block";
+         document.getElementById('schedaMappa').style.display = "block";
+       document.getElementById('schedaMappa').style.opacity = "100%";
+       } else {
+           alert("Non ho trovato niente")
+       }
+   }).catch(function (error) {
+       alert(error);
+   }).finally(() => {
+     document.getElementById('nascondiSotto').style.display = "block";
+     document.getElementById('schedaMappa').style.display = "block";
+     document.getElementById('schedaMappa').style.opacity = "100%";
+   });
+ }
+ */
+
+
+//document.getElementById("schedaMappa").style.display = "none";
+
+var conferma = false;
+document.querySelector("form").addEventListener("submit", (e) => {
+  if (!conferma) {
+    e.preventDefault();
+    console.log("hei");
+    
+    cercaCitta();
+
+  } else {
+    console.log("ciao");
+  }
+});
+
+document.querySelector("#bottoneRicerca").addEventListener("click", () => {
+  conferma = true;
+  document.querySelector("form").submit();
+});
