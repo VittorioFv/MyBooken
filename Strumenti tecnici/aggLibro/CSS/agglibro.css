@@ -11,7 +11,6 @@
 
 #modalbook {
     width: 90%;
-    height: 80%;
     border-radius: 10px;
     margin: auto;
     box-sizing: border-box;
@@ -26,6 +25,7 @@ button {
     cursor: pointer;
     box-shadow: 1px 3px 3px rgba(0, 94, 121, 0.4);
     color: #FFFFFF;
+    border: none;
 }
 
 #show-modalbook-btn {
@@ -51,21 +51,13 @@ input[type=text],
 select,
 textarea {
     width: 80%;
-    padding: 9px;
+    padding: 4px;
     border: 1px solid #ccc;
     border-radius: 10px;
     resize: vertical;
+    
 }
 
-input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    float: right;
-}
 
 label {
     padding: 12px 12px 12px 0;
@@ -75,6 +67,7 @@ label {
 .col-25 {
     margin-left: 7%;
     margin-right: 7%;
+    
 }
 
 .col-75 {
@@ -89,6 +82,15 @@ label {
     clear: both;
 }
 
+#bnt-carica{
+    font-family: 'Gamja Flower', cursive;
+    font-size: large;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    
+
+}
 
 @media only screen and (max-width: 992px) {
     .col-25,
