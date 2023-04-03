@@ -8,8 +8,13 @@ var currentMarker = null;
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-//L.marker([45.4384958, 10.9924122]).addTo(map);
-
+function updateDivPosition() {
+  if (window.innerWidth > 992) {
+    document.getElementById('basicMap').style.left = "20%";
+  } else {
+    document.getElementById('basicMap').style.left = "10%";
+  }
+}
 
 //INIZIO
 function cercaCitta(cittaDaCercare) {
@@ -39,7 +44,7 @@ function cercaCitta(cittaDaCercare) {
       console.log(error);
     })
     .finally(() => {
-      document.getElementById('basicMap').style.left = "20%";
+      updateDivPosition();
       document.getElementById('overlay').style.display = "block";
       document.getElementById('bottoneRicerca').style.display = "block";
       document.getElementById('domanda').style.display = "block";
@@ -72,3 +77,8 @@ document.querySelector("#bottoneRicerca").addEventListener("click", () => {
   conferma = true;
   document.querySelector("form").submit();
 });
+
+
+
+
+window.addEventListener('resize', updateDivPosition);
