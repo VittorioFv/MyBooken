@@ -21,7 +21,7 @@ class Profilo(models.Model):
         ]
     )
 
-class Recensioni(models.Model):
+'''class Recensioni(models.Model):
     idUser = models.ForeignKey(User, on_delete=models.CASCADE)
     voto = models.IntegerField(
         default=5,
@@ -30,4 +30,4 @@ class Recensioni(models.Model):
             MinValueValidator(1)
         ]
      )
-    testo = models.CharField(max_length=1000)
+    testo = models.CharField(max_length=1000)'''

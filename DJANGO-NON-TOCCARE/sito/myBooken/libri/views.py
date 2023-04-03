@@ -4,7 +4,7 @@ from django.template import loader
 
 from libri.forms import formAggiuntaLibri
 from libri.forms import formModificaLibri
-from autenticazione.models import Profilo, Recensioni
+from autenticazione.models import Profilo#, Recensioni
 from interazioniUtenti.models import Chat
 from .models import Libri
 from django.contrib.auth.models import User
@@ -87,14 +87,14 @@ def libri(request):
 def dettagliLibro(request, id):
     libro = Libri.objects.get(id=id)
     profilo = Profilo.objects.get(user=libro.idUser)
-    recensioni = Recensioni.objects.filter(idUser=libro.idUser)
+    #recensioni = Recensioni.objects.filter(idUser=libro.idUser)
 
     template = loader.get_template('dettagliLibro.html')
     context = {
         'mylibri': libro,
         'usernameUtente': libro.idUser,
         'profilo': profilo,
-        'recensioni': recensioni,
+        #'recensioni': recensioni,
     }
     return HttpResponse(template.render(context, request))
 
