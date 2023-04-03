@@ -25,9 +25,12 @@ function cercaCitta(cittaDaCercare) {
       var lon = data[0].lon;
       map.setView(new L.LatLng(lat, lon), 13);
       currentMarker = L.marker([lat, lon]).addTo(map);
-      map.fitBounds(marker.getBounds());
-      document.getElementById("longitudine").value = lng;
+      //map.fitBounds(marker.getBounds());
+      document.getElementById("longitudine").value = lon;
       document.getElementById("latitudine").value = lat;
+      console.log("Quello che mi interessa: "+ document.getElementById("longitudine").value);
+      console.log("Quello che mi interessa: "+ document.getElementById("latitudine").value);
+
       document.getElementById('basicMap').style.left = "20%";
       document.getElementById('overlay').style.display = "block";
       document.getElementById('bottoneRicerca').style.display = "block";
