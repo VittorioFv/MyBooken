@@ -10,11 +10,10 @@
 }
 
 #modalbook {
-    width: 80%;
-    height: 80%;
+    width: 90%;
     border-radius: 10px;
-    background-color: #A7DCEA;
     margin: auto;
+    box-sizing: border-box;
 }
 
 button {
@@ -26,6 +25,7 @@ button {
     cursor: pointer;
     box-shadow: 1px 3px 3px rgba(0, 94, 121, 0.4);
     color: #FFFFFF;
+    border: none;
 }
 
 #show-modalbook-btn {
@@ -38,12 +38,73 @@ button {
 
 #close-modalbook-btn {
     float: right;
-    right: 10px;
-    top: 10px;
     margin: 10px;
 }
 
-.containeragglibro{
-    text-align: center;
+.containeragglibro {
+    border-radius: 5px;
+    background-color: #A7DCEA;
+    padding: 20px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 80%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
     
+}
+
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.col-25 {
+    margin-left: 7%;
+    margin-right: 7%;
+    
+}
+
+.col-75 {
+    margin-left: 7%;
+    margin-right: 7%;
+    
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#bnt-carica{
+    font-family: 'Gamja Flower', cursive;
+    font-size: large;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+}
+.rowagglibro{
+
+}
+
+.agglibroscroll{
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    line-height: 22px;
+}
+
+@media only screen and (max-width: 992px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
