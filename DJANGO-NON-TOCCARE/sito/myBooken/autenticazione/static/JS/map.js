@@ -28,9 +28,7 @@ function cercaCitta(cittaDaCercare) {
       //map.fitBounds(marker.getBounds());
       document.getElementById("longitudine").value = lon;
       document.getElementById("latitudine").value = lat;
-      console.log("Quello che mi interessa: "+ document.getElementById("longitudine").value);
-      console.log("Quello che mi interessa: "+ document.getElementById("latitudine").value);
-
+   
       document.getElementById('basicMap').style.left = "20%";
       document.getElementById('overlay').style.display = "block";
       document.getElementById('bottoneRicerca').style.display = "block";
@@ -57,28 +55,16 @@ map.on('click', (event) => {
   // aggiungi un nuovo marker alla mappa
   const marker = L.marker([event.latlng.lat, event.latlng.lng]).addTo(map);
   currentMarker = marker;
-  console.log("Valore vecchio longitudine: " + document.getElementById("longitudine").value);
-  console.log("Valore vecchio latitudine: " + document.getElementById("latitudine").value);
 
   document.getElementById("longitudine").value = event.latlng.lng;
   document.getElementById("latitudine").value = event.latlng.lat;
-
-  console.log("New value longitudine: " + document.getElementById("longitudine").value);
-  console.log("New value latitudine: " + document.getElementById("latitudine").value);
-
-
 });
 
 var conferma = false;
 document.querySelector("form").addEventListener("submit", (e) => {
   if (!conferma) {
-    e.preventDefault();
-    console.log("hei");
-    
+    e.preventDefault();    
     cercaCitta();
-
-  } else {
-    console.log("ciao");
   }
 });
 
