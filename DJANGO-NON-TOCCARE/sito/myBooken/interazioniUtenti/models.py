@@ -6,11 +6,16 @@ from django.core.validators import MinLengthValidator
 from libri.models import Libri
 
 
+
+
 class Chat(models.Model):
   utente1 = models.ForeignKey(User, related_name='utente1', on_delete=models.CASCADE)
   utente2 = models.ForeignKey(User, related_name='utente2', on_delete=models.CASCADE)
 
   numeroScambi = models.IntegerField(default=0)
+
+  data = models.DateField(auto_now=False, auto_now_add=False)
+  tempo = models.TimeField(auto_now=False, auto_now_add=False)
 
   class Meta:
     unique_together = ('utente1', 'utente2')

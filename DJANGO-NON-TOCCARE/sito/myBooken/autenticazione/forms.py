@@ -19,6 +19,17 @@ class formDiRegistrazione(UserCreationForm):
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
 
+class formCambiaPassword(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ('password1', 'password2')
+
+    def __init__(self, *args, **kwargs):
+        super(formCambiaPassword, self).__init__(*args, **kwargs)
+        self.fields['password1'].widget.attrs['id'] = 'password1'
+        self.fields['password2'].widget.attrs['id'] = 'password2'
+
+
 class formProfilo(forms.ModelForm):
     
     class Meta:

@@ -1,0 +1,228 @@
+  /* Gamja Flower*/
+  @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+  /* Golos*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #A7DCEA;
+    text-align: center;
+}
+
+input[type="text"]{
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+
+}
+
+input[type="text"]::-webkit-input-placeholder {
+    font-size: 20px;
+    color: #7aaea8;
+
+    font-family: 'Golos Text', sans-serif;
+
+}
+input[type="password"]::-webkit-input-placeholder {
+    color: #7aaea8;
+
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+
+
+}
+
+input[type="text"]:-moz-placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+
+    opacity: 1;
+}
+
+input[type="text"]:-ms-input-placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+
+}
+
+input[type="text"]::-ms-input-placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif; 
+    color: #7aaea8;
+
+}
+
+input[type="text"]::placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+}
+
+#loghetto{
+    position: relative;
+    top: 40px;
+}
+
+.forms{
+    position: relative;
+    top: 25px;
+    font-family: 'Gamja Flower', cursive;
+}
+
+#form2Example2{
+    background-color:  rgb(54, 134, 125, 0.3);
+    color: #36867D;
+    border: 0px;
+    
+}
+
+#form2Example1{
+    background-color: rgb(54, 134, 125, 0.3);
+    color: #36867D;
+    border: 0px;
+}
+
+.col{
+    position: relative;
+    margin: auto;
+    left: -30px;
+}
+
+.form-outline{
+    margin: auto;
+    width: 85%;
+}
+
+label{
+    float: left;
+    color:#36867D;
+    font-size: 24px;
+
+}
+
+.row{
+    position: relative;
+    text-align: center;
+}
+
+#fine{
+    position: absolute;
+    margin-top: 100px;
+    width: 250px;
+    left: calc(50% - 125px);
+}
+#fine a{
+    text-decoration: none;
+    opacity: 50%;
+    font-size: 22px;
+
+}
+
+
+
+  @media screen and (min-width: 992px){
+    .container {
+        border-radius: 20px;
+        background-color: #E1F1E5;
+        width: 605px;
+        height: 487px;
+        position: relative;
+        top: 90px;
+        padding: 20px;
+      }
+    .btn{
+        position: relative;
+        font-size: 24px;
+        border: 0px;
+        border-radius: 15px;
+        width: 235px;
+        height: 60px;
+        margin-top: 20px;
+    
+    }
+    input{
+        width: 516px;
+        height: 57px;
+    }
+    #accedi{
+        background-color: #089FCA; 
+        font-family: 'Golos Text', sans-serif;
+        margin-left: 10px;
+    }
+
+    #registrati{
+        background-color: rgb(8, 159, 202, 0.4);
+        color: #005E79;
+        line-height: 45px;
+        font-family: 'Golos Text', sans-serif;
+    }
+    .row{
+        margin-top: 40px;
+    }
+
+
+
+  }
+ 
+  @media screen and (max-width: 992px) {
+    .container {
+        border-radius: 20px;
+        background-color: #E1F1E5;
+        width: 314px;
+        height: 362px;
+        position: relative;
+        top: 90px;
+      }
+    .btn{
+        position: relative;
+        font-size: large;
+        border: 0px;
+        border-radius: 15px;
+        width: 120px;
+        height: 50px;
+        margin-top: 10px;
+    
+    }
+    #accedi{
+        background-color: #089FCA; 
+        font-family: 'Golos Text', sans-serif;
+    }
+
+    #registrati{
+        background-color: rgb(8, 159, 202, 0.4);
+        color: #005E79;
+        line-height: 40px;
+        font-family: 'Golos Text', sans-serif;
+    }
+    #PassDim{
+        margin-top: -10px;
+    }
+    .row{
+        margin-top: 20px;
+    }
+    #fine{
+        font-size: 14px;
+    }
+  }
+  .btn{
+    box-shadow: 0px 5px 5px rgba(0, 94, 121, 0.25);
+  }
+  .btn:hover{
+    box-shadow: 0px 8px 8px rgba(0, 94, 121, 0.25);
+  }
+  .alert{
+    margin-top: 50px;
+    margin-bottom: -80px;
+    width: 605px;
+    position: relative;
+    left: calc(50% - 302px);
+  }
+  #PasswordDimenticata{
+    color: #005E79; 
+    font-family: 'Golos Text', sans-serif;
+  }
+

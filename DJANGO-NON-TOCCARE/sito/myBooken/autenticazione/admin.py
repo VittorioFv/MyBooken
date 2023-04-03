@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Profilo, Recensione
+from .models import Profilo#, Recensioni
 
 admin.site.register(Profilo)
 
-admin.site.register(Recensione)
+#admin.site.register(Recensioni)

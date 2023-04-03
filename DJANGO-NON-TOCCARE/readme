@@ -34,3 +34,7 @@ Requisito per creare token per l'accesso con l'email:
 
 	Mappe e distanze tra punti:
 		pip install geopy
+		
+	QR code:
+		pip install django-qr-code
+

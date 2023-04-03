@@ -13,7 +13,11 @@
   <p>ISBN: {{ mylibri.isbn }}</p>  
 
   <hr>
-  <p>Torna ai <a href="/libri/">Libri</a></p> 
+  
+  <h1>{{ usernameUtente }}</h1>
+  <h2>{{ profilo.citta }}</h2>
+  
+  <a href="/libri/contatta_autore/{{ usernameUtente }}">Contatta l'autore</a>
 {% endblock %}
 
 
