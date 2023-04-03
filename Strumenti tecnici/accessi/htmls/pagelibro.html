@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/indexburgerToken.css">
     <link rel="stylesheet" href="../accessi/css/accesso.css">
-    <title>SCHEDA LIBRO</title>
+    <title>PAGE LIBRO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,38 +21,58 @@
         <div id="primabar">
             <div class="col-xs-12">
                 <img class="img-responsive" src="../img/logo.svg" width="150" height="150" id="loghetto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> 
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                  <div id="esplora">Esplora</div>
+                  <img class="img-responsive" src="../../../icone e altri svg/library.svg" width="35" height="35" id="icbook">
+                  <div id="mybooks">I miei libri</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                  </svg>
+                  <div id="icchat">Chat</div>
                 <img class="img-responsive" src="../../../LogoToken/token.svg" width="50" height="50" id="token">
             </div>
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
           </svg>
 
-            <div id="titolo">NOME LIBRO</div>
             <div id="libro"></div>
             
-                <div id="p1"></div> <div id="p2"></div>
-                <div id="chat">Scrivi in chat</div>
-                <div id="richiedi">Richiedi libro</div>
+                <div id="p1"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" id="icchat1" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                  </svg></div> 
+                  <div id="p2"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                  </svg></div>
+                <div id="chat"><strong>Scrivi in chat</strong></div>
+                <div id="richiedi"><strong>Richiedi libro</strong></div>
 
-                    <div class="riquadri" id="r1">Lingua: Italiano</div>
-                    <div class="riquadri" id="r2">Genere Romanzo</div>
-                    <div class="riquadri" id="r3">Pubblicato in data...</div>
+                <div class="riquadriverdi" id="v1"><strong>Lingua: </strong></div>
+                <div class="riquadriverdi" id="v2"><strong>Genere: </strong></div>
+                <div class="riquadriverdi" id="v3"><strong>Pubblicato: </strong></div>
 
-
-
+                    <div class="riquadri" id="r1"><strong>Italiano</strong></div>
+                    <div class="riquadri" id="r2"><strong>Romanzo</strong></div>
+                    <div class="riquadri" id="r3"><strong>30/03/2023</strong></div>
 
                 <div id="autore"><strong>Autore</strong></div>
-                <div class="riquadri" id="r4">NOME AUTORE</div>
+                <div class="riquadri" id="r4"><strong>Nome Autore</strong></div>
 
-                <div id="descrizione">Descrizione libro</div>
-                <div id="containertesto">Shrek è un imponente orco verde che vive in solitudine all’interno di una casa di legno in una palude ed evita ogni contatto sociale siccome da sempre gli umani considerano cattivi gli orchi. Nonostante appaia scorbutico e solitario, in realtà Shrek è buono e altruista. In un luogo poco distante dalla sua palude, alcune guardie di Lord Farquaad stanno acquistando creature delle favole, vendute dai loro proprietari: Farquaad è uno spietato dittatore, che vuole far sparire dai suoi feudi tutte le creature magiche, considerate da lui inutili. </div>
-
+                <div id="descrizione"><strong> Descrizione libro</strong></div>
+                <div id="containertesto">L'orco Shrek, con l'aiuto del suo amico Ciuchino, cerca di salvare la principessa Fiona per riconquistare la proprietà della sua palude dalle mani di Lord Farquad.</div>
+            
                 <div id="prova"><strong>@username_prova</strong></div>
+                <div id="provaquery"><strong>@username_prova</strong></div>
                 <div id="riquadroprova"></div>
 
-                <div id="correlati"><strong>POTREBBERO PIACERTI ANCHE...</strong></div>
+                <div id="correlati">POTREBBERO PIACERTI ANCHE...</div>
                 
                 <div id="riquadrocorrelati">
                     <div class="image">1</div>
@@ -63,6 +83,19 @@
                     <div class="image">6</div>
                 </div>
 
+                <div id="ultimabarra">
+                </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--
                 
             <div id="fine">
                 <div class="col-xs-12"></div>
@@ -71,6 +104,4 @@
 
             <div id="contact">
             <a href="mailto:bendelewisdom@gmail.com"><strong style="color:rgb(11, 138, 128)">My Booken | &copy 2023</strong></a> 
-            </div>
-</body>
-</html>
+            </div>-->

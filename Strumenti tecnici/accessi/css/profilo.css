@@ -1,0 +1,194 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: #A7DCEA;
+}
+
+#primabar{
+    background-color: #A7DCEA;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#loghetto{
+    position: relative;
+    top: 20px;
+    width: 10%;
+    height: 30px;
+    left: 5%;
+}
+
+#token{
+    position: relative;
+    left: 40%;
+    top: 14px;
+    width: 10%;
+    height: 30px;
+}
+
+.bi-chevron-left{
+    position: relative;
+    top: -70px;
+    left: -45%;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: #e0f0ea;
+    width: 45%;
+    height: 490px;
+    position: relative;
+    top: -35px;
+  }
+
+#nome{
+    font-size: 20px;
+    color: rgb(34, 133, 133);
+    position: relative;
+    top: 40px;
+}
+
+#username{
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+
+}
+
+hr{
+    position: relative;
+    width: 80%;
+    left: 7%;
+    top: 40px;
+}
+
+#label1{
+    position: absolute;
+    top: 140px;
+    color:rgb(64, 160, 136);
+    left: 9%;
+}
+
+#label2{
+    position: absolute;
+    margin-top: 50px;
+    top: 190px;
+    color:rgb(64, 160, 136);
+    left: 9%;
+}
+
+#label3{
+    position: absolute;
+    margin-top: 240px;
+    color:rgb(64, 160, 136);
+    left: 9%;
+}
+
+.btn-primary{
+    position: absolute;
+    background-color: #C0E4D9;
+    border: 0px;
+    width: 30%;
+    color: rgb(34, 133, 133);
+    bottom: 1%;
+    left: 35%;
+    
+}
+ 
+@media screen and (max-width: 992px) {
+
+    .col-xs-12 {
+        width: 100%;
+        margin-top: auto;
+      }
+
+    .container{
+        position: relative;
+        width: 85%;
+        height: 500px;
+        margin: auto;
+        top: -10px;
+        left: 0%;
+    }
+
+    .bi-chevron-left{
+        position: relative;
+        top: -50px;
+        left: -37%;
+        height: 40px;
+    }
+
+    hr{
+        position: relative;
+        width: 80%;
+        top: 8%;
+        left: 7%;
+    }
+    
+    #nome{
+        font-size: 20px;
+        color: rgb(34, 133, 133);
+        position: relative;
+        top: 50px;
+    }
+    
+    #username{
+        font-size: 20px;
+        position: relative;
+        top: 30px;
+    
+    }
+    
+    #loghetto{
+    position: relative;
+    width: 40%;
+    height: 120px;
+    left: 9%;
+    top: 11px;
+    }
+
+    #label1{
+        color:rgb(64, 160, 136);
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+
+    #label2{
+        margin-top: 50px;
+        color:rgb(64, 160, 136);
+        position: absolute;
+        top: 40%;
+        left: 10%;
+    }
+
+    #label3{
+        margin-top: 80px;
+        color:rgb(64, 160, 136);
+        position: absolute;
+        top: 55%;
+        left: 10%;
+    }
+
+    .btn-primary{
+       position: relative;
+       width: 50%;
+       top: 350px;
+       left: 0%;
+       height: 40px;
+      }
+     
+    #token{
+        position: relative;
+        left: 13%;
+        top: 11px;
+        width: 12%;
+        height: 60px;
+    }
+    
+
+  }
+  

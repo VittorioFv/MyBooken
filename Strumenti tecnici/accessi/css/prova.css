@@ -1,0 +1,320 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: #A7DCEA;
+}
+
+#primabar{
+    background-color: #A7DCEA;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#loghetto{
+    position: relative;
+    top: 20px;
+    width: 10%;
+    height: 30px;
+    left: 5%;
+}
+
+#token{
+    position: relative;
+    left: 40%;
+    top: 14px;
+    width: 10%;
+    height: 30px;
+}
+
+.bi-chevron-left{
+    position: relative;
+    top: -70px;
+    left: -45%;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: #e0f0ea;
+    width: 45%;
+    height: 490px;
+    position: relative;
+    top: -35px;
+  }
+
+#nome{
+    font-size: 20px;
+    color: rgb(34, 133, 133);
+    position: relative;
+    top: 40px;
+}
+
+#username{
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+
+}
+
+hr{
+    position: relative;
+    left: 7%;
+    top: 40px;
+}
+
+#label1{
+    position: relative;
+    left: -40%;
+    top: 50px;
+}
+
+#label2{
+    position: relative;
+    margin-top: 50px;
+    top: 50px;
+    left: -37%;
+}
+
+#label3{
+    position: relative;
+    margin-top: 50px;
+    left: -34%;
+    top: 50px;
+}
+
+.btn-primary{
+    position: relative;
+    background-color: #C0E4D9;
+    border: 0px;
+    width: 30%;
+    color: rgb(34, 133, 133);
+    top: 90px;
+    
+}
+
+@media screen and (max-width: 992px) {
+    .col-xs-12, .col{
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .container{
+        position: relative;
+        width: 80%;
+        height: 70%;
+        margin: auto;
+        top: -40px;
+        left: 0%;
+    }
+
+    .bi-chevron-left{
+        position: relative;
+        top: -70px;
+        left: -40%;
+        height: 40px;
+    }
+
+    hr{
+        position: relative;
+        width: 80%;
+        top: 7%;
+        left: 7%;
+    }
+
+    #loghetto{
+        position: relative;
+        width: 40%;
+        height: 100px;
+        left: 4%;
+        top: -2px;
+        }
+
+        #token{
+            position: relative;
+            left: 12%;
+            top: -2px;
+            width: 12%;
+            height: 60px;
+        }
+        
+        #nome{
+            font-size: 20px;
+            color: rgb(34, 133, 133);
+            position: relative;
+            top: 40px;
+        }
+        
+        #username{
+            font-size: 20px;
+            position: relative;
+            top: 20px;
+        }
+        
+        #label1{
+            position: relative;
+            left: -33%;
+            color:rgb(64, 160, 136);
+            font-size: 20px;
+            margin-top: -1%;
+        }
+    
+        #label2{
+            position: relative;
+            left: -27%;
+            margin-top: 20%;
+            color:rgb(64, 160, 136);
+            font-size: 20px;
+        }
+    
+        #label3{
+            position: relative;
+            left: -20%;
+            margin-top: 20%;
+            color:rgb(64, 160, 136);
+            font-size: 20px;
+        }
+        
+        
+      .btn-primary{
+        position: relative;
+        width: 70%;
+        height: 40px;
+        top: 80px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    //*#form2Example1{
+        margin: auto;
+        position: relative;
+        left: -45px;
+    }
+    
+    #form2Example2{
+        margin: auto;
+        position: relative;
+        left: -45px;
+    }
+   
+    
+    #form2Example3{
+        margin: auto;
+        position: relative;
+        left: -45px;
+    }
+    
+    #form2Example4{
+        margin: auto;
+        position: relative;
+        left: -45px;
+    }
+    
+    #label1{
+        float: left;
+        position: relative;
+        left: -30%;
+        color:rgb(64, 160, 136)
+    }
+
+    #label2{
+        float: left;
+        position: relative;
+        left: -42%;
+        width: 150%;
+        margin-top: 5px;
+        color:rgb(64, 160, 136)
+    }
+
+    #label3{
+        float: left;
+        position: relative;
+        left: -30%;
+        margin-top: 5px;
+        color:rgb(64, 160, 136)
+    }
+
+    #label4{
+        float: left;
+        width: 150%;
+        position: relative;
+        left: -42%;
+        margin-top: 5px;
+        color:rgb(64, 160, 136)
+    }
+    
+    .final{
+        position: relative;
+        top: 80px;
+        margin: auto;
+    }
+    
+    .row{
+        position: relative;
+        left: 20px;
+    }
+
+    #fine{
+        position: relative;
+        bottom: -50px;
+    }
+    .form-check-input{
+        position: relative;
+        left: 117px;
+        top: -50px;
+    }
+
+    .form-check-label{
+        position: relative;
+        left: 120px;
+        top: -50px;
+        width: 100%;
+      }
+
+      .col{
+        position: relative;
+        left: -70px;
+        top: -30px;
+      }
+
+      .btn-primary{
+        position: relative;
+        top: 20px;
+      }
+
+      .text-center{
+        position: relative;
+        top: 10px;
+      }
+      
+      }
+
+  }
+  
