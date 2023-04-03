@@ -44,7 +44,10 @@ button {
 .containeragglibro {
     border-radius: 5px;
     background-color: #A7DCEA;
-    padding: 20px;
+    padding: 20px;  
+    overflow-y: auto;
+    scroll-behavior: smooth;
+      
 }
 
 input[type=text],
@@ -55,19 +58,16 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 10px;
     resize: vertical;
-    
 }
 
-
 label {
-    padding: 12px 12px 12px 0;
+    padding: 10px 10px 10px 0;
     display: inline-block;
 }
 
 .col-25 {
     margin-left: 7%;
     margin-right: 7%;
-    
 }
 
 .col-75 {
@@ -82,6 +82,20 @@ label {
     clear: both;
 }
 
+#btnaggimg{
+    width: 25px;
+    height: 25px;
+}
+
+#btn-usapositione{
+    width: fit-content;
+    height: 25px;
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+    text-decoration: underline;
+}
+
 #bnt-carica{
     font-family: 'Gamja Flower', cursive;
     font-size: large;
@@ -89,15 +103,24 @@ label {
     height: 40px;
     border-radius: 10px;
 }
+
 .rowagglibro{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    height: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
 
 }
 
 .agglibroscroll{
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    line-height: 22px;
+    display: inline-block;
+}
+
+.categoria{
+    padding: 0px;
+    margin: 0px;
 }
 
 @media only screen and (max-width: 992px) {
