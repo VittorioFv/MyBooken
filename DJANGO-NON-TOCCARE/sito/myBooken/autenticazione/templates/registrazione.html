@@ -31,8 +31,6 @@
       {% endfor %}
     {% endif %}
     <div class="container BoxRegistrazione">
-
-
         <form class="forms" action = "{% url 'registrazione' %}" method = POST>
             {% csrf_token %}
           <!-- Username input -->

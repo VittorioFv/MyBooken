@@ -86,9 +86,16 @@ def registrazioneUtente(request):
             activateEmail(request, utente, form.cleaned_data.get('email'))
 
             return render(request, 'confermaMail.html', {'nome': utente.username})
+        else:
+            messages.success(request, ("Sei uscito dal tuo account correttamente"))
+            return render(request, 'registrazione.html', {
+            'form': form,
+            'formP': formP,
+    })
     else:
         form = formDiRegistrazione()
         formP = formProfilo()
+
     return render(request, 'registrazione.html', {
         'form': form,
         'formP': formP,

@@ -5,29 +5,93 @@
 {% endblock %}
 
 {% block headCss %}
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/registrazione.css' %}">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/aggiuntaLibri.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
+{% comment %} <form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
     {% csrf_token %}
     
     {{ form.as_div }}
 
     <input type = "submit" value = "Submit">
-</form>
+</form> {% endcomment %}
+<div class="container BoxRegistrazione">
+  <form id="forms_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
+      {% csrf_token %}
+    <!-- Username input -->
+    <div class="form-outline mb-4 input">  
+      <label class="form-label" for="name">ISBN</label>
+      <input type="text" name = "isbn" id="name" class="form-control" placeholder="ISBN" />
+    </div>
 
-<div id="nascondiSotto"></div>
+    <div class="form-outline mb-4 input">  
+      <label class="form-label" for="mail">TITOLO</label>
+      <input type="text" name = "titolo" id="mail" class="form-control" placeholder="titolo" />
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4 input"> 
+      <label class="form-label" for="pass1">AUTORE</label>
+      <input type="text" name = "autore" id="pass1" class="form-control" placeholder="autore" />
+    </div>
+
+    <div class="form-outline mb-4 input"> 
+      <label class="form-label" for="pass2">DESCRIZIONE</label>
+      <input type="text" name = "descrizione" id="pass2" class="form-control" placeholder="descrizione libro" />
+    </div>
+  
+    <div class="form-outline mb-4 input">  
+      <label class="form-label" for="citta">CITTA'</label>
+      <input type="text" name = "citta"  id="citta" class="form-control" value="" placeholder="città" />
+    </div>
+
+      <div class="inputHidden"> 
+        <input type="text" name = "longitudine" id="longitudine" value="" placeholder="" />
+      </div>
+      <div class="inputHidden">
+        <input type="text" name = "latitudine"  id="latitudine" value="" placeholder="" />
+      </div>
+    <!-- 2 column grid layout for inline styling -->
+    <div class="final">
+
+    <!-- Submit button -->
+    <button type="Submit" class="btn btn-primary btn-block mb-4" id="accedi" value="Submit">CONFERMA</button> 
+    
+      <div id="PassDim">
+        <!-- Simple link -->
+        <a href="{% url 'login' %}" id="HaiAccount">Hai già un account?</a>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>
+
+<div id="overlay"></div>   
+<div id="basicMap"></div>
+<h3 id="domanda"> Seleziona la posizione corretta </h3>
+<button type="button" id="bottoneRicerca">Okay</button>
+
+
+
+
+
+{% comment %} <div id="nascondiSotto"></div>
 <div id="schedaMappa">
   <div id="basicMap"></div>
   <h3> La posizione è corretta? </h3>
   <button type="button" id="bottoneRicerca">Sì</button>
-</div>
+</div> {% endcomment %}
 
-<script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
 {% load static %}
-<script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
+<script type="text/javascript" src="{% static 'JS/map.js' %}"></script>
 
 {% endblock %}

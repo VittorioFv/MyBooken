@@ -59,11 +59,24 @@
   }
   @media screen and (max-width: 992px) {
     #basicMap{
+      display: block;
+      z-index: 5;
+      position: fixed;
+      border-radius: 20px;
       width: 80%;
+      height: 60%;
+      top: 21%;
+      left: -1000px;
+      margin: 0px;
+
     }
     #domanda{
       width: 80%;
       left: 10%;
+      padding-bottom: 40px;
+      top: 14%;
+
+
     }
     #bottoneRicerca{
     bottom: 11%;
