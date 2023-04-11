@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <button type="submit" id="show-modalbook-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="34"
+    <button type="button" id="show-modalbook-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="34"
             fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
                 d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
@@ -22,7 +22,7 @@
 
     <div id="overlaybook">
         <div id="modalbook">
-            <button type="submit" id="close-modalbook-btn">
+            <button type="button" id="close-modalbook-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="34px" fill="currentColor" class="bi bi-x"
                     viewBox="0 0 16 16">
                     <path
@@ -35,7 +35,8 @@
                     <div class="row">
                         <div class="col-25">
                             <label>ISBN*:</label>
-                            <input type="text" id="isbn" name="isbn" placeholder="000-00-00000-00-0" required>
+                            <input type="text" id="isbn" name="isbn" placeholder="000-00-00000-00-0" maxlength="13"
+                                minlength="13" required>
                         </div>
                     </div>
                     <div class="row">
@@ -71,14 +72,16 @@
                         </div>
                         <div class="col-75">
                             <textarea id="subject" name="subject" placeholder="Descrizione..."
-                                style="height:80px"></textarea>
+                                style="height:70px"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-25">
                             <label>Aggiungi immagine</label>
-                            <button type="submit" id="btnaggimg"><svg xmlns="http://www.w3.org/2000/svg" width="16px"
-                                    height="16px" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 19 11">
+                            <button type="submit" id="btnaggimg">
+                                <input type="file" id="inputfile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                                    class="bi bi-plus-lg" viewBox="0 0 17 11">
                                     <path fill-rule="evenodd"
                                         d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
                                 </svg>
@@ -88,7 +91,7 @@
 
                     <Label style="margin-left: 7%;
                     margin-right: 7%;">Categoria:</Label>
-                    <div class="row">
+                    <div class="rowcontenitore">
                         <div class="rowagglibro">
                             <div class="agglibroscroll">
                                 <div class="categoria">
@@ -166,15 +169,13 @@
                                         <input type="checkbox">Umorismo
                                     </label>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
 
 
-                    <button type="submit" id="bnt-carica">CARICA</button>
-
+                    <center><button type="submit" id="bnt-carica">CARICA</button>
+                    </center>
                 </form>
 
 
