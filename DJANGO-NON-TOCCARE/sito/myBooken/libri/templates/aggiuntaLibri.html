@@ -1,33 +1,280 @@
-{% extends "master.html" %}
+
 
 {% block title %}
   Aggiungi libro MyBooken
 {% endblock %}
 
 {% block headCss %}
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/mappa.css' %}">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/aggiuntaLibri.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
+{% comment %} <form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
     {% csrf_token %}
     
     {{ form.as_div }}
 
     <input type = "submit" value = "Submit">
-</form>
+</form> {% endcomment %}
+{% comment %} <div class="container BoxRegistrazione">
+  <form id="forms_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
+      {% csrf_token %}
+    <!-- Username input -->
+    <div class="form-outline mb-4 input">  
+      <label class="form-label" for="name">ISBN</label>
+      <input type="text" name = "isbn" id="name" class="form-control" placeholder="ISBN" />
+    </div>
 
-<div id="nascondiSotto"></div>
-<div id="schedaMappa">
-  <div id="basicMap"></div>
-  <h3> La posizione è corretta? </h3>
-  <button type="button" id="bottoneRicerca">Sì</button>
+    <div class="form-outline mb-4 input">  
+      <label class="form-label" for="mail">TITOLO</label>
+      <input type="text" name = "titolo" id="mail" class="form-control" placeholder="titolo" />
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4 input"> 
+      <label class="form-label" for="pass1">AUTORE</label>
+      <input type="text" name = "autore" id="pass1" class="form-control" placeholder="autore" />
+    </div>
+
+    <div class="form-outline mb-4 input"> 
+      <label class="form-label" for="pass2">DESCRIZIONE</label>
+      <input type="text" name = "descrizione" id="pass2" class="form-control" placeholder="descrizione libro" />
+    </div>
+
+    <div class="form-outline mb-4 input"> 
+      <label class="form-label" for="immagine">COPERTINA</label>
+      <input type="file" name = "immagine" id="immagine" class="form-control" accept="image/" />
+    </div>
+
+    <div class="form-outline mb-4 input"> 
+      <label class="form-label" for="categorie">CATEGORIE</label>
+      <input type="checkbox" name = "categoria" id="categoria"  value="bah"/>
+    </div>
+  
+    <div class="form-outline mb-4 input">  
+      <label class="form-label" for="citta">CITTA'</label>
+      <input type="text" name = "citta"  id="citta" class="form-control" value="" placeholder="città" />
+    </div>
+
+      <div class="inputHidden"> 
+        <input type="text" name = "longitudine" id="longitudine" value="" placeholder="" />
+      </div>
+      <div class="inputHidden">
+        <input type="text" name = "latitudine"  id="latitudine" value="" placeholder="" />
+      </div>
+    <!-- 2 column grid layout for inline styling -->
+    <div class="final">
+
+    <!-- Submit button -->
+    <button type="Submit" class="btn btn-primary btn-block mb-4" id="accedi" value="Submit">CONFERMA</button> 
+    
+      <div id="PassDim">
+        <!-- Simple link -->
+        <a href="{% url 'login' %}" id="HaiAccount">Hai già un account?</a>
+      </div>
+    </div>
+    </div>
+  </form>
 </div>
 
-<script type="text/javascript" src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+<div id="overlay"></div>   
+<div id="basicMap"></div>
+<h3 id="domanda"> Seleziona la posizione corretta </h3>
+<button type="button" id="bottoneRicerca">Okay</button> {% endcomment %}
+
+
+
+
+
+<!--aaaaaaaaaaaaaaaaaaaaaaa-->
+<button type="button" id="show-modalbook-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="34"
+  fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+  <path fill-rule="evenodd"
+      d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+</svg>
+</button>
+
+<div id="overlaybook">
+<div id="modalbook">
+  <button type="button" id="close-modalbook-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="34px" fill="currentColor" class="bi bi-x"
+          viewBox="0 0 16 16">
+          <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+      </svg>
+  </button>
+
+  <div class="containeragglibro">
+      <form action="" method="POST">
+          <div class="row">
+              <div class="col-25">
+                  <label>ISBN:</label>
+                  <input type="text" id="isbn" name="isbn" placeholder="000-00-00000-00-0" maxlength="13"
+                      minlength="13" required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label>Inserisci il titolo:</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="titolo" name="Titolo" placeholder="Titolo..." required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label>Inserisci l'autore:</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="autore" name="Autore" placeholder="Autore..." required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label>Inserisci la posizione:</label>
+                  <label>
+                      <button id="btn-usapositione" type="button"> Usa la posizione del tuo profilo</button>
+                  </label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="posizione" name="Posizione" placeholder="Posizione..." required>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label>Inserisci una descrizione:</label>
+              </div>
+              <div class="col-75">
+                  <textarea id="subject" name="subject" placeholder="Descrizione..."
+                      style="height:70px"></textarea>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                  <label>Aggiungi immagine</label>
+                  <button type="submit" id="btnaggimg">
+                      <input type="file" id="inputfile">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                          class="bi bi-plus-lg" viewBox="0 0 17 11">
+                          <path fill-rule="evenodd"
+                              d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                      </svg>
+                  </button>
+              </div>
+          </div>
+
+          <Label style="margin-left: 7%;
+          margin-right: 7%;">Categoria:</Label>
+          <div class="rowcontenitore">
+              <div class="rowagglibro">
+                  <div class="agglibroscroll">
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Istruzione
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Letteratura e
+                              narrativa
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Storia
+                          </label>
+                      </div>
+                  </div>
+                  <div class="agglibroscroll">
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Gialli e thriller
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Arte, cinema e
+                              fotografia
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Romanzi
+                          </label>
+                      </div>
+                  </div>
+                  <div class="agglibroscroll">
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Biografia
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Avventura e azione
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Fumetti e manga
+                          </label>
+                      </div>
+                  </div>
+                  <div class="agglibroscroll">
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Fantascienza
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Distopia
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Fantasy
+                          </label>
+                      </div>
+                  </div>
+                  <div class="agglibroscroll">
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox">Umorismo
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <center><button type="submit" id="bnt-carica">CARICA</button>
+          </center>
+      </form>
+
+
+
+  </div>
+
+
+
+
+</div>
+</div>
+  
+
+
+
+
+
 {% load static %}
-<script type="text/javascript" src="{% static 'JS/mappa.js' %}"></script>
+<script type="text/javascript" src="{% static 'JS/map.js' %}"></script>
 
 {% endblock %}

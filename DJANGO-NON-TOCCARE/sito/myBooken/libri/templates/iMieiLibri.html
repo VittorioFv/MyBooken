@@ -30,6 +30,9 @@
   </div>
 
   <a href="{% url 'aggiungi_libro' %}"> Aggiungi libro </a>
+  {% include 'aggiuntaLibri.html' %}
 
+  {% load static %}
+  <script type="text/javascript" src="{% static 'JS/script.js' %}"></script>
 {% endblock %}
 

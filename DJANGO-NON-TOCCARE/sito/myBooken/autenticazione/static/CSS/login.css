@@ -18,16 +18,14 @@ input[type="text"]{
 
 }
 
-input[type="text"]::-webkit-input-placeholder {
+/* input[type="text"]::-webkit-input-placeholder {
     font-size: 20px;
     color: #7aaea8;
-
     font-family: 'Golos Text', sans-serif;
 
 }
 input[type="password"]::-webkit-input-placeholder {
     color: #7aaea8;
-
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
 
@@ -38,7 +36,6 @@ input[type="text"]:-moz-placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
     color: #7aaea8;
-
     opacity: 1;
 }
 
@@ -46,17 +43,20 @@ input[type="text"]:-ms-input-placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
     color: #7aaea8;
-
 }
 
 input[type="text"]::-ms-input-placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif; 
     color: #7aaea8;
-
-}
+} */
 
 input[type="text"]::placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+}
+input[type="password"]::placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
     color: #7aaea8;

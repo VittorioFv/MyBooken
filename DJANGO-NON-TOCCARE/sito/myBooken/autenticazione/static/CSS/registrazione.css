@@ -34,7 +34,7 @@ input[type="email"]{
 
 }
 
-input[type="text"]::-webkit-input-placeholder {
+/* input[type="text"]::-webkit-input-placeholder {
     font-size: 20px;
     color: #7aaea8;
     font-family: 'Golos Text', sans-serif;
@@ -62,19 +62,29 @@ input[type="text"]:-moz-placeholder {
     opacity: 1;
 }
 
-input[type="text"]:-ms-input-placeholder {
+input[type="email"]:-ms-input-placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
     color: #36867D;
 }
 
-input[type="text"]::-ms-input-placeholder {
+input[type="password"]::-ms-input-placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;   
     color: #7aaea8;
-}
+} */
 
 input[type="text"]::placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+}
+input[type="email"]::placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+}
+input[type="password"]::placeholder {
     font-size: 20px;
     font-family: 'Golos Text', sans-serif;
     color: #7aaea8;
@@ -96,8 +106,28 @@ input[type="text"]::placeholder {
     background-color:  rgb(54, 134, 125, 0.3);
     color: #36867D;
     border: 0px;
-    
 }
+#name{
+    background-color:  rgb(54, 134, 125, 0.3);
+    color: #36867D;
+    border: 0px;   
+}
+#mail{
+    background-color:  rgb(54, 134, 125, 0.3);
+    color: #36867D;
+    border: 0px;
+}
+#pass1{
+    background-color:  rgb(54, 134, 125, 0.3);
+    color: #36867D;
+    border: 0px;
+}
+#pass2{
+    background-color:  rgb(54, 134, 125, 0.3);
+    color: #36867D;
+    border: 0px;
+}
+
 
 #citta{
     background-color: rgb(54, 134, 125, 0.3);

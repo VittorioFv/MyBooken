@@ -1,0 +1,199 @@
+/* 
+.BoxRegistrazione{
+    top: 10px;
+    height: 920px;
+
+}
+#forms_aggiungi_libro{
+    position: relative;
+    top: 20px;
+    font-family: 'Gamja Flower', cursive;
+}
+#immagine{
+    background-color:  rgb(54, 134, 125, 0.3);
+    font-family: 'Golos Text', sans-serif;
+}
+input[type="file"]::placeholder {
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
+    color: #7aaea8;
+}
+.input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+
+@media screen and (max-width: 992px) {
+    .BoxRegistrazione{
+        height: 800px;
+    }
+} */
+  /* Gamja Flower*/
+  @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+  /* Golos*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+#overlaybook {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modalbook {
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    max-height: 700px;
+}
+
+button {
+    width: 36px;
+    height: 36px;
+    background-color: #089FCA;
+    border-radius: 50px;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px rgba(0, 94, 121, 0.4);
+    color: #FFFFFF;
+    border: none;
+}
+
+#show-modalbook-btn {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin: 10px;
+    margin-bottom: 56px;
+}
+
+#close-modalbook-btn {
+    float: right;
+    margin: 10px;
+}
+
+.containeragglibro {
+    border-radius: 5px;
+    background-color: #A7DCEA;
+    padding: 20px;  
+}
+
+input[type=text],
+select,
+textarea {
+    width: 80%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+label {
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+
+.col-25 {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.col-75 {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#btnaggimg{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+#inputfile {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+#btnaggimg svg{
+    transform: translateY(-20px);
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+
+
+#btn-usapositione{
+    width: fit-content;
+    height: 25px;
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+    text-decoration: underline;
+}
+
+#bnt-carica{
+    font-family: 'Gamja Flower', cursive;
+    font-size: large;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.rowcontenitore{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.rowagglibro{
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    height: 100px;
+    overflow-y: hidden;
+}
+
+.agglibroscroll{
+    display: inline-block;
+}
+
+.categoria{
+    padding: 0px;
+    margin: 0px;
+    background-color: #DFF0E4;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    height: 25px;
+    margin-right: 3px;
+    color: #36867D;
+}
+
+input[type="checkbox"] {
+    border: none;
+    margin-top: 6px;
+}
+
+@media only screen and (max-width: 992px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}

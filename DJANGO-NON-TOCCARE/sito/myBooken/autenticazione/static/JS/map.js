@@ -1,15 +1,24 @@
 var map = L.map('basicMap').setView([45.4384958, 10.9924122], 13);
 var markersArray = []
 var currentMarker = null;
-
+var open = null;
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-//L.marker([45.4384958, 10.9924122]).addTo(map);
-
+function updateDivPosition() {
+  if(open == 1){
+    if (window.innerWidth > 992) {
+      document.getElementById('basicMap').style.left = "20%";
+    } else {
+      document.getElementById('basicMap').style.left = "10%";
+    }
+  }else{
+    document.getElementById('basicMap').style.left = "-1000px";
+  }
+}
 
 //INIZIO
 function cercaCitta(cittaDaCercare) {
@@ -33,16 +42,18 @@ function cercaCitta(cittaDaCercare) {
       document.getElementById('overlay').style.display = "block";
       document.getElementById('bottoneRicerca').style.display = "block";
       document.getElementById('domanda').style.display = "block";
+      open = 1;
 
     })
     .catch(function(error) {
       console.log(error);
     })
     .finally(() => {
-      document.getElementById('basicMap').style.left = "20%";
+      updateDivPosition();
       document.getElementById('overlay').style.display = "block";
       document.getElementById('bottoneRicerca').style.display = "block";
       document.getElementById('domanda').style.display = "block";
+      open = 1;
     });
 }
 
@@ -72,3 +83,8 @@ document.querySelector("#bottoneRicerca").addEventListener("click", () => {
   conferma = true;
   document.querySelector("form").submit();
 });
+
+
+
+
+window.addEventListener('resize', updateDivPosition);
