@@ -24,7 +24,7 @@
 
     <input type = "submit" value = "Submit">
 </form> {% endcomment %}
-<div class="container BoxRegistrazione">
+{% comment %} <div class="container BoxRegistrazione">
   <form id="forms_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
       {% csrf_token %}
     <!-- Username input -->
@@ -88,7 +88,7 @@
 <div id="overlay"></div>   
 <div id="basicMap"></div>
 <h3 id="domanda"> Seleziona la posizione corretta </h3>
-<button type="button" id="bottoneRicerca">Okay</button>
+<button type="button" id="bottoneRicerca">Okay</button> {% endcomment %}
 
 
 
