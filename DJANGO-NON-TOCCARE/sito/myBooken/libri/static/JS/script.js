@@ -31,4 +31,3 @@ toggletoken.onclick = function () {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-
