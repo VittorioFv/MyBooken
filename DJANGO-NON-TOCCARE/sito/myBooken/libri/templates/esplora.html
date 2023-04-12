@@ -4,35 +4,108 @@
   MyBooken esplora
 {% endblock %}
 
+
+{% block headCss %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/esplora.css' %}">
+{% endblock %}
+
 {% block content %}
 
-  <form action = "" method = POST>
+  <!-- Form Search  ---------->
+  <form action="" method="POST" class="containersearch">
     {% csrf_token %}
     
-    <input type = "text" name = "cercaLibri">
-
-    <input type = "submit" value = "cerca">
-
+    <input type = "text" name = "cercaLibri" placeholder="Cerca titolo, autore, ISNB...">
+    <button type="submit" id="btnSubmit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg></button>
   </form>
     
 
-  <div class="row horizScroll">
-    {% for x in mylibri %}
-      <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
-        <a href="dettagli_libro/{{ x.id }}">
-          {% if x.immagine %}
-            <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
-          {% endif %}
-          <div class="card-body">
-              <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
+  <!--  Category Scrolling ------>
+  <div class="categoryscrollmenu">
+    <div class="singlecategory"><a href="#" data-id="istruzione">Istruzione</a></div>
+    <div class="singlecategory"><a href="#" data-id="letteraturaenarrativa">Letteratura e narrativa</a></div>
+    <div class="singlecategory"><a href="#" data-id="storia">Storia</a></div>
+    <div class="singlecategory"><a href="#" data-id="gialliethriller">Gialli e thriller</a></div>
+    <div class="singlecategory"><a href="#" data-id="artecinemaefotografia">Arte, cinema e fotografia</a></div>
+    <div class="singlecategory"><a href="#" data-id="romanzi">Romanzi</a></div>
+    <div class="singlecategory"><a href="#" data-id="biografia">Biografia</a></div>
+    <div class="singlecategory"><a href="#" data-id="avventuraeazione">Avventura e azione</a></div>
+    <div class="singlecategory"><a href="#" data-id="fumettiemanga">Fumetti e manga</a></div>
+    <div class="singlecategory"><a href="#" data-id="fantascienza">Fantascienza</a></div>
+    <div class="singlecategory"><a href="#" data-id="distopia">Distopia</a></div>
+    <div class="singlecategory"><a href="#" data-id="fantasy">Fantasy</a></div>
+    <div class="singlecategory"><a href="#" data-id="umorismo">Umorismo</a></div>
+  </div>
+  <!--  Filtered categories------>
+  <div class="categoryscrollmenufiltrata">
+    <div class="singlecategoryfiltrata nascosto" id="istruzione">Istruzione<a href="#" data-id="istruzione"> x</a>
+    </div>
+    <div class="singlecategoryfiltrata nascosto" id="letteraturaenarrativa">Letteratura e narrativa<a href="#"
+            data-id="letteraturaenarrativa"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="storia">Storia<a href="#" data-id="storia">x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="gialliethriller">Gialli e thriller<a href="#"
+            data-id="gialliethriller"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="artecinemaefotografia">Arte, cinema e fotografia<a href="#"
+            data-id="artecinemaefotografia"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="romanzi">Romanzi<a href="#" data-id="romanzi"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="biografia">Biografia<a href="#" data-id="biografia"> x</a>
+    </div>
+    <div class="singlecategoryfiltrata nascosto" id="avventuraeazione">Avventura e azione<a href="#"
+            data-id="avventuraeazione"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="fumettiemanga">Fumetti e manga<a href="#"
+            data-id="fumettiemanga"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="fantascienza">Fantascienza<a href="#" data-id="fantascienza">
+            x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="distopia">Distopia<a href="#" data-id="distopia"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="fantasy">Fantasy<a href="#" data-id="fantasy"> x</a></div>
+    <div class="singlecategoryfiltrata nascosto" id="umorismo">Umorismo<a href="#" data-id="umorismo"> x</a></div>
+</div>
+  <!-- Contenitore Mobile ---->
+    <div class="containermapmobile">
+      <div class="containerschedalibrimobile">
+      {% for x in mylibri %}
+        <div class="contenitorelibrovrt"><a href="#">
+          <div class="contenitorebodyvrt">
+            <div id="toplibrovrt">
+              {% if x.immagine %}
+                <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
+              {% endif %}
+            </div>
+            <div id="bodylibrovrt">
+                <h3>{{ x.titolo }}</h3>
+                <h5><i>{{ x.autore }}</i></h5>
+                <p id="descritionlibro">{{ x.descrizione }}</p>
+            </div>
           </div>
-          <div class="card-footer">
-              <small class="text-muted testoFooter">{{ x.autore }}</small>
+          <div id="footerlibrovrt">
+              <h6 id="locationlibrovrt" style="color: #000;">{{ x.citta }}</h6>
+              <h6 id="isbnlibrovrt" style="color: #000;">ISBN: {{ x.isbn }}</h6>
           </div>
-        </a>
+          <div class="data" style="display: none">{{ x.longitudine }},{{ x.latitudine }}</div>
+        </a></div>
+      {% endfor %}
+    </div>
+    <div class="mappa">
+      <div id="basicMap">
+
       </div>
-    {% endfor %}
+      
+    </div>
   </div>
 
+
+  <button type="button" id="show-modal-btn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+    fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+</svg>
+</button>
+
+  <script src="{% static 'JS/mappaEsplora.js'%}"></script>
+  <script src="{% static 'JS/filtercategory.js'%}"></script>
 {% endblock %}
 

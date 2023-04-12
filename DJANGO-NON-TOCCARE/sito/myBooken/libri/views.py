@@ -61,6 +61,9 @@ def contattaAutore(request, username):
     
     return redirect('chat_main')
 
+import json 
+from django.core import serializers
+
 @login_required
 def libri(request):
     profilo = Profilo.objects.get(user=request.user.id)
@@ -78,6 +81,10 @@ def libri(request):
 
     mylibri = mylibri[:10]
 
+    data = serializers.serialize('json', mylibri, fields=('latitudine', 'longitudine'))
+
+    print(data)
+    
     return render(request, 'esplora.html', {
         'mylibri': mylibri,
     })

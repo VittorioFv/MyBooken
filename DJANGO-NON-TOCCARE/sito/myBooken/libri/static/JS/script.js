@@ -28,6 +28,7 @@ toggletoken.onclick = function () {
     toggle.classList.remove('active');
     sidebar.classList.remove('active');
 }
+<<<<<<< Updated upstream
 
 const overlay = document.querySelector("#overlaybook");
 
@@ -39,3 +40,5 @@ document.querySelector("#close-modalbook-btn").addEventListener("click", () => {
     overlay.style.display = 'none';
 })
 
+=======
+>>>>>>> Stashed changes

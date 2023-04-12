@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 from django.db.models.signals import pre_delete
 from .signals import ImmaginiLibriCleanup
 
-
 class Libri(models.Model):
     titolo = models.CharField(max_length=50)  # VARCHAR
     autore = models.CharField(max_length=50)  # VARCHAR
