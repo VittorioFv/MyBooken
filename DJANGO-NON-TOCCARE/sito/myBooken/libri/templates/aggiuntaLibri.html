@@ -16,84 +16,7 @@
 
 {% block content %}
 
-{% comment %} <form id="form_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
-    {% csrf_token %}
-    
-    {{ form.as_div }}
 
-    <input type = "submit" value = "Submit">
-</form> {% endcomment %}
-{% comment %} <div class="container BoxRegistrazione">
-  <form id="forms_aggiungi_libro" action = "{% url 'aggiungi_libro' %}" method = POST enctype="multipart/form-data">
-      {% csrf_token %}
-    <!-- Username input -->
-    <div class="form-outline mb-4 input">  
-      <label class="form-label" for="name">ISBN</label>
-      <input type="text" name = "isbn" id="name" class="form-control" placeholder="ISBN" />
-    </div>
-
-    <div class="form-outline mb-4 input">  
-      <label class="form-label" for="mail">TITOLO</label>
-      <input type="text" name = "titolo" id="mail" class="form-control" placeholder="titolo" />
-    </div>
-  
-    <!-- Password input -->
-    <div class="form-outline mb-4 input"> 
-      <label class="form-label" for="pass1">AUTORE</label>
-      <input type="text" name = "autore" id="pass1" class="form-control" placeholder="autore" />
-    </div>
-
-    <div class="form-outline mb-4 input"> 
-      <label class="form-label" for="pass2">DESCRIZIONE</label>
-      <input type="text" name = "descrizione" id="pass2" class="form-control" placeholder="descrizione libro" />
-    </div>
-
-    <div class="form-outline mb-4 input"> 
-      <label class="form-label" for="immagine">COPERTINA</label>
-      <input type="file" name = "immagine" id="immagine" class="form-control" accept="image/" />
-    </div>
-
-    <div class="form-outline mb-4 input"> 
-      <label class="form-label" for="categorie">CATEGORIE</label>
-      <input type="checkbox" name = "categoria" id="categoria"  value="bah"/>
-    </div>
-  
-    <div class="form-outline mb-4 input">  
-      <label class="form-label" for="citta">CITTA'</label>
-      <input type="text" name = "citta"  id="citta" class="form-control" value="" placeholder="città" />
-    </div>
-
-      <div class="inputHidden"> 
-        <input type="text" name = "longitudine" id="longitudine" value="" placeholder="" />
-      </div>
-      <div class="inputHidden">
-        <input type="text" name = "latitudine"  id="latitudine" value="" placeholder="" />
-      </div>
-    <!-- 2 column grid layout for inline styling -->
-    <div class="final">
-
-    <!-- Submit button -->
-    <button type="Submit" class="btn btn-primary btn-block mb-4" id="accedi" value="Submit">CONFERMA</button> 
-    
-      <div id="PassDim">
-        <!-- Simple link -->
-        <a href="{% url 'login' %}" id="HaiAccount">Hai già un account?</a>
-      </div>
-    </div>
-    </div>
-  </form>
-</div>
-
-<div id="overlay"></div>   
-<div id="basicMap"></div>
-<h3 id="domanda"> Seleziona la posizione corretta </h3>
-<button type="button" id="bottoneRicerca">Okay</button> {% endcomment %}
-
-
-
-
-
-<!--aaaaaaaaaaaaaaaaaaaaaaa-->
 <button type="button" id="show-modalbook-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="34"
   fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
   <path fill-rule="evenodd"
@@ -112,39 +35,48 @@
   </button>
 
   <div class="containeragglibro">
-      <form action="" method="POST">
-          <div class="row">
+      <form action="/libri/aggiungi_libro" method="POST">
+        {% csrf_token %}
+          <div class="row1">
               <div class="col-25">
-                  <label>ISBN*:</label>
+                  <label>ISBN:</label>
+              </div>
+              <div class="col-75">
                   <input type="text" id="isbn" name="isbn" placeholder="000-00-00000-00-0" maxlength="13"
                       minlength="13" required>
               </div>
           </div>
           <div class="row1">
               <div class="col-25">
-                  <label>Inserisci il titolo*:</label>
+                  <label>Inserisci il titolo:</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="titolo" name="Titolo" placeholder="Titolo..." required>
+                  <input type="text" id="titolo" name="titolo" placeholder="Titolo..." required>
               </div>
           </div>
           <div class="row1">
               <div class="col-25">
-                  <label>Inserisci l'autore*:</label>
+                  <label>Inserisci l'autore:</label>
               </div>
               <div class="col-75">
-                  <input type="text" id="autore" name="Autore" placeholder="Autore..." required>
+                  <input type="text" id="autore" name="autore" placeholder="Autore..." required>
               </div>
           </div>
           <div class="row1">
               <div class="col-25">
-                  <label>Inserisci la posizione*:</label>
+                  <label>Inserisci la posizione:</label>
                   <label>
                       <button id="btn-usapositione" type="button"> Usa la posizione del tuo profilo</button>
                   </label>
               </div>
+              <div class="inputHidden"> 
+                <input type="text" name = "longitudine" id="longitudine" value="" placeholder="" />
+              </div>
+              <div class="inputHidden">
+                <input type="text" name = "latitudine"  id="latitudine" value="" placeholder="" />
+              </div>
               <div class="col-75">
-                  <input type="text" id="posizione" name="Posizione" placeholder="Posizione..." required>
+                  <input type="text" id="citta" name="citta" placeholder="Posizione..." required>
               </div>
           </div>
           <div class="row1">
@@ -152,7 +84,7 @@
                   <label>Inserisci una descrizione:</label>
               </div>
               <div class="col-75">
-                  <textarea id="subject" name="subject" placeholder="Descrizione..."
+                  <textarea id="descrizione" name="descrizione" placeholder="Descrizione..."
                       style="height:70px"></textarea>
               </div>
           </div>
@@ -160,7 +92,7 @@
               <div class="col-25">
                   <label>Aggiungi immagine</label>
                   <button type="button" id="btnaggimg">
-                      <input type="file" id="inputfile">
+                      <input type="file" id="immagine" name="immagine" accept="image/">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
                           class="bi bi-plus-lg" viewBox="0 0 17 11">
                           <path fill-rule="evenodd"
@@ -177,77 +109,77 @@
                   <div class="agglibroscroll">
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Istruzione
+                              <input type="checkbox" name="categoria" value="1"> Istruzione
                           </label>
                       </div>
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Letteratura e
+                              <input type="checkbox" name="categoria" value="2"> Letteratura e
                               narrativa
                           </label>
                       </div>
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Storia
+                              <input type="checkbox" name="categoria" value="3"> Storia
                           </label>
                       </div>
                   </div>
                   <div class="agglibroscroll">
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Gialli e thriller
+                              <input type="checkbox" name="categoria" value="4"> Gialli e thriller
                           </label>
                       </div>
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Arte, cinema e
+                              <input type="checkbox" name="categoria" value="5"> Arte, cinema e
                               fotografia
                           </label>
                       </div>
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Romanzi
+                              <input type="checkbox" name="categoria" value="6"> Romanzi
                           </label>
                       </div>
                   </div>
                   <div class="agglibroscroll">
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Biografia
+                              <input type="checkbox" name="categoria" value="7"> Biografia
                           </label>
                       </div>
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Avventura e azione
+                              <input type="checkbox" name="categoria" value="8"> Avventura e azione
                           </label>
                       </div>
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Fumetti e manga
-                          </label>
-                      </div>
-                  </div>
-                  <div class="agglibroscroll">
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox"> Fantascienza
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox"> Distopia
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox"> Fantasy
+                              <input type="checkbox" name="categoria" value="9"> Fumetti e manga
                           </label>
                       </div>
                   </div>
                   <div class="agglibroscroll">
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox"> Umorismo
+                              <input type="checkbox" name="categoria" value="10"> Fantascienza
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox" name="categoria" value="11"> Distopia
+                          </label>
+                      </div>
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox" name="categoria" value="12"> Fantasy
+                          </label>
+                      </div>
+                  </div>
+                  <div class="agglibroscroll">
+                      <div class="categoria">
+                          <label class="categoria">
+                              <input type="checkbox" name="categoria" value="13"> Umorismo
                           </label>
                       </div>
                   </div>
@@ -268,6 +200,12 @@
 
 </div>
 </div>
+
+<div id="overlay"></div>   
+<div id="basicMap"></div>
+<h3 id="domanda"> Seleziona la posizione corretta </h3>
+<button type="button" id="bottoneRicerca">Okay</button>
+
   
 
 

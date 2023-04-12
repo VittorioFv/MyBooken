@@ -6,7 +6,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
 
-
+  .inputHidden {
+    display: none;
+}
   #overlaybook {
     display: none;
     position: fixed;
@@ -97,7 +99,7 @@ label {
     display: inline-block;
 }
 
-#inputfile {
+#immagine {
     display: inline-block;
     opacity: 0;
     position: relative;
@@ -174,5 +176,95 @@ input[type="checkbox"] {
     }
 }
 @media screen and (min-width: 992px){
-    
+    #modalbook {
+        margin-top: 5%;
+    }
 }
+
+
+
+
+#basicMap {
+    display: block;
+    z-index: 205;
+    position: fixed;
+    border-radius: 20px;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: -1000px;
+    margin: 0px;
+
+  }
+#domanda{
+    display: none;
+    position: fixed;
+    z-index: 204;
+    left: 20%;
+    top: 15%;
+    margin: 0px;
+    color: #36867D;
+    width: 60%;
+    background-color: #E1F1E5;
+    padding: 3px;
+    padding-bottom: 20px;
+    font-family: 'Golos Text', sans-serif;
+
+    border-radius: 10px 10px 0 0;
+   
+}
+#bottoneRicerca{
+    display: none;
+    position: fixed;
+    opacity: 1;
+    z-index: 205;
+    left: calc(50% - 75px);
+    bottom: 12%;
+    background-color: rgb(8, 159, 202);
+    color: white;
+    line-height: 45px;
+    font-family: 'Golos Text', sans-serif;
+    border-radius: 15px;
+    width: 150px;
+    height: 60px;
+    font-size: 24px;
+    border: 0px;
+    box-shadow: 0px 5px 5px rgba(0, 94, 121, 0.25);
+
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 202;
+  }
+  @media screen and (max-width: 992px) {
+    #basicMap{
+      display: block;
+      z-index: 205;
+      position: fixed;
+      border-radius: 20px;
+      width: 80%;
+      height: 60%;
+      top: 21%;
+      left: -1000px;
+      margin: 0px;
+
+    }
+    #domanda{
+      width: 80%;
+      left: 10%;
+      padding-bottom: 40px;
+      top: 14%;
+
+
+    }
+    #bottoneRicerca{
+    bottom: 11%;
+
+    }
+  }
