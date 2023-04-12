@@ -92,7 +92,7 @@
               <div class="col-25">
                   <label>Aggiungi immagine</label>
                   <button type="button" id="btnaggimg">
-                      <input type="file" id="immagine" name="immagine" accept="image/">
+                      <input type="file" name="immagine" accept="image/*" id="id_immagine">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
                           class="bi bi-plus-lg" viewBox="0 0 17 11">
                           <path fill-rule="evenodd"
@@ -214,5 +214,6 @@
 
 {% load static %}
 <script type="text/javascript" src="{% static 'JS/map.js' %}"></script>
+
 
 {% endblock %}
