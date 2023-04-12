@@ -4,6 +4,9 @@
     --bacColor: #E1F1E7;
 }
 
+a {
+    text-decoration: none;
+}
 
 .contenitorebodyvrt {
     display: flex;
