@@ -35,7 +35,7 @@
   </button>
 
   <div class="containeragglibro">
-      <form action="/libri/aggiungi_libro" method="POST">
+      <form action="/libri/aggiungi_libro" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
           <div class="row1">
               <div class="col-25">
@@ -92,7 +92,7 @@
               <div class="col-25">
                   <label>Aggiungi immagine</label>
                   <button type="button" id="btnaggimg">
-                      <input type="file" name="immagine" accept="image/*" id="id_immagine">
+                      <input type="file" name="immagine" accept="image/*" id="immagine">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
                           class="bi bi-plus-lg" viewBox="0 0 17 11">
                           <path fill-rule="evenodd"

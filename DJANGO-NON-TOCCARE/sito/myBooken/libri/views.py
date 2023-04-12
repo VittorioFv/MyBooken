@@ -132,7 +132,6 @@ def modificaLibro(request, id):
             libro = form.save(commit=False)
             libro.save(update_fields=[
                        'titolo', 'autore', 'isbn', 'descrizione'])
-
             return redirect('libri')
     else:
         form = formModificaLibri(instance=libro)
