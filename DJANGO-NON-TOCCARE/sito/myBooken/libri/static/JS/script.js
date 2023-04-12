@@ -28,9 +28,3 @@ toggletoken.onclick = function () {
     toggle.classList.remove('active');
     sidebar.classList.remove('active');
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
