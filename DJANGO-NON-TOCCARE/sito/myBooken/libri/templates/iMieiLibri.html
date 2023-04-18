@@ -5,14 +5,19 @@
 {% endblock %}
 
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/esplora.css' %}">
+
 
   <div class="row horizScroll">
     {% for x in mylibri %}
-      <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
+      {% comment %} <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
         <a href="modifica_libro/{{ x.id }}">
+          <div>
           {% if x.immagine %}
             <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
           {% endif %}
+          </div>
           <div class="card-body">
               <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
           </div>
@@ -25,11 +30,31 @@
             </a>
           </div>
         </a>
-      </div>
+      </div> {% endcomment %}
+
+      <div class="contenitorelibrovrt col-xs-12 col-md-4 col-lg-3"><a href="modifica_libro/{{ x.id }}">
+        <div class="contenitorebodyvrt">
+          <div id="toplibrovrt">
+            {% if x.immagine %}
+              <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
+            {% endif %}
+          </div>
+          <div id="bodylibrovrt">
+              <h3><strong>{{ x.titolo }}</strong></h3>
+              <h5><i>{{ x.autore }}</i></h5>
+              <p id="descritionlibro">{{ x.descrizione }}</p>
+          </div>
+        </div>
+        <div id="footerlibrovrt1">
+            <h6 id="locationlibrovrt" style="color: #000;">{{ x.citta }}</h6>
+            <h6 id="isbnlibrovrt"><a href="elimina_libro/{{ x.id }}">ELIMINA</a></h6>
+        </div>
+        <div class="data" style="display: none">{{ x.longitudine }},{{ x.latitudine }}</div>
+      </a></div>
+
     {% endfor %}
   </div>
 
-  <a href="{% url 'aggiungi_libro' %}"> Aggiungi libro </a>
   {% include 'aggiuntaLibri.html' %}
 
   {% load static %}

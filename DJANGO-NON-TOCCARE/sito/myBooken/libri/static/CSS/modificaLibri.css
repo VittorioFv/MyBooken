@@ -1,0 +1,65 @@
+  /* Gamja Flower*/
+  @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+/* Golos*/
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
+
+.form-control{
+    background-color: #E1F1E5;
+    margin: 2px;
+}
+form{
+    background-color: #A7DCEA;
+    margin: 1%;
+    padding: 5%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Golos Text', sans-serif;
+}
+.contientiForm{
+    display: flex;
+    justify-content: center;
+}
+label{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+input[type="submit"]{
+    background-color: #089FCA;
+    border: transparent;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px rgba(0, 94, 121, 0.4);
+    color: #FFFFFF;
+    border: none;
+    font-family: 'Gamja Flower', cursive;
+    font-size: large;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 15px; 
+    position: relative;
+    left: calc(50% - 40px);
+}
+
+
+form img{
+    width: 40%;
+    height: 30%;
+    position: relative;
+    left: 30%;
+    border-radius: 20px;
+}
+@media screen and (min-width: 992px){
+    form img{
+        width: 40%;
+        height: 40%;
+        left: 30%;
+    }
+    form{
+        width: 80%;
+        position: absolute;
+        left: 10%;
+    }
+}
+

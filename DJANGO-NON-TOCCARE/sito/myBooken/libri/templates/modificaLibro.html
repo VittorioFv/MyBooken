@@ -4,15 +4,22 @@
   Aggiungi libro MyBooken
 {% endblock %}
 
+
+
 {% block content %}
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/modificaLibri.css' %}">
 <form action = "{{ id }}" method = POST>
     {% csrf_token %}
-    
+    <div class="contieniForm">
+    <img src="{{libro.immagine.url}}">
     {{ form.as_div }}
-
     <input type = "submit" value = "Submit">
+    </div>
 
-</form>
+</form> 
+
+ 
 
 {% endblock %}
