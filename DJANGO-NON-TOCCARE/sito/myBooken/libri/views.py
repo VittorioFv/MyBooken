@@ -74,6 +74,7 @@ def libri(request):
     mylibri = Libri.objects.filter(
         longitudine__gt=lonm, longitudine__lt=lonM, latitudine__gt=latm, latitudine__lt=latM)
     mylibri = mylibri.exclude(idUser=request.user.id)
+    
     if request.method == 'POST':
         testoDaCercare = request.POST.get('cercaLibri')
         mylibri = mylibri.filter(Q(titolo__icontains=testoDaCercare) | Q(descrizione__icontains=testoDaCercare) | Q(

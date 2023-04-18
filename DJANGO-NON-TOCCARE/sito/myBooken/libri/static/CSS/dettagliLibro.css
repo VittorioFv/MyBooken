@@ -9,6 +9,15 @@ a {
     text-decoration: none;
 }
 
+.stella {
+    fill: #32849C;
+    stroke: #32849C;
+    stroke-width: 1;
+
+    width: 18%;
+    height: 48px;
+}
+
 #primabar{
     background-color: #A7DCEA;
     height: 100px;
