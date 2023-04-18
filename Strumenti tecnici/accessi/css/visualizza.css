@@ -1,0 +1,455 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#primabar{
+    background-color: #A7DCEA;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#loghetto{
+    position: relative;
+    top: 37px;
+    width: 10%;
+    height: 30px;
+    left: -35%;
+}
+
+#token{
+    position: relative;
+    left: 45%;
+    top: -160px;
+    width: 10%;
+    height: 30px;
+}
+
+.bi-chevron-left{
+    position: relative;
+    top: -70px;
+    left: -45%;
+}
+
+.contenitorelibrovrt {
+    background-color: #DFF0E4;
+    margin: auto;
+    padding: auto;
+    overflow: auto;
+    box-sizing: border-box;
+    color: #36867D;
+    transition: all 0.2s;
+    width: 80%;
+    display: block;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    height: 230x;
+}
+
+#toplibrovrt {
+    background-color: #36867D;
+    width: 15%;
+    border-radius: 25px;
+    height: 160px;
+    position: relative;
+    left: 3%;
+    top: 30px;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    padding-top: 5px;
+}
+
+#autore{
+    position: relative;
+    left: -5%;
+}
+
+#bodylibrovrt {
+    display: inline-block;
+    width: 70%;
+    margin-top: 17px;
+    position: relative;
+    left: -30%;
+    top: 20px;
+}
+
+#descritionlibro {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-bottom: 47px;
+    font-size: 14px;
+    position: relative;
+    left: 28%;
+    top: 20px;
+}
+
+#footerlibrovrt {
+    margin-left: 3%;
+    margin-right: 3%;
+    display: block;
+    clear: both;
+}
+
+#locationlibrovrt {
+    float: left;
+}
+
+#isbnlibrovrt {
+    float: right;
+}
+
+#fraseiniz{
+    color: #36867D ;
+    position: relative;
+    top: -15px;
+}
+
+
+.bi-chevron-left{
+    display: none;
+}
+
+.bi-search{
+    color: #23687a;
+    position: relative;
+    left: -24%;
+    top: 35px;
+}
+
+#esplora{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: -11%;
+    top: 5px;
+    font-size: 20px;
+}
+
+#icbook{
+    position: relative;
+    top: -28px;
+    left: -4%;
+}
+
+#mybooks{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: 4%;
+    top: -60px;
+    font-size: 20px;
+}
+
+.bi-chat-left{
+    color: #23687a;
+    position: relative;
+    top: -90px;
+    left: 12%;
+}
+
+#icchat{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: 19%;
+    top: -125px;
+    font-size: 20px;
+}
+
+#icchat1{
+    position: relative;
+    top: 15px;
+    color: #23687a;
+    left: -20%;
+}
+
+.bi-book{
+    color: #23687a;
+    top: 12px;
+    position: relative;
+    left: -20%;
+}
+
+
+#libroside{
+    width: 100%;
+}
+
+.bi-list{
+    position: relative;
+    top: -70px;
+    left: -45%;
+    color: #23687a;
+}
+
+#valutazioni{
+    background-color: #298a7eaf;
+    color: white;
+    height: 22px;
+    border-radius: 10px;
+    width: 14%;
+    position: relative;
+    left: 10%;
+    top: 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#containerval{
+    background-color: #E1F1E5;
+    height: 180px;
+    padding: 80px;
+    border-radius: 8px;
+    width: 80%;
+    border-radius: 0px 20px 20px 20px;
+    position: relative;
+    left: 10%;
+    top: 50px;
+    color: #1b87a1;
+}
+
+#containerval2{
+    position: relative;
+    top: 10px;
+    color: #1b87a1;
+    left: 14%;
+}
+
+#containerval3{
+    position: relative;
+    top: -185px;
+    color: #1b87a1;
+    left: 14%;
+}
+
+.bi-star-fill{
+    position: relative;
+    left: -44%;
+}
+
+#d1{
+    position: relative;
+    top: -95px;
+    left: 40%;
+    font-size: 25px;
+}
+
+#d2{
+    position: relative;
+    top: -94px;
+    left: 13%;
+    font-size: 25px;
+}
+
+#d3{
+    position: relative;
+    font-size: 25px;
+    top: 85px;
+    left: 13%;
+}
+
+#riqfinale{
+    position: relative;
+    background-color: #A7DCEA;
+    color: #23687a;
+    font-size: 20px;
+    width: 45%;
+    height: 50px;
+    padding: 8px;
+    border-radius: 15px;
+    border: 0px;
+    left: 25%;
+    top: -44px;
+}
+
+#lastchat{
+    top: 0px;
+    position: relative;
+    left: -27%;
+}
+
+
+@media screen and (max-width: 992px) {
+body{
+    
+}
+
+#loghetto{
+    position: relative;
+    left: 5%;
+    width: 50%;
+}
+
+#token{
+    position: relative;
+    left: 38%;
+}
+
+.bi-list{
+    display: none;
+}
+
+#fraseiniz{
+    position: relative;
+    left: -18%;
+}
+
+.contenitorelibrovrt {
+   height: 250px;
+   position: relative;
+   border-radius: 25px;
+   width: 95%;
+   overflow: hidden;
+}
+
+#footerlibrovrt{
+    position: relative;
+    top: -180px;
+}
+
+#toplibrovrt {
+    position: relative;
+    width: 35%;
+    height: 125px;
+    top: 35px;
+    left: 5%;
+    border-radius: 10px;
+}
+
+#autore{
+    position: relative;
+    left: -9%;
+}
+
+#bodylibrovrt {
+    position: relative;
+    left: 10%;
+    top: -110px;
+}
+
+
+#valutazioni{
+    position: relative;
+    left: 2%;
+    width: 45%;
+}
+
+#containerval{
+    position: relative;
+    width: 95%;
+    left: 2%;
+}
+
+#containerval2{
+    position: relative;
+    left: 18%;
+}
+
+#containerval3{
+    position: relative;
+    left: 18%;
+}
+
+.bi-star-fill{
+    position: relative;
+    left: -40%;
+}
+
+#d1{
+    position: relative;
+    left: 55%;
+}
+
+#d2{
+    position: relative;
+    left: 11%;
+}
+
+#d3{
+    position: relative;
+    left: 11%;
+}
+
+#riqfinale{
+    position: relative;
+    width: 70%;
+    top: -75px;
+    left: 15%;
+}
+
+#lastchat{
+    display: none;
+}
+
+.bi-chevron-left{
+    position: relative;
+    left: 5%;
+    top: -70px;
+    display: block;
+}
+
+#descritionlibro {
+    position: relative;
+    left: 27%;
+    top: -30px;
+    width: 70%;
+}
+
+.bi-search{
+    position: relative;
+    left: -60%;
+    top: 1070px;
+    z-index: 1;
+}
+
+#icbook{
+    position: relative;
+    top: 1005px;
+    left: 1%;
+    z-index: 1;
+}
+
+.bi-chat-left{
+    position: relative;
+    top: 942px;
+    left: 37%;
+    z-index: 1;
+}
+
+#esplora{
+    position: relative;
+    left: -35%;
+    top: 1070px;
+    z-index: 1;
+}
+
+#mybooks{
+    position: relative;
+    left: -1%;
+    top: 1005px;
+    z-index: 1;
+}
+
+#icchat{
+    position: relative;
+    left: 37%;
+    top: 940px;
+    z-index: 1;
+}
+
+#ultimabarra{
+    background-color: #A7DCEA;
+    height: 110px;
+    position: relative;
+    top: 25px;
+    left: -26%;
+    width: 150%;
+}
+}
+

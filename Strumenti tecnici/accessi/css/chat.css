@@ -1,0 +1,334 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#primabar{
+    background-color: #A7DCEA;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#loghetto{
+    position: relative;
+    top: 37px;
+    width: 10%;
+    height: 30px;
+    left: -35%;
+}
+
+#token{
+    position: relative;
+    left: 45%;
+    top: -160px;
+    width: 10%;
+    height: 30px;
+}
+
+.bi-chevron-left{
+    position: relative;
+    top: -70px;
+    left: -45%;
+}
+
+
+.bi-search{
+    color: #23687a;
+    position: relative;
+    left: -24%;
+    top: 35px;
+}
+
+#esplora{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: -11%;
+    top: 5px;
+    font-size: 20px;
+}
+
+#icbook{
+    position: relative;
+    top: -28px;
+    left: -4%;
+}
+
+#mybooks{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: 4%;
+    top: -60px;
+    font-size: 20px;
+}
+
+.bi-chat-left{
+    color: #23687a;
+    position: relative;
+    top: -90px;
+    left: 12%;
+}
+
+#icchat{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: 19%;
+    top: -125px;
+    font-size: 20px;
+}
+
+#icchat1{
+    position: relative;
+    top: 15px;
+    color: #23687a;
+    left: -20%;
+}
+
+.bi-book{
+    color: #23687a;
+    top: 12px;
+    position: relative;
+    left: -20%;
+}
+
+.bi-list{
+    position: relative;
+    top: -70px;
+    left: -45%;
+    color: #23687a;
+}
+
+.rettangolo{
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 90px;
+    top: 10px;
+    left: 10%;
+    background: #E1F2E6;
+    border-radius: 15px;
+}
+
+#one{
+    position: relative;
+    width: 80%;
+    left: -25%; 
+    top: 20px;
+    font-size: 20px;
+}
+
+.frasedueb{
+    width: 70%;
+    float: left;
+    position: relative;
+    font-size: 15px;
+    left: 19%;
+    top: -3px;
+}
+
+#two{
+    position: relative;
+    font-size: 15px;
+    left: 5%;
+}
+
+#imgprofilo {
+    background-color: white;
+    width: 4%;
+    height: 55px;
+    position: relative;
+    top: -60px;
+    left: 13%;
+    float: left;
+    border-radius: 50px;
+}
+
+.fraseuno {
+    display: inline-block;
+    width: 70%;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    left: -20%;
+    top: 20px;
+    font-size: 20px;
+}
+
+.frasedue {
+    display: inline-block;
+    width: 70%;
+    float: left;
+    position: relative;
+    font-size: 15px;
+    left: 21%;
+    top: -3px;
+}
+
+.bi-qr-code-scan{
+    z-index: 1;
+    position: relative;
+    left: 30%;
+    top: -45px;
+    color: #23687a;
+}
+
+.bi-chat-dots{
+    z-index: 1;
+    position: relative;
+    left: 32%;
+    top: -45px;
+    color: #23687a;
+}
+
+#ultimabarra{
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+body{
+    overflow-x: hidden;
+    overflow: hidden;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+#loghetto{
+    position: relative;
+    width: 100%;
+    left: -2%;
+}
+
+#token{
+    position: relative;
+    left: 34%;
+    top: -180px;
+}
+
+.bi-list{
+    position: relative;
+    top: -65px;
+    left: -36%;
+    height: 40px;
+}
+
+.rettangolo{
+    position: relative;
+    left: 10%;
+    top: -10px;
+    width: 80%;
+    background: #E1F2E6;
+    border-radius: 15px;
+
+}
+
+#one{
+    position: relative;
+    top: 20px;
+    left: -10%;
+}
+
+.frasedueb{
+    width: 70%;
+    float: left;
+    position: relative;
+    font-size: 15px;
+    left: 19%;
+    top: -3px;
+}
+
+#two{
+    position: relative;
+    left: 16%;
+}
+
+#imgprofilo {
+    width: 15%;
+    position: relative;
+    top: -85px;
+    left: 12%;
+}
+
+.fraseuno {
+    position: relative;
+    left: -20%;
+    width: 100%;
+    top: 15px;
+    font-size: 20px;
+}
+
+.frasedue {
+    position: relative;
+    left: 28%;
+    top: 0px;
+}
+
+.bi-search{
+    position: relative;
+    left: -32%;
+    top: 730px;
+    z-index: 1;
+}
+
+#ultimabarra{
+    background-color: #A7DCEA;
+    height: 110px;
+    display: block;
+    width: 100%;
+}
+
+#icbook{
+    position: relative;
+    top: 665px;
+    left: -1%;
+    z-index: 1;
+}
+
+.bi-chat-left{
+    position: relative;
+    top: 605px;
+    left: 30%;
+    z-index: 1;
+}
+
+#esplora{
+    position: relative;
+    left: -33%;
+    top: 730px;
+    z-index: 1;
+}
+
+#mybooks{
+    position: relative;
+    left: -1%;
+    top: 665px;
+    z-index: 1;
+}
+
+#icchat{
+    position: relative;
+    left: 31%;
+    top: 600px;
+    z-index: 1;
+}
+
+.bi-qr-code-scan{
+    position: relative;
+    left: 30%;
+    top: -90px;
+    height: 25px;
+    color: #23687a;
+}
+
+.bi-chat-dots{
+    position: relative;
+    left: 30%;
+    top: -90px;
+    color: #23687a;
+}
+}

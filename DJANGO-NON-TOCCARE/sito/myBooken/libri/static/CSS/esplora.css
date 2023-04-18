@@ -77,10 +77,12 @@ a {
 
 #footerlibrovrt {
     white-space: pre-wrap;
-
     padding-top: 0px;
     display: flex;
     flex-direction: row;
+}
+#footerlibrovrt1{
+    display: flex;
 }
 
 #isbnlibrovrt {
@@ -405,4 +407,10 @@ button {
 
         transition: all 1s;
     }
+}
+a{
+    text-decoration: none;
+}
+h6 a{
+    color: #005E79 !important;
 }

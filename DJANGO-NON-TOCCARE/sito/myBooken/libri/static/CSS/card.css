@@ -21,19 +21,22 @@ display: none;  /* Safari and Chrome */
 }
 
 .schedaLibro{
-    color: #eee;
+    color: #36867D;
     max-width: 18rem;
     position: relative;
     min-height: 100%;
     padding: 40px;
-    background-color: #313030;  
+    background-color: #E1F2E6;  
 }
 .schedaLibro a {
-    color: white;
+    color: #36867D;
     text-decoration: none;
 }
 .immagine{
     border-radius: 7%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
 }
 .titoloCarta{
     display: -webkit-box;
