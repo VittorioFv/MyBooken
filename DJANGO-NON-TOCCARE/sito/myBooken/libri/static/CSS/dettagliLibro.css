@@ -1,0 +1,542 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+a { 
+    text-decoration: none;
+}
+
+#primabar{
+    background-color: #A7DCEA;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#loghetto{
+    position: relative;
+    top: -22px;
+    left: -34%;
+}
+
+#provaquery{
+    display: none;
+}
+
+
+
+#esplora{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: -11%;
+    top: -115px;
+    font-size: 20px;
+}
+
+#icbook{
+    position: relative;
+    top: -146px;
+    left: -4%;
+}
+
+#mybooks{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: 4%;
+    top: -180px;
+    font-size: 20px;
+}
+
+#icchat{
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    position: relative;
+    left: 19%;
+    top: -245px;
+    font-size: 20px;
+}
+
+#icchat1{
+    position: relative;
+    top: 12px;
+    color: #23687a;
+    left: -30px;
+}
+
+.bi-booka{
+    color: #23687a;
+    top: 12px;
+    position: relative;
+    left: -30px;
+}
+
+#token{
+    position: relative;
+    left: 45%;
+    top: -284px;
+}
+
+#libroside{
+    width: 100%;
+}
+
+.bi-list{
+    position: relative;
+    top: -70px;
+    left: -45%;
+    color: #23687a;
+}
+
+
+#libro{
+    border-radius: 15px;
+    position: relative;
+    border: 10px solid #A7DCEA;
+    width: 20%;
+    left: 5%;
+    margin-top: 50px;
+
+    height: 300px;
+}
+
+#libro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#p1{
+    border: 0px;
+    background-color: #A7DCEA;
+    width: 120px;
+    height: 54px;
+    border-radius: 10px;
+    position: relative;
+    left: 5%;
+    top: 20px;
+}
+
+#p2{
+    border: 0px;
+    background-color: #A7DCEA;
+    width: 120px;
+    height: 54px;
+    border-radius: 10px;
+    position: relative;
+    left: calc(5% + 130px );
+    top: -33px;
+}
+
+#chat{
+    width: 60px;
+    position: relative;
+    left: calc(5% + 50px);
+    z-index: 1;
+    top: -85px;
+    color: #23687a;
+}
+
+#richiedi{
+    width: 50px;
+    position: relative;
+    left: calc(5% + 180px);
+    z-index: 1;
+    top: -133px;
+    color: #23687a;
+}
+
+.riquadriverdi{
+        background-color: #298a7eaf;
+        color: white;
+        height: 22px;
+        border-radius: 8px;
+        width: 100px;
+        position: relative;
+        font-family: 'Gamja Flower', cursive;
+}
+
+#v1{
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+    left: 35%;
+    top: -490px;
+
+}
+
+#v2{
+    position: relative;
+    border-radius: 10px 10px 0px 0px; 
+    left: 35%;
+    top: -430px;
+}
+
+#v3{
+    position: relative;
+    border-radius: 10px 10px 0px 0px; 
+    left: 63%;
+    top: -487px;
+}
+
+.riquadri{
+    background-color: #E1F1E5;
+    border-radius: 8px;
+    width: 50%;
+}
+
+#r1{
+    position: relative;
+    left: 35%;
+    top: -490px;
+    padding: 6px;
+    border-radius: 0px 10px 10px 10px; 
+    color: #1b87a1 ;
+    
+}
+
+#r2{
+    position: relative;
+    left: 35%;
+    top: -430px;
+    padding: 6px;
+    border-radius: 0px 10px 10px 10px; 
+    color: #1b87a1 ;
+    width: 22%; 
+}
+
+#r3{
+    position: relative;
+    left: 63%;
+    width: 22%;
+    top: -487px;
+    padding: 6px;
+    border-radius: 0px 10px 10px 10px; 
+    color: #1b87a1;
+}
+
+#r4{
+    position: relative;
+    top: -503px;
+    border-radius: 0px 0px 10px 10px; 
+    left: 35%;
+    padding: 2px;
+    color: #1b87a1 ;
+    font-size: 13px;
+}
+
+#descrizione{
+    background-color: #298a7eaf;
+    color: white;
+    height: 22px;
+    border-radius: 10px;
+    width: 8%;
+    position: relative;
+    left: 35%;
+    top: -450px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#containertesto{
+    background-color: #E1F1E5;
+    height: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 50%;
+    border-radius: 0px 10px 10px 10px;
+    position: relative;
+    left: 35%;
+    top: -450px;
+    color: #1b87a1;
+}
+
+#prova{
+    width: 20%;
+    height: 30px;
+    background-color: #089FCA;
+    position: relative;
+    top: -560px;
+    left: 5%;
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+}
+
+#riquadroprova{
+    background-color: #A7DCEA;
+    position: relative;
+    width: 20%;
+    height: 60px;
+    top: -561px;
+    left: 5%;
+    padding: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#correlati{
+    position: relative;
+    left: -4%;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 25px;
+    top: -540px;
+    color: #1b87a1;
+}
+
+#riquadrocorrelati{
+    width: 50%;
+    height: 120px;
+    background-color: #36867d63;
+    position: relative;
+    left: 35%;
+    top: -530px;
+    border-radius: 10px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding: 10px;
+}
+
+.image{
+    width: 12%;
+    height: 80px;
+    background-color: #E1F1E5;
+    position: relative;
+    margin: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 25px;
+    top: -27px;
+}
+
+#ultimabarra{
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .col-xs-12 {
+      width: 100%;
+      margin-top: auto;
+    }
+
+#loghetto{
+    position: relative;
+    left: 5%;
+}
+
+#token{
+    position: relative;
+    left: 38%;
+}
+
+#libro{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top: -20px;
+}
+
+#p1{
+    position: relative;
+    left: calc(15%);
+    top: -50px;
+}
+
+#p2{
+    position: relative;
+    left: calc(20% + 120px);
+    top: -103px;
+    border-radius: 15px;
+}
+
+#containertesto{
+    width: 50%;
+    position: relative;
+    left: 35%;
+    top: 200px;
+}
+
+.bi-list{
+    display: none;
+}
+
+.bi-chevron-left{
+    position: relative;
+    left: 5%;
+    top: -70px;
+    display: block;
+}
+
+#chat{
+    width: 60px;
+    position: relative;
+    left: calc(15% + 50px);
+    padding: 1px;
+    z-index: 1;
+    top: -156px;
+}
+
+
+#richiedi{
+    position: relative;
+    left: calc(20% + 170px);
+    z-index: 1;
+    top: -205px;
+}
+
+#v1{
+    position: relative;
+    top: -180px;
+    left: 2%;
+}
+
+#v2{
+    position: relative;
+    left: 37%;
+    top: -202px;
+}
+
+#v3{
+    position: relative;
+    left: 65%;
+    top: -224px;
+    font-size: 15px;
+}
+
+.riquadri{
+    width: 50%;
+}
+
+#r1{
+    position: relative;
+    top: -226px;
+    left: 2%;
+}
+
+#r2{
+    position: relative;
+    left: 37%;
+    top: -250px;
+}
+
+#r3{
+    position: relative;
+    left: 70%;
+    top: -274px;
+}
+
+#r4{
+    position: relative;
+    top: -251px;
+    left: 2%;
+    width: 33%;
+}
+
+#autore{
+    position: relative;
+    left: 2%;
+    top: -250px;
+        height: 22px;
+        width: 33%;
+        font-family: 'Gamja Flower', cursive;
+}
+
+#descrizione{
+    width: 36%;
+    position: relative;
+    left: 2%;
+    top: -230px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#containertesto{
+    width: 95%;
+    position: relative;
+    left: 2%;
+    top: -231px;
+}
+
+#prova{
+    display: none;
+}
+
+#provaquery{
+    position: relative;
+    top: -220px;
+    display: block;
+    left: -18%;
+    color: #23687a;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 35px;
+}
+
+#riquadroprova{
+    position: relative;
+    width: 96%;
+    height: 90px;
+    top: -210px;
+    left: 2%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#correlati{
+    position: relative;
+    left: -10%;
+    top: -200px;
+}
+
+#riquadrocorrelati{
+    width: 96%;
+    height: 150px;
+    position: relative;
+    left: 2%;
+    top: -190px;
+}
+
+.image{
+    width: 30%;
+    height: 110px;
+    position: relative;
+    padding: 42px;
+    top: -20px;
+}
+
+.bi-search{
+    position: relative;
+    left: -50%;
+    top: 1380px;
+}
+
+#ultimabarra{
+    background-color: #A7DCEA;
+    height: 120px;
+    display: block;
+    width: 100%;
+}
+
+#icbook{
+    position: relative;
+    top: 1255px;
+}
+
+#esplora{
+    position: relative;
+    left: -35%;
+    top: 1320px;
+}
+
+#mybooks{
+    position: relative;
+    left: -1%;
+    top: 1255px;
+}
+
+#icchat{
+    position: relative;
+    left: 37%;
+    top: 1188px;
+}
+}
