@@ -16,7 +16,7 @@ function updateDivPosition() {
       document.getElementById('basicMap').style.left = "10%";
     }
   }else{
-    document.getElementById('basicMap').style.left = "-1000px";
+    document.getElementById('basicMap').style.left = "-150vw";
   }
 }
 

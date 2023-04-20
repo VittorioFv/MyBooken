@@ -9,29 +9,8 @@
 <link rel="stylesheet" href="{% static 'CSS/esplora.css' %}">
 
 
-  <div class="row1 horizScroll">
+  <div class="riga horizScroll">
     {% for x in mylibri %}
-      {% comment %} <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
-        <a href="modifica_libro/{{ x.id }}">
-          <div>
-          {% if x.immagine %}
-            <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
-          {% endif %}
-          </div>
-          <div class="card-body">
-              <h5 class="card-title titoloCarta">{{ x.titolo }}</h5>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted testoFooter">
-              {{ x.autore }}
-            </small>
-            <a href="elimina_libro/{{ x.id }}">
-              ELIMINA
-            </a>
-          </div>
-        </a>
-      </div> {% endcomment %}
-
       <div class="contenitorelibrovrt col-xs-12 col-md-4 col-lg-3"><a href="modifica_libro/{{ x.id }}">
         <div class="contenitorebodyvrt">
           <div id="toplibrovrt">

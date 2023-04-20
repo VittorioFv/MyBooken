@@ -258,8 +258,7 @@ input {
 }
 
 .containerschedalibrimobile{
-    flex: 1;
-    
+    flex: 1;   
     margin: 0;
     padding: 0;
 }
@@ -413,4 +412,12 @@ a{
 }
 h6 a{
     color: #005E79 !important;
+}
+.riga{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0px;
+    margin-top: 2%;
+    gap: 3%;
 }

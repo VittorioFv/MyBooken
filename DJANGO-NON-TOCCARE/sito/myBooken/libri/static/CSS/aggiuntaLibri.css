@@ -204,7 +204,7 @@ input[type="checkbox"] {
     width: 60%;
     height: 60%;
     top: 20%;
-    left: -1000px;
+    left: -150vw;
     margin: 0px;
 
   }
@@ -263,7 +263,7 @@ input[type="checkbox"] {
       width: 80%;
       height: 60%;
       top: 21%;
-      left: -1000px;
+      left: -150vw;
       margin: 0px;
 
     }
