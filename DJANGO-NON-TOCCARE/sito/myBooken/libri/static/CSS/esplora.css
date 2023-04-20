@@ -106,33 +106,37 @@ input {
     margin-top: 10px;
     margin-bottom: 5px;
     position: relative;
-    height: 24px;
 }
 
 .containersearch input {
     width: 50%;
-    padding-right: 20px;
+    padding-left: 16px;
     box-sizing: border-box;
+    border: 0px;
+    background: #D7EFF6;
+    border-radius: 10px;
+}
+
+.bi-search {
+    color: rgba(0, 94, 121, 1.0);
 }
 
 .containersearch button {
     top: 0;
     bottom: 0;
     padding: 0;
-    margin-left: -25px;
-    width: 25px;
-    height: 25px;
+    margin-left: -30px;
+    width: 30px;
+    height: 30px;
 }
 
 #textsearch {
     border: transparent;
     border-radius: 10px;
-    background-color: #A7DCEA;
+    background-color: #A7DCEA; 
 }
 
 #btnSubmit {
-    width: 25px;
-    height: 25px;
     background-color: transparent;
     border-radius: 10px;
     border: transparent;
@@ -244,6 +248,7 @@ input {
 
 .mappa {
     flex: 1;
+    height: 50vw;
     aspect-ratio: 1 / 1;
     background-color: var(--bacColor);
     border-radius: var(--paddingDist);
@@ -258,6 +263,8 @@ input {
 }
 
 .containerschedalibrimobile{
+    height: 50vw;
+    overflow-y: scroll;
     flex: 1;   
     margin: 0;
     padding: 0;
@@ -339,8 +346,20 @@ button {
     width: 25px;
     height: 25px;
 }
+#show-modal-btn {
+    display: none;
+}
 
 @media only screen and (max-width: 992px) {
+    .containerschedalibrimobile{
+        height: 100%;
+        overflow-y: visible;
+    }
+
+    #show-modal-btn {
+        display: block;
+    }
+
     .mappa {
         position: fixed;
         bottom: -75vh;
@@ -378,8 +397,8 @@ button {
     }
 
     .horizontal .contenitorelibrovrt{
-        width: 300px;
-        margin-right: 0px;
+        width: 350px;
+        margin-left: 0px;
         display: inline-block;
     }
 

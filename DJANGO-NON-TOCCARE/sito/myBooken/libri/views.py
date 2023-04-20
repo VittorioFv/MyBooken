@@ -88,6 +88,7 @@ def libri(request):
     print(data)
     
     return render(request, 'esplora.html', {
+        'categorie': Categorie.objects.all(),
         'mylibri': mylibri,
     })
 

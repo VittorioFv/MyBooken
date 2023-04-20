@@ -52,11 +52,14 @@ button {
 }
 
 #show-modalbook-btn {
-    bottom: 0;
-    right: 0;
+    bottom: 48px;
+    right: 16px;
+
+    width: 48px;
+    height: 48px;
+
     position: fixed;
-    margin: 10px;
-    margin-bottom: 56px;
+    margin: 16px;
 }
 
 #close-modalbook-btn {
@@ -191,6 +194,12 @@ input[type="checkbox"] {
     #modalbook {
         margin-top: 5%;
     }
+
+    #show-modalbook-btn {
+        bottom: 128px;
+        right: 128px;
+    }
+    
 }
 
 

@@ -13,7 +13,9 @@
 <form action = "{{ id }}" method = POST>
     {% csrf_token %}
     <div class="contieniForm">
-    <img src="{{libro.immagine.url}}">
+    {% if libro.immagine %}
+      <img src="{{libro.immagine.url}}">
+    {% endif %}
     {{ form.as_div }}
     <input type = "submit" value = "Submit">
     </div>
