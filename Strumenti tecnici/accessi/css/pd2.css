@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(146, 220, 218);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+    text-align: center;
+}
+
+#tastoback{
+    position: relative;
+    left: -40%;
+    top: 60px;
+    color: #005E79;
+}
+
+#image{
+    position: relative;
+    left: -1%;
+    top: 10px;
+}
+
+.container {
+    border-radius: 20px;
+    background-color: #E1F1E7;
+    width: 35%;
+    height: 350px;
+    position: relative;
+    top: 50px;
+  }
+
+#frase{
+    position: relative;
+    width: 70%;
+    left: 15%;
+    top: 40px;
+    font-size: 24px;
+    color: #418D84;
+    z-index: 1;
+}
+
+#security{
+    position: relative;
+    color: #418D84;
+    top: 90px;
+}
+
+#accesso{
+    position: relative;
+    top: 150px;
+}
+
+#fine{
+    position: relative;
+    top: 110px;
+}
+
+  @media screen and (max-width: 992px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        overflow: hidden;
+    }
+    
+    .bi-chevron-left{
+        position: relative;
+        left: 3%;
+        height: 30px;
+    }
+    
+    #loghetto{
+        position: relative;
+        height: 150px;
+    }
+    
+    .container {
+        width: 80%;
+        height: 350px;
+        position: relative;
+        top: 50px;
+      }
+    
+    #frase{
+        position: relative;
+        width: 100%;
+        top: 50px;
+        font-size: 18px;
+        color: #418D84;
+        z-index: 1;
+        left: -1%;
+    }
+    
+    .bi-shield-check{
+        position: relative;
+        height: 80px;
+        width: 100%;
+        left: -1%;
+    }
+    
+    #accesso{
+        position: relative;
+        left: 6%;
+        width: 90%;
+        top: 130px;
+        font-size: 20px;
+    }
+    
+    #fine{
+        position: relative;
+        top: 250px;
+    }
+    
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
