@@ -1,0 +1,24 @@
+.chat {
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 90px;
+    top: 10px;
+    left: 10%;
+    background: #E1F2E6;
+    border-radius: 15px;
+
+    display: flex;
+    color: #23687a;
+
+    padding: 16px;
+}
+
+.qrcode {
+    color: #23687a;
+    margin-left: auto;
+}
+
+.icon {
+    margin-left: 16px;
+}

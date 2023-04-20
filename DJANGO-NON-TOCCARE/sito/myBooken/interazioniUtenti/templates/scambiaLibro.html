@@ -6,6 +6,11 @@
 
 {% block content %}
 
+  {% if not mylibri %}
+  <h1> Sembra che l'utente selezionato non abbia libri da scambiare </h1>
+  
+  {% endif %}
+
   <div class="row horizScroll">
     {% for x in mylibri %}
       <div class="card schedaLibro col-xs-4 col-md-4 col-lg-3">
