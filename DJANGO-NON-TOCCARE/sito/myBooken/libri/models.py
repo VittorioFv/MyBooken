@@ -26,7 +26,6 @@ class Libri(models.Model):
 
     # per qualche motivo la variabile categorie al plurale da errore
     categoria = models.ManyToManyField('Categorie', through='LibriCategorie')
-
     data = models.DateField(auto_now=False, auto_now_add=True)
 
 pre_delete.connect(ImmaginiLibriCleanup, sender=Libri)
