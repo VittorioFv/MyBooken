@@ -150,7 +150,6 @@ def aggiungiLibro(request):
             libro = form.save(commit=False)
 
             libro.idUser = request.user
-
             libro.save()
 
             form.save_m2m()
