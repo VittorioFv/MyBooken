@@ -106,81 +106,14 @@
           <div class="rowcontenitore">
               <div class="rowagglibro">
                   <div class="agglibroscroll">
+
+                    {% for x in categorie %}
                       <div class="categoria">
                           <label class="categoria">
-                              <input type="checkbox" name="categoria" value="1"> Istruzione
+                              <input type="checkbox" name="categoria" value={{ x.id }}> {{x.nomeCategoria}}
                           </label>
                       </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="2"> Letteratura e
-                              narrativa
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="3"> Storia
-                          </label>
-                      </div>
-                  </div>
-                  <div class="agglibroscroll">
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="4"> Gialli e thriller
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="5"> Arte, cinema e
-                              fotografia
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="6"> Romanzi
-                          </label>
-                      </div>
-                  </div>
-                  <div class="agglibroscroll">
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="7"> Biografia
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="8"> Avventura e azione
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="9"> Fumetti e manga
-                          </label>
-                      </div>
-                  </div>
-                  <div class="agglibroscroll">
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="10"> Fantascienza
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="11"> Distopia
-                          </label>
-                      </div>
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="12"> Fantasy
-                          </label>
-                      </div>
-                  </div>
-                  <div class="agglibroscroll">
-                      <div class="categoria">
-                          <label class="categoria">
-                              <input type="checkbox" name="categoria" value="13"> Umorismo
-                          </label>
-                      </div>
+                    {% endfor %}
                   </div>
               </div>
           </div>

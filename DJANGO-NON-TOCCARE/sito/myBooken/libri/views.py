@@ -6,7 +6,7 @@ from libri.forms import formAggiuntaLibri
 from libri.forms import formModificaLibri
 from autenticazione.models import Profilo#, Recensioni
 from interazioniUtenti.models import Chat
-from .models import Libri
+from .models import Libri, Categorie
 from django.contrib.auth.models import User
 
 from datetime import datetime, date
@@ -117,6 +117,7 @@ def mieiLibri(request):
 
     template = loader.get_template('iMieiLibri.html')
     context = {
+        'categorie': Categorie.objects.all(),
         'mylibri': mylibri,
     }
     return HttpResponse(template.render(context, request))
@@ -156,11 +157,7 @@ def aggiungiLibro(request):
             form.save_m2m()
 
             return redirect('i_miei_libri')
-    else:
-        form = formAggiuntaLibri()
-    return render(request, 'aggiuntaLibri.html', {
-        'form': form,
-    })
+    return redirect('i_miei_libri')
 
 
 @login_required
