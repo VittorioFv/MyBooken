@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.template import loader
@@ -137,6 +138,7 @@ def modificaLibro(request, id):
             return redirect('i_miei_libri')
     else:
         form = formModificaLibri(instance=libro)
+    
     return render(request, 'modificaLibro.html', {
         'form': form,
         'id': id,
@@ -157,6 +159,9 @@ def aggiungiLibro(request):
             form.save_m2m()
 
             return redirect('i_miei_libri')
+        else:
+            messages.success(request, ("C'è stato un errore, assicurati che i dati siano corretti"))
+
     return redirect('i_miei_libri')
 
 

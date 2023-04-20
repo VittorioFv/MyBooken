@@ -8,6 +8,15 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'CSS/esplora.css' %}">
 
+  {% if messages %}
+    {% for ms in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ ms }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    {% endfor %}
+  {% endif %}
 
   <div class="riga horizScroll">
     {% for x in mylibri %}
