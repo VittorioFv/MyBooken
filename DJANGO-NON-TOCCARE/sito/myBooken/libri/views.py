@@ -77,15 +77,16 @@ def libri(request):
     mylibri = mylibri.exclude(idUser=request.user.id)
     
     if request.method == 'POST':
+        category = request.POST.getlist('categorie')
         testoDaCercare = request.POST.get('cercaLibri')
         mylibri = mylibri.filter(Q(titolo__icontains=testoDaCercare) | Q(descrizione__icontains=testoDaCercare) | Q(
             autore__icontains=testoDaCercare) | Q(isbn__icontains=testoDaCercare))
 
+        if len(category) != 0:
+            for categoria in category:
+                mylibri = mylibri.filter(categoria__pk = categoria)
+
     mylibri = mylibri[:10]
-
-    data = serializers.serialize('json', mylibri, fields=('latitudine', 'longitudine'))
-
-    print(data)
     
     return render(request, 'esplora.html', {
         'categorie': Categorie.objects.all(),

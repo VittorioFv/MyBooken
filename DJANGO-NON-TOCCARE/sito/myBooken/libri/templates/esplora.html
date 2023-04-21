@@ -8,6 +8,9 @@
 {% block headCss %}
   {% load static %}
   <link rel="stylesheet" href="{% static 'CSS/esplora.css' %}">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/form.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -22,19 +25,23 @@
             <path
                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
         </svg></button>
+
+    {% for c in categorie %}  
+      <input type="checkbox" class="inputHidden" id="checkc{{c.pk}}" value={{c.pk}} name="categorie">
+    {% endfor %}
   </form>
     
 
   <!--  Category Scrolling ------>
   <div class="categoryscrollmenu">
     {% for c in categorie %}
-      <div class="singlecategory"><a href="#" data-id={{c.nomeCategoria}}>{{c.nomeCategoria}}</a></div>
+      <div class="singlecategory"><a href="#" data-id="c{{c.pk}}"">{{c.nomeCategoria}}</a></div>
     {% endfor %}
   </div>
   <!--  Filtered categories------>
   <div class="categoryscrollmenufiltrata">
     {% for c in categorie %}
-      <div class="singlecategoryfiltrata nascosto" id={{c.nomeCategoria}}>{{c.nomeCategoria}}<a href="#" data-id={{c.nomeCategoria}}> x</a>
+      <div class="singlecategoryfiltrata nascosto" id="c{{c.pk}}">{{c.nomeCategoria}}<a href="#" data-id="c{{c.pk}}"> x</a>
       </div>
     {% endfor %}
 </div>
