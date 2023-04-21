@@ -94,6 +94,7 @@ def libri(request):
     })
 
 
+
 @login_required
 def dettagliLibro(request, id):
     libro = Libri.objects.get(id=id)
@@ -173,3 +174,11 @@ def eliminaLibro(request, id):
     libro.delete()
 
     return redirect('i_miei_libri')
+
+@login_required
+def burgherMenu(request):
+    profilo = Profilo.objects.get(user=request.user.id)
+    token = profilo.numTopen
+    return render(request, 'burgherMenu.html',{
+        'token' : token,
+    })
