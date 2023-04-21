@@ -3,6 +3,10 @@ a {
     text-decoration: none;
 }
 
+strong {
+    margin-left: 4px;
+}
+
 .stella {
     fill: #32849C;
     stroke: #32849C;
