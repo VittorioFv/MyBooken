@@ -28,11 +28,17 @@
 <body>
     {% include 'burgherMenu.html' %}
 
-
+<div class="content">
     {% block content %}
     {% endblock %}
-
-
+</div>
+    <!-- Footer -->
+    <div class="contieniFooter">
+        <footer class="col-12 col-md-12 col-lg-12">
+            <a href="#"><img src="../../LogoToken/logo.svg" alt="Logo MyBooken" id="imglogofooter"></a>
+            | &copy 2023
+        </footer>
+    </div>
     {# JAVASCRIPT PER IL MENU #}
     {% load static %}
     <script type="text/javascript" src="{% static 'JS/script.js' %}"></script>
