@@ -12,7 +12,9 @@
   body {
     background: white;
   }
-  
-  img {
-    max-width: 100%;
+
+  h1 {
+    color: #36867D;
+    margin: 32px;
+    text-align: center;
   }

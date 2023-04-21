@@ -17,6 +17,10 @@
 
     {% endfor %}
   {% endif %}
+  
+  {% if not mylibri %}
+      <h1> Non hai pubblicato nessun libro, clicca sul più per aggiungere un libro </h1>
+  {% endif %}
 
   <div class="riga horizScroll">
     {% for x in mylibri %}

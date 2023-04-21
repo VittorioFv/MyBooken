@@ -48,6 +48,9 @@
   <!-- Contenitore Mobile ---->
     <div class="containermapmobile">
       <div class="containerschedalibrimobile">
+      {% if not mylibri %}
+        <h1> Sembra che non ci siano libri con le caratteristiche cercate </h1>
+      {% endif %}
       {% for x in mylibri %}
         <div class="contenitorelibrovrt"><a href="dettagli_libro/{{ x.id }}">
           <div class="contenitorebodyvrt">

@@ -28,16 +28,21 @@ data.forEach((e) => {
           ]);
 })
 
-lon = 0;
-lat = 0;
-d.forEach( (e) => {
-  lon += e[0];
-  lat += e[1];
-});
-lon /= d.length;
-lat /= d.length;
+if (d.length > 0) {
+  lon = 0;
+  lat = 0;
+  d.forEach( (e) => {
+    lon += e[0];
+    lat += e[1];
+  });
+  lon /= d.length;
+  lat /= d.length;
+} else {
+  lon = 10.9924122;
+  lat = 45.4384958;
+}
 
-var map = L.map('basicMap').setView([lat, lon], 13);
+var map = L.map('basicMap').setView([lat, lon], 12);
 var markersArray = []
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
