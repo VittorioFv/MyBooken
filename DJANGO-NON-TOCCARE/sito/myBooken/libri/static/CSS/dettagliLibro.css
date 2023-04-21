@@ -1,9 +1,3 @@
-body{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    text-align: center;
-}
 
 a { 
     text-decoration: none;
@@ -264,25 +258,36 @@ a {
 
 #prova{
     width: 20%;
-    height: 30px;
     background-color: #089FCA;
     position: relative;
     top: -560px;
     left: 5%;
-    padding: 5px;
+    padding: 16px;
     border-radius: 10px 10px 0px 0px;
     color: white;
+
+    font-size: 1.6em;
 }
 
 #riquadroprova{
     background-color: #A7DCEA;
     position: relative;
     width: 20%;
-    height: 60px;
     top: -561px;
     left: 5%;
     padding: 5px;
     border-radius: 0px 0px 10px 10px;
+}
+
+#riquadroprova  p {
+    color: #32849C;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+}
+#riquadroprova  h1 {
+    color: #32849C;
+    margin-bottom: 0;
 }
 
 #correlati{

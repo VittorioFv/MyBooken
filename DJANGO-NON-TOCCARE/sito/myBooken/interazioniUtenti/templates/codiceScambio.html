@@ -4,12 +4,21 @@
   MyBooken esplora
 {% endblock %}
 
+{% block headCss %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/qrcode.css' %}">
+{% endblock %}
+
 {% block content %}
 
   <div class="qrCode">
     {% load qr_code %}
     {% qr_from_text link %}
+  </div>
+  <div class="codice">
     {{ codice }}
   </div>
+
+  <h1> Chiedi al proprietario del libro di scannerizzare il qr-code o inserire il codice all'interno dell'applicazione </h1>
 {% endblock %}
 
