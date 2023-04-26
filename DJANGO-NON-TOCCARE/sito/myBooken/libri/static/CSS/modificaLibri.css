@@ -45,7 +45,7 @@ input[type="submit"]{
 
 form img{
     width: 40%;
-    height: 30%;
+    /*height: 30%;*/
     position: relative;
     left: 30%;
     border-radius: 20px;
@@ -53,12 +53,12 @@ form img{
 @media screen and (min-width: 992px){
     form img{
         width: 40%;
-        height: 40%;
+        /*height: 40%;*/
         left: 30%;
     }
     form{
         width: 80%;
-        position: absolute;
+        position: relative;
         left: 10%;
     }
 }
