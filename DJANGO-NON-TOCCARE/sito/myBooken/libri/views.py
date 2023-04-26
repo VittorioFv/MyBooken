@@ -91,6 +91,7 @@ def libri(request):
     return render(request, 'esplora.html', {
         'categorie': Categorie.objects.all(),
         'mylibri': mylibri,
+        'topen': Profilo.objects.get(user=request.user.id).numTopen
     })
 
 
@@ -106,6 +107,7 @@ def dettagliLibro(request, id):
         'mylibri': libro,
         'usernameUtente': libro.idUser,
         'profilo': profilo,
+        'topen': Profilo.objects.get(user=request.user.id).numTopen
         #'recensioni': recensioni,
     }
     return HttpResponse(template.render(context, request))
@@ -123,6 +125,7 @@ def mieiLibri(request):
     context = {
         'categorie': Categorie.objects.all(),
         'mylibri': mylibri,
+        'topen': Profilo.objects.get(user=request.user.id).numTopen
     }
     return HttpResponse(template.render(context, request))
 
@@ -146,6 +149,7 @@ def modificaLibro(request, id):
         'form': form,
         'id': id,
         'libro':libro,
+        'topen': Profilo.objects.get(user=request.user.id).numTopen
     })
 
 
@@ -181,4 +185,5 @@ def burgherMenu(request):
     token = profilo.numTopen
     return render(request, 'burgherMenu.html',{
         'token' : token,
+        'topen': Profilo.objects.get(user=request.user.id).numTopen
     })
