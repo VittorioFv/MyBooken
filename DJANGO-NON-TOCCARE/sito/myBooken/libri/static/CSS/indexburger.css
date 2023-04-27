@@ -12,7 +12,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .navcontainer {
@@ -78,7 +78,7 @@
 
 #sidebar.active {
   left: 0px;
-  z-index: 2;
+  z-index: 100;
 }
 
 #sidebar ul {
@@ -140,9 +140,10 @@
   transition: 0.2s;
 }
 
+
 #sidebartoken.active {
   right: 0px;
-  z-index: 2;
+  z-index: 100;
 }
 
 #sidebartoken ul {
@@ -174,6 +175,9 @@
   margin-bottom: 30px;
   height: 65vh;
 }
+.vertical-menu::-webkit-scrollbar {
+  display: none;
+  }
 
 .footerNavbar {
   width: auto;

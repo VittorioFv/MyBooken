@@ -269,6 +269,9 @@ input {
     margin: 0;
     padding: 0;
 }
+.containerschedalibrimobile::-webkit-scrollbar {
+    display: none;
+    }
 
 #overlay {
     display: none;
@@ -439,4 +442,7 @@ h6 a{
     column-gap: 0px;
     margin-top: 2%;
     gap: 3%;
+}
+#basicMap {
+    z-index: 3;
 }

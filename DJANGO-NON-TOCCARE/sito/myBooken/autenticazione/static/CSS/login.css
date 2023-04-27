@@ -131,7 +131,12 @@ label{
     }
 
 
-
+    #Istruzioni{
+        font-family: 'Golos Text', sans-serif; 
+        margin-left: 5%;
+        margin-right: 5%; 
+        color: #418D84; 
+    }
   }
  
   @media screen and (max-width: 992px) {
@@ -172,6 +177,12 @@ label{
     }
     #fine{
         font-size: 14px;
+    }
+    #Istruzioni{
+        font-family: 'Golos Text', sans-serif; 
+        margin-left: 2%;
+        margin-right: 2%; 
+        color: #418D84; 
     }
   }
   .btn{

@@ -118,7 +118,7 @@ label {
 }
 
 #btnaggimg svg{
-    transform: translate(-1px, -34.5px);
+    transform: translate(0px, -33.5px);
     display: inline-block;
     position: relative;
     z-index: 0;
@@ -135,7 +135,7 @@ label {
 }
 
 #bnt-carica{
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Golos Text', sans-serif;
     font-size: large;
     width: 80px;
     height: 40px;
@@ -212,7 +212,7 @@ input[type="checkbox"] {
     border-radius: 20px;
     width: 60%;
     height: 60%;
-    top: 20%;
+    top: 21%;
     left: -150vw;
     margin: 0px;
 
@@ -289,3 +289,6 @@ input[type="checkbox"] {
 
     }
   }
+  .rowcontenitore::-webkit-scrollbar {
+    display: none;
+    }
