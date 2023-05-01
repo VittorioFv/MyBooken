@@ -5,35 +5,34 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'CSS/esplora.css' %}">
   <!-- Contenitore Mobile ---->
-  <div class="containermapmobile">
-    <div class="containerschedalibrimobile">
-      {% if not mylibri %}
-      <h1> Sembra che l'utente selezionato non abbia libri da scambiare </h1>
-      
-      {% endif %}
 
-      {% for x in mylibri %}
-            <div class="contenitorelibrovrt"><a href="dettagli_libro/{{ x.id }}">
-              <div class="contenitorebodyvrt">
-                <div id="toplibrovrt">
-                  {% if x.immagine %}
-                    <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
-                  {% endif %}
-                </div>
-                <div id="bodylibrovrt">
-                    <h3><strong>{{ x.titolo }}</strong></h3>
-                    <h5><i>{{ x.autore }}</i></h5>
-                    <p id="descritionlibro">{{ x.descrizione }}</p>
-                </div>
+  {% if not mylibri %}
+    <h1> Sembra che l'utente selezionato non abbia libri da scambiare </h1>
+  
+  {% endif %}
+  <div class="riga horizScroll">
+
+    {% for x in mylibri %}
+          <div class="contenitorelibrovrt col-xs-12 col-md-4 col-lg-3"><a href="dettagli_libro/{{ x.id }}">
+            <div class="contenitorebodyvrt">
+              <div id="toplibrovrt">
+                {% if x.immagine %}
+                  <img class="card-img-top immagine" src="{{ x.immagine.url }}" alt="Card image cap">
+                {% endif %}
               </div>
-              <div id="footerlibrovrt">
-                  <h6 id="locationlibrovrt" style="color: #000;">{{ x.citta }}</h6>
-                  <h6 id="isbnlibrovrt" style="color: #000;">ISBN: {{ x.isbn }}</h6>
+              <div id="bodylibrovrt">
+                  <h3><strong>{{ x.titolo }}</strong></h3>
+                  <h5><i>{{ x.autore }}</i></h5>
+                  <p id="descritionlibro">{{ x.descrizione }}</p>
               </div>
-              <div class="data" style="display: none">{{ x.longitudine }},{{ x.latitudine }}</div>
-            </a></div>
-          {% endfor %}
-    </div>
+            </div>
+            <div id="footerlibrovrt">
+                <h6 id="locationlibrovrt" style="color: #000;">{{ x.citta }}</h6>
+                <h6 id="isbnlibrovrt" style="color: #000;">ISBN: {{ x.isbn }}</h6>
+            </div>
+            <div class="data" style="display: none">{{ x.longitudine }},{{ x.latitudine }}</div>
+          </a></div>
+        {% endfor %}
   </div>
 {% endblock %}
 
